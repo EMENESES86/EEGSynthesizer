@@ -1,0 +1,94 @@
+cff-version: 1.2.0
+
+title: >-
+  EEGSynthesizer: Stochastic Synthetic EEG Generator for
+  Epileptic Seizure Detection Model Training
+
+message: >-
+  If you use this software, the generated datasets, or any derivative
+  work in academic research, please cite it using the metadata below.
+
+type: software
+
+authors:
+  - family-names: Meneses Torres
+    given-names: Edison Fernando
+    affiliation: >-
+      Pontificia Universidad Católica del Ecuador, Sede Ambato (PUCESA)
+    email: efmenesest@pucesa.edu.ec
+    orcid: "https://orcid.org/0000-0002-6917-8355"
+
+version: "3.0.0"
+
+date-released: "2026-03-27"
+
+license: CC-BY-4.0
+
+repository-code: "https://github.com/EMENESES86/EEGSynthesizer"
+
+keywords:
+  - electroencephalography
+  - EEG
+  - synthetic data generation
+  - stochastic synthesis
+  - epilepsy
+  - seizure detection
+  - ictal morphology
+  - spike-wave
+  - generalized absence seizures
+  - focal temporal seizures
+  - CHB-MIT
+  - deep learning
+  - transfer learning
+  - biomedical signal processing
+  - computational neuroscience
+  - data augmentation
+
+abstract: >-
+  EEGSynthesizer is a stochastic parametric synthesizer of scalp EEG
+  signals with physiologically coherent ictal morphology. It generates
+  large-scale synthetic datasets of virtual patients (3,000 patients,
+  19-channel 10-20 montage, 250 Hz) covering two epileptic phenotypes:
+  generalized absence seizures and focal temporal seizures. The framework
+  is designed to address the scarcity of labeled ictal EEG data by
+  producing training sets transferable to the real clinical domain,
+  validated against the CHB-MIT Scalp EEG Dataset (PhysioNet). Signal
+  generation models 1/f background noise, spike-wave patterns (2.4–4.2
+  Hz), inter-channel spatial correlation via common field mixing, and
+  realistic artifacts (eye blinks, EMG, non-ictal confounders). The
+  pipeline includes five cross-validation protocols: internal
+  separability, Real-to-Real (R2R), Synthetic-to-Real (TSTR),
+  Real-to-Synthetic (TRTS), and augmentation. The synthesizer is part of
+  a doctoral thesis in biomedical engineering targeting Q1 publication.
+
+preferred-citation:
+  type: software
+  title: >-
+    EEGSynthesizer: Stochastic Synthetic EEG Generator for
+    Epileptic Seizure Detection Model Training
+  authors:
+    - family-names: Meneses Torres
+      given-names: Edison Fernando
+      affiliation: >-
+        Pontificia Universidad Católica del Ecuador, Sede Ambato (PUCESA)
+      orcid: "https://orcid.org/0000-0002-6917-8355"
+  version: "3.0.0"
+  year: 2026
+  license: CC-BY-4.0
+  repository-code: "https://github.com/EMENESES86/EEGSynthesizer"
+
+references:
+  - type: dataset
+    title: "CHB-MIT Scalp EEG Database"
+    version: "1.0.0"
+    authors:
+      - family-names: Shoeb
+        given-names: Ali Hossam
+      - family-names: Goldberger
+        given-names: Ary L.
+    year: 2009
+    url: "https://physionet.org/content/chbmit/1.0.0/"
+    notes: >-
+      Real EEG dataset used for cross-domain validation (subjects chb01,
+      chb02, chb03, chb05, chb06). Subjects selected based on minimum
+      3 annotated seizure files and standard 23-channel montage.

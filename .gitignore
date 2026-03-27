@@ -1,0 +1,16 @@
+# ============================================================
+#  EEGSynthesizer — .gitignore
+# ============================================================
+ 
+ 
+# --- Entorno virtual / Virtual environment ---
+.venv/
+venv/
+env/
+.env/
+ 
+ 
+# --- Datasets generados (archivos pesados) ---
+# Generated datasets (heavy files)
+dataset_eeg_final/
+dataset_doctorado_final/
