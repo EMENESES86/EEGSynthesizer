@@ -24,7 +24,7 @@
 
 ## Descripción general
 
-**EEGSynthesizer v3** es un sintetizador estocástico de señales EEG de cuero cabelludo con morfología ictal fisiológicamente coherente. Genera datasets sintéticos de pacientes virtuales para entrenar modelos de detección de epilepsia en escenarios donde los datos reales etiquetados son escasos, costosos o éticamente restringidos.
+**EEGSynthesizer** es un sintetizador estocástico de señales EEG de cuero cabelludo con morfología ictal fisiológicamente coherente. Genera datasets sintéticos de pacientes virtuales para entrenar modelos de detección de epilepsia en escenarios donde los datos reales etiquetados son escasos, costosos o éticamente restringidos.
 
 El sintetizador **no** tiene como objetivo replicar exactamente el EEG real. Su objetivo es generar señales con morfología ictal *plausible* que permitan entrenar modelos con capacidad de transferencia al dominio clínico real.
 
@@ -449,7 +449,7 @@ Este repositorio se distribuye bajo licencia **CC-BY-4.0** (Creative Commons Att
 
 ## Overview
 
-**EEGSynthesizer v3** is a stochastic synthesizer of scalp EEG signals with physiologically coherent ictal morphology. It generates synthetic datasets of virtual patients for training epileptic seizure detection models in scenarios where real labeled data is scarce, costly, or ethically restricted.
+**EEGSynthesizer** is a stochastic synthesizer of scalp EEG signals with physiologically coherent ictal morphology. It generates synthetic datasets of virtual patients for training epileptic seizure detection models in scenarios where real labeled data is scarce, costly, or ethically restricted.
 
 The synthesizer does **not** aim to perfectly replicate real EEG. Its goal is to generate signals with *plausible* ictal morphology that enable training models transferable to the real clinical domain.
 
