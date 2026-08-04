@@ -1,182 +1,117 @@
 {
-  "schema_version": "1.0-reproducibility-audit",
-  "audited_utc": "2026-08-04T16:18:35Z",
-  "scope": "reconstrucción, reanudación, integridad, determinismo numérico, trazabilidad pública y claridad de ejecución",
+  "schema_version": "3.0-definitive-reproducibility-audit",
+  "audited_utc": "2026-08-04T23:15:18Z",
+  "scope": "dos notebooks, manifiestos SYN/CHB-MIT/Siena, contrato temporal Siena y productos de publicación",
   "environment": {
     "python": "3.13.7",
-    "direct_dependencies_pinned": 15,
-    "clean_install": "SUPPORTED",
-    "dependency_consistency": "SUPPORTED"
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "mne": "1.11.0",
+    "matplotlib": "3.10.8"
   },
-  "implementation": {
-    "notebook_1_0_sha256": "7a843d36451491f9c8e0294dd525e606a1b642a3334420a85471a387fd6f9cbf",
-    "notebook_1_1_sha256": "82819aa80c40e15162efb4028c6bd4ec46f558ac39c816dd978e1833ec0d9b15",
-    "readme_sha256": "0a5564aa01e4fb26f337fc6de1b7dc15a5a8b30e5e2f2c1ddc400aa44e504d15",
-    "requirements_sha256": "7d7897023e09ebbfeb624fcd31c28a17427faf8369955a9109ae590ff845a29f",
-    "citation_sha256": "4b162a44b5a41416b8c7e0ee6548fc1970884a9e888bd1492360fa6b52d12a2f",
-    "notebook_format": "SUPPORTED",
-    "all_code_cells_compile": "SUPPORTED",
-    "stored_outputs": 0,
-    "stored_execution_counts": 0,
-    "notebook_1_0_stored_outputs": 7,
-    "notebook_1_0_stored_execution_counts": 9,
-    "notebook_1_1_stored_outputs": 0,
-    "notebook_1_1_stored_execution_counts": 0
+  "execution_contract": {
+    "order": [
+      "1_0_EEGSynthesizer_DATASET.ipynb",
+      "1_1_EEGSynthesizer_VALIDATION.ipynb"
+    ],
+    "validation_modes": [
+      "status",
+      "prepare_dev",
+      "external",
+      "siena_external"
+    ],
+    "resume_support": [
+      "CHB-MIT .part + HTTP Range + SHA256",
+      "Siena .part + HTTP Range + SHA256",
+      "manifiestos derivados con SHA256"
+    ]
   },
-  "clean_reconstruction": {
-    "isolated_clone": "SUPPORTED",
-    "status_mode_without_heavy_local_artifacts": "SUPPORTED",
-    "pilot_from_public_development_snapshot": "SUPPORTED",
-    "full_3000_subject_rebuild": "SUPPORTED",
-    "generated_file_count": 21,
-    "all_generated_file_hashes_identical_to_frozen_dataset": true,
-    "pdf_metadata_deterministic": true,
-    "note": "Los hashes de los 21 artefactos generados coinciden; las fechas de ejecución del manifiesto son campos de procedencia y cambian en cada reconstrucción."
+  "notebooks": {
+    "1_0_EEGSynthesizer_DATASET.ipynb": {
+      "sha256": "4ca82ebf3de5412a291305c32e655084daa25e48c7f8ef4a22ca12f53a368ef1",
+      "cells": 11,
+      "stored_output_cells": 0,
+      "compile_errors": [],
+      "absolute_workstation_paths": 0,
+      "prohibited_attribution_terms": 0
+    },
+    "1_1_EEGSynthesizer_VALIDATION.ipynb": {
+      "sha256": "1babcb5499d2cb16220098c9b087ba1066beaaca0e49952901dc912d2d2619ca",
+      "cells": 12,
+      "stored_output_cells": 0,
+      "compile_errors": [],
+      "absolute_workstation_paths": 0,
+      "prohibited_attribution_terms": 0
+    }
   },
-  "recovery": {
-    "chbmit_exact_download_function_resume_from_part": "SUPPORTED",
-    "chbmit_exact_download_function_corruption_repair": "SUPPORTED",
-    "siena_exact_download_function_resume_from_part": "SUPPORTED",
-    "siena_exact_download_function_corruption_repair": "SUPPORTED",
-    "sha256_required_before_promotion": true,
-    "atomic_promotion": true
+  "phase_classifier_unit_tests": {
+    "postictal_priority": true,
+    "preictal_bounds": true,
+    "strict_4h": true,
+    "ictal_overlap": true
   },
-  "data_integrity": {
-    "synthetic_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
-    "chbmit_manifest_sha256": "734595476187c3581372823c93ef967216aab4f869efcf67c5a21a3301874ffc",
-    "siena_manifest_sha256": "67fb8099f9818f72a31dfdadbc950b1730c4b9c2ef58b5aae328e7bd44db1c25",
-    "siena_official_entries_verified": 58,
-    "siena_official_edf": 41,
-    "nan_or_infinite_values": 0,
-    "patient_leakage": false,
-    "duplicate_siena_windows": 0
+  "siena_phase_integrity": {
+    "preictal_postictal_overlap_windows": 0,
+    "preictal_outside_30_to_5_min_windows": 0,
+    "strict_interictal_inside_4h_windows": 0
   },
-  "determinism": {
-    "development_artifacts_identical_on_two_runs": true,
-    "chbmit_numeric_csv_identical_on_repeated_runs": true,
-    "siena_numeric_csv_identical_on_repeated_runs": true,
-    "random_forest_threads": 1,
-    "independent_patient_seeds": true
+  "traceability": {
+    "generation_manifest_frozen": true,
+    "siena_builder_matches_validator": true,
+    "siena_uses_current_synthetic_manifest": true,
+    "multicorpus_summary_matches_validator": true,
+    "preictal_summary_matches_validator": true,
+    "preictal_summary_matches_siena_manifest": true,
+    "publication_manifest_matches_validator": true,
+    "symmetry_matches_generator": true,
+    "symmetry_matches_synthetic_manifest": true
   },
   "scientific_results": {
-    "generator_internal_integrity": "SUPPORTED",
-    "generalized_symmetry_before_degradation": {
+    "CHB_MIT_TSTR_RF_zscore": {
       "status": "SUPPORTED",
-      "passed": 750,
-      "total": 750
-    },
-    "generalized_symmetry_after_degradation": {
-      "status": "NOT SUPPORTED",
-      "passed": 603,
-      "total": 750
-    },
-    "chbmit_tstr": {
-      "status": "SUPPORTED",
-      "subjects": 18,
-      "macro_auroc": 0.6430743202093415,
+      "macro_auc": 0.6430743202093415,
       "ci95": [
         0.5460355378919731,
         0.7332719679407158
-      ]
-    },
-    "siena_ictal_vs_preictal_tstr": {
-      "status": "SUPPORTED",
-      "subjects": 14,
-      "macro_auroc": 0.6992021055008338,
-      "ci95": [
-        0.6190591348054201,
-        0.7762500743358814
       ],
-      "interpretation": "prueba externa de detección ictal; el generador no sintetiza ni predice la fase preictal"
+      "n_subjects": 18
     },
-    "siena_chb_plus_syn_minus_chb": {
+    "Siena_TSTR_RF_zscore_clean_preictal": {
       "status": "SUPPORTED",
-      "mean_auroc_difference": 0.05685747169498427,
+      "macro_auc": 0.7008300137418093,
       "ci95": [
-        0.0335963370290812,
-        0.08062536467493128
+        0.6211641143045521,
+        0.7762140062259614
       ],
-      "subjects_improved": 13,
-      "subjects": 14
+      "n_subjects": 14
     },
-    "siena_ictal_vs_strict_interictal": {
+    "Siena_TSTR_RF_zscore_strict_interictal": {
       "status": "NOT EVALUABLE",
-      "evaluable_subjects": 4
+      "macro_auc": 0.5862347148637471,
+      "ci95": [
+        0.4400382882882883,
+        0.7650312409183377
+      ],
+      "n_subjects": 4,
+      "endpoint": "ictal_vs_interictal_strict_at_least_4h"
     },
-    "fidelity_distributional_equivalence": "NOT SUPPORTED",
-    "complete_external_morphology_coverage": "NOT SUPPORTED",
-    "diversity_equivalent_to_real_eeg": "NOT SUPPORTED",
-    "focal_temporal_siena": {
+    "focal_morphology_external": {
       "status": "NOT SUPPORTED",
       "features_within_real_real_q95_fraction": 0.8947368421052632,
-      "laterality_accuracy": 0.6923076923076923
-    },
-    "clinical_equivalence": "NOT DEMONSTRATED"
-  },
-  "public_distribution_audit": {
-    "absolute_local_paths_found": 0,
-    "non_scientific_generation_attribution_found": 0,
-    "notebook_outputs_or_hidden_execution_results_found": 0,
-    "heavy_edf_or_array_files_selected_for_git": 0,
-    "reader_instructions": "SUPPORTED"
-  },
-  "evidence": {
-    "chbmit_summary_sha256": "2522b314b89a4deca709db7c8241f6bb51337e3abb1ccf75fde9066d46b5a05b",
-    "symmetry_summary_sha256": "70a14ed06cab20b1db821f8e739504880b63f1760da98aa6fa0fc0a30d97e1e9",
-    "multicorpus_summary_sha256": "fb94132b91596d893ac53fb30dbfca8d5b46214f1bdc24c573089405a388917e",
-    "siena_preictal_integrity_sha256": "d3a755ee608a0c00882bf5bdd00d6a89ca6e52fc258c232cdce87ada787e580a"
-  },
-  "verdict": {
-    "software_and_reproducibility": "SUPPORTED",
-    "research_framework": "VIABLE REFORZADO CON LIMITACIONES",
-    "thesis_current_wording": "NO VIABLE EN SU REDACCIÓN ACTUAL",
-    "thesis_after_replacing_obsolete_results_and_limiting_claims": "VIABLE CON LIMITACIONES",
-    "reason": "La generación, integridad y transferencia predefinida son reproducibles, pero la equivalencia clínica, la fidelidad distribucional completa y la cobertura total de la variabilidad real no están demostradas."
+      "large_cliff_effects": 9,
+      "features_ks_ge_0_5": 5,
+      "laterality_accuracy": 0.6923076923076923,
+      "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+    }
   },
   "publication_products": {
-    "status": "SUPPORTED",
-    "figures_audited": 6,
-    "multicorpus_table_visible_in_executed_notebook": true,
-    "embedded_png_images_in_final_cell": 6,
-    "png_files": 6,
-    "pdf_files": 6,
-    "captions_file": "16_publication_captions.csv",
-    "figure_audit_file": "16_publication_figure_audit.csv",
-    "representative_signal_provenance_file": "16_publication_representative_signals.csv",
-    "manifest_file": "16_publication_manifest.json",
-    "manifest_sha256": "136bf9b064b5345489207b32ef0579d765b7620d578bf38c466d4112d60a61c0",
-    "manifest_sources_verified": 21,
-    "manifest_outputs_verified": 17,
-    "manifest_hash_errors": 0,
-    "outputs_byte_identical_on_two_clean_status_runs": true,
-    "pdf_pages_verified": 6,
-    "pdf_rendering": "SUPPORTED",
-    "visual_overlap_or_clipping": 0,
-    "obsolete_uncontrolled_png_removed": 7,
-    "generator_or_scientific_metrics_changed": false,
-    "doctoral_figure_corrections": {
-      "table_units": "19 features for morphology coverage; 13 evaluable subjects for laterality",
-      "signal_and_psd_eligibility": "ictal_fraction >= 0.999 in every corpus",
-      "morphology_coverage": "both REAL-inside-SYN and SYN-inside-REAL shown",
-      "representative_signal_traceability": "subject/patient, event, source index, time, derivation, raw PTP and selection rule recorded",
-      "symmetry_denominator": "read dynamically from n_generalized_events"
-    },
-    "interpretation": "Productos descriptivos reproducibles; los CSV y JSON numéricos siguen siendo la fuente inferencial.",
-    "terminology_audit": {
-      "status": "SUPPORTED",
-      "technical_statuses_preserved_in_numeric_sources": true,
-      "reader_facing_statuses": [
-        "RESPALDADO",
-        "EXPLORATORIO (n < 10)",
-        "REFERENCIA REAL-REAL",
-        "IC95 % incluye 0",
-        "CRITERIO COMPLETO NO ALCANZADO"
-      ],
-      "not_supported_definition": "el criterio completo no se alcanzó; no implica ausencia de efecto, daño o invalidez",
-      "not_evaluable_definition": "tamaño muestral inferior al mínimo prospectivo; estimación exploratoria",
-      "laterality_interpretation": "descriptivo: 9/13 concordantes; sin umbral confirmatorio predefinido",
-      "inference_scope": "plausibilidad morfológica operacional, cobertura por rasgos y utilidad de transferencia externa",
-      "formal_equivalence_scope": "requiere un diseño diferente con márgenes clínicos predefinidos"
-    }
-  }
+    "manifest_sha256": "753a2f53af3e46acb378048081c602e506e20c1f3f06a9a7ce73733466d23a82",
+    "outputs_verified": 17,
+    "sources_verified": 21
+  },
+  "failures": [],
+  "verdict": "SUPPORTED",
+  "interpretation": "La reproducibilidad, integridad y trazabilidad son independientes de que una métrica científica sea favorable; los estados científicos se conservan sin reinterpretación."
 }

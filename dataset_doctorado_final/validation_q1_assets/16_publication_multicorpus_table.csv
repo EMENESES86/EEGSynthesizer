@@ -1,7 +1,7 @@
 Corpus,Endpoint,Estimando,Estimación,IC95_inf,IC95_sup,Unidad/N,Resultado
-CHB-MIT,ictal vs. interictal,AUROC TSTR,0.6430743202093415,0.5460355378919731,0.7332719679407158,18 sujetos,Respaldado: IC95 % AUROC > 0.5
-Siena,ictal vs. preictal (30-5 min),AUROC TSTR,0.6992021055008338,0.6190591348054201,0.7762500743358814,14 sujetos,Respaldado: IC95 % AUROC > 0.5
-Siena,ictal vs. interictal estricto,AUROC TSTR,0.5862347148637471,0.4400382882882883,0.7650312409183377,4 sujetos,Estimación exploratoria: n < 10
-Siena,ictal vs. preictal (30-5 min),Delta AUROC CHB+SYN-CHB,0.0568574716949842,0.0335963370290812,0.0806253646749312,14 sujetos,Beneficio respaldado: IC95 % diferencia > 0
-Siena,morfología focal temporal,fracción dentro de REAL-REAL q95,0.8947368421052632,,,19 rasgos,Concordancia 17/19; criterio completo 19/19
+CHB-MIT,ictal vs. interictal,AUROC TSTR (RF; z-score/ventana),0.6430743202093415,0.5460355378919731,0.7332719679407158,18 sujetos,RESPALDADO
+Siena,ictal vs. preictal limpio (30-5 min; postictal excluido),AUROC TSTR (RF; z-score/ventana),0.7008300137418093,0.6211641143045521,0.7762140062259614,14 sujetos,RESPALDADO
+Siena,ictal vs. interictal estricto,AUROC TSTR (RF; z-score/ventana),0.5862347148637471,0.4400382882882883,0.7650312409183377,4 sujetos,Estimación exploratoria: n < 10
+Siena,ictal vs. preictal limpio (30-5 min; postictal excluido),ΔAUROC CHB+SYN-CHB (RF; z-score/ventana),0.0562857451389235,0.0329035352611456,0.0807642759510501,14 sujetos,RESPALDADO
+Siena,morfología focal temporal,Wasserstein/IQR mediano dentro de REAL-REAL q95,0.8947368421052632,,,19 rasgos,Concordancia 17/19; criterio completo 19/19
 Siena,lateralidad focal temporal,exactitud de lateralidad,0.6923076923076923,,,13 sujetos evaluables,Descriptivo: concordancia 9/13; sin umbral confirmatorio

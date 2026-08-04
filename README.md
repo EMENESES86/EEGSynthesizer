@@ -87,24 +87,7 @@ el directorio de trabajo sea la raíz correcta.
 
 ## Reproducción completa desde cero
 
-### Paso 1 — perfil de desarrollo
-
-Abra `1_1_EEGSynthesizer_VALIDATION.ipynb` y seleccione:
-
-```python
-NOTEBOOK_MODE = "prepare_dev"
-```
-
-Ejecute **Run All**. El notebook:
-
-1. consulta los índices oficiales de CHB-MIT;
-2. descarga o reutiliza los EDF de desarrollo;
-3. verifica sus SHA-256;
-4. construye el perfil únicamente con `chb01`, `chb02`, `chb03`, `chb05` y
-   `chb06`; `chb21` se trata como la misma persona que `chb01`;
-5. registra el checkpoint `S1_development_profile`.
-
-### Paso 2 — generación del SYN
+### Paso 1 — generación del SYN
 
 Abra `1_0_EEGSynthesizer_DATASET.ipynb` y mantenga:
 
@@ -134,16 +117,17 @@ CALIBRATION_MODE = "recompute"
 Este modo vuelve a calcular el contraste baseline–candidato usando exclusivamente
 la cohorte de desarrollo. Nunca utiliza CHB-MIT externo ni Siena para recalibrar.
 
-### Paso 3 — validación externa CHB-MIT
+### Paso 2 — validación externa CHB-MIT y Siena
 
-Regrese a `1_1_EEGSynthesizer_VALIDATION.ipynb`:
+Abra `1_1_EEGSynthesizer_VALIDATION.ipynb`, conserve el modo predeterminado y
+ejecute **Run All** una sola vez:
 
 ```python
-NOTEBOOK_MODE = "external"
+NOTEBOOK_MODE = "siena_external"
 ```
 
-Ejecute **Run All**. Se construye o reutiliza la cohorte real, se excluyen los
-sujetos de desarrollo y se ejecutan:
+El notebook construye o reutiliza primero CHB-MIT, excluye los sujetos de
+desarrollo y ejecuta:
 
 - R2R;
 - TSTR;
@@ -153,16 +137,8 @@ sujetos de desarrollo y se ejecutan:
 - fidelidad, cobertura, diversidad y proximidad en características;
 - bootstrap por sujeto.
 
-### Paso 4 — validación multicorpus Siena
-
-En el mismo notebook seleccione:
-
-```python
-NOTEBOOK_MODE = "siena_external"
-```
-
-Ejecute **Run All**. El notebook descarga Siena desde PhysioNet, verifica 58
-entradas oficiales —incluidos 41 EDF— y procesa 14 sujetos.
+A continuación, en la misma ejecución, descarga o reutiliza Siena desde PhysioNet,
+verifica 58 entradas oficiales —incluidos 41 EDF— y procesa 14 sujetos.
 
 La primera ejecución puede descargar aproximadamente 20.3 GiB. Si los archivos ya
 existen, aparecerá un mensaje como:
@@ -172,7 +148,14 @@ Siena: 58/58 archivos verificados; EDF oficiales: 41; pendientes: 0
 Siena ya está descargado y verificado; no es necesaria una nueva descarga.
 ```
 
-### Paso 5 — inspección sin recalcular
+### Modos opcionales de mantenimiento
+
+`prepare_dev` vuelve a descargar/reutilizar los EDF de desarrollo y reconstruye el
+perfil 5.1 con `chb01`, `chb02`, `chb03`, `chb05` y `chb06`; `chb21` se trata como
+la misma persona que `chb01`. No es necesario para la reproducción normal porque
+el perfil congelado y sus hashes forman parte del repositorio.
+
+`external` ejecuta únicamente CHB-MIT. `status` inspecciona sin recalcular:
 
 Para conocer qué etapas existen:
 
@@ -270,8 +253,8 @@ la PSD utilizan únicamente ventanas con ocupación ictal completa.
 - Masa exacta en límites: `0 %`.
 - Frecuencia generalizada de 2.5–4 Hz: `750/750` (`100 %`).
 - Máximo frontocentral generalizado: `747/750` (`99.6 %`).
-- Simetría bilateral antes de degradación: `750/750` (`100 %`, `SUPPORTED`).
-- Simetría observable después de degradación: `603/750` (`80.4 %`,
+- Simetría bilateral en pares frontales no degradados: `750/750` (`100 %`, `SUPPORTED`).
+- Simetría observable en la señal final, incluyendo degradación: `603/750` (`80.4 %`,
   `NOT SUPPORTED`); los 147 fallos tuvieron degradación frontal.
 - Los controles internos programados para el escenario focal fueron aprobados.
 
@@ -293,12 +276,16 @@ constituyen validación clínica independiente.
 Siena contiene 14 sujetos y 47 crisis declaradas. El procesamiento aceptó 46 y
 excluyó una mediante una regla documentada.
 
-Endpoint ictal frente a preictal, evaluable en 14 sujetos:
+Endpoint ictal frente a preictal limpio de 30 a 5 minutos, con exclusión postictal
+prioritaria, evaluable en 14 sujetos:
 
-- TSTR RF z-score: AUROC macro `0.6992`.
-- IC95 %: `[0.6191, 0.7763]`.
+- 5 600 ventanas preictales; solapamiento con los 30 minutos postictales: `0`.
+- Ventanas preictales fuera del intervalo 30–5 min: `0`.
+- TSTR RF z-score: AUROC macro `0.7008`.
+- IC95 %: `[0.6212, 0.7762]`.
 - Estado: `SUPPORTED`.
-- CHB+SYN frente a CHB: diferencia media `+0.0569`, IC95 % `[0.0336, 0.0806]`.
+- CHB+SYN frente a CHB: diferencia media `+0.0563`, IC95 % `[0.0329, 0.0808]`;
+  13 de 14 sujetos mejoraron.
 
 Endpoint ictal frente a interictal estricto:
 
@@ -323,11 +310,13 @@ Debe citarse cada corpus conforme a su página oficial y respetarse su licencia.
 
 ### “Falta el perfil de desarrollo”
 
-Ejecute primero `1_1` con `NOTEBOOK_MODE="prepare_dev"`.
+Restaure los tres artefactos públicos de desarrollo o ejecute `1_1` con
+`NOTEBOOK_MODE="prepare_dev"`. En una copia completa del repositorio no se necesita
+este paso.
 
 ### “Faltan prerrequisitos de Siena”
 
-Complete, en orden: `prepare_dev`, `1_0 full`, `external` y `siena_external`.
+Ejecute primero `1_0` en `full/frozen` y después `1_1` en `siena_external`.
 
 ### Descarga interrumpida
 

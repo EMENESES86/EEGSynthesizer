@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0-siena-ictal-preictal",
-  "generated_utc": "2026-08-04T05:27:36Z",
+  "schema_version": "1.1-siena-ictal-preictal",
+  "generated_utc": "2026-08-04T23:14:55Z",
   "endpoint": "ictal_vs_preictal_30_to_5_min",
   "interpretation": "detección ictal frente a preictal; no síntesis ni predicción preictal",
   "criteria_frozen_in_notebook": {
@@ -13,7 +13,15 @@
     "official_sha256_entries_verified": 58,
     "official_edf": 41,
     "siena_artifact_hashes_verified": true,
-    "synthetic_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0"
+    "synthetic_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
+    "siena_manifest_sha256": "01aa4e57b24438de27c0854a83e5dbe769864ea5548a160fdf61460ab5f0a4f8",
+    "validator_notebook_sha256": "1babcb5499d2cb16220098c9b087ba1066beaaca0e49952901dc912d2d2619ca",
+    "phase_classifier_unit_tests": {
+      "postictal_priority": true,
+      "preictal_bounds": true,
+      "strict_4h": true,
+      "ictal_overlap": true
+    }
   },
   "cohort": {
     "subjects_total": 14,
@@ -45,67 +53,71 @@
     "strict_interictal_subject_count": 4,
     "duplicate_windows": 0,
     "patient_leakage": false,
-    "finite": true
+    "finite": true,
+    "preictal_postictal_overlap_windows": 0,
+    "preictal_outside_30_to_5_min_windows": 0,
+    "strict_interictal_inside_4h_windows": 0,
+    "minimum_clean_preictal_windows_per_subject": 400
   },
   "TSTR_RF_zscore": {
     "status": "SUPPORTED",
-    "macro_auc": 0.6992021055008338,
+    "macro_auc": 0.7008300137418093,
     "ci95": [
-      0.6190591348054201,
-      0.7762500743358814
+      0.6211641143045521,
+      0.7762140062259614
     ],
     "n_subjects": 14
   },
   "paired_differences": [
     {
       "comparison": "SIENA_PLUS_SYN_minus_R2R",
-      "mean_auc_difference": 0.002395793548184743,
-      "ci95_low": -0.0101801895470661,
-      "ci95_high": 0.01657871875350134,
+      "mean_auc_difference": -0.004260390663765894,
+      "ci95_low": -0.020247888017194807,
+      "ci95_high": 0.010923817470098636,
       "subjects_improved": 6,
       "n_subjects": 14,
       "status": "NOT SUPPORTED"
     },
     {
       "comparison": "SIENA_PLUS_SYN_minus_SMOTE",
-      "mean_auc_difference": 0.015362164179203112,
-      "ci95_low": -0.013338583114034103,
-      "ci95_high": 0.04359139980132889,
-      "subjects_improved": 8,
+      "mean_auc_difference": 0.010308955387636345,
+      "ci95_low": -0.015862160844011878,
+      "ci95_high": 0.034450781726839796,
+      "subjects_improved": 9,
       "n_subjects": 14,
       "status": "NOT SUPPORTED"
     },
     {
       "comparison": "CHB_PLUS_SYN_minus_CHB",
-      "mean_auc_difference": 0.05685747169498427,
-      "ci95_low": 0.0335963370290812,
-      "ci95_high": 0.08062536467493128,
+      "mean_auc_difference": 0.05628574513892359,
+      "ci95_low": 0.03290353526114568,
+      "ci95_high": 0.0807642759510501,
       "subjects_improved": 13,
       "n_subjects": 14,
       "status": "SUPPORTED"
     },
     {
       "comparison": "TSTR_minus_R2R",
-      "mean_auc_difference": -0.017179947498206116,
-      "ci95_low": -0.056113979575975075,
-      "ci95_high": 0.021412032714413803,
-      "subjects_improved": 3,
+      "mean_auc_difference": -0.017257552391077395,
+      "ci95_low": -0.060850619981789277,
+      "ci95_high": 0.02172269834336679,
+      "subjects_improved": 5,
       "n_subjects": 14,
       "status": "NOT SUPPORTED"
     }
   ],
   "numeric_artifacts": {
     "14_siena_ictal_preictal_loso.csv": {
-      "sha256": "a59772fe76612e3a34bac8ad5334230da7a4222e9af2c243f104efeef5e60bf2",
-      "bytes": 56810
+      "sha256": "a3c59469c08cbf81467b6f53d5b67826c44049d80d16affdd26b8056683280a6",
+      "bytes": 56826
     },
     "14_siena_ictal_preictal_bootstrap.csv": {
-      "sha256": "8c26b236aca5bcbbd71186e37173b43562bcaae193bbaccb4c002231fd706a79",
-      "bytes": 15975
+      "sha256": "66b734cfff350f81dd16bf23ca10e6ab1c4014ebd83a265d32439b5ebb8e8f60",
+      "bytes": 15994
     },
     "14_siena_ictal_preictal_paired_differences.csv": {
-      "sha256": "b457d4432fbdc381e52bfc128b6e915f740480257897eb5bfcfe5f6034faa9f4",
-      "bytes": 502
+      "sha256": "16b2a0b994bbecc14cb798b79687ae727665812ee7d90a41be2f9204023c3141",
+      "bytes": 506
     }
   }
 }

@@ -34,7 +34,7 @@
     },
     "S3_synthetic_frozen": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T11:15:18Z",
+      "completed_utc": "2026-08-04T21:38:22Z",
       "details": {
         "selected_profile": "baseline",
         "reused": true
@@ -48,7 +48,7 @@
     },
     "S4_chbmit_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T11:15:59Z",
+      "completed_utc": "2026-08-04T22:38:51Z",
       "artifacts": {
         "real_manifest": {
           "exists": true,
@@ -69,7 +69,7 @@
     },
     "S5_siena_raw": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T05:27:36Z",
+      "completed_utc": "2026-08-04T23:14:55Z",
       "artifacts": {
         "official_checksums": {
           "exists": true,
@@ -90,12 +90,12 @@
     },
     "S6_siena_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T05:27:36Z",
+      "completed_utc": "2026-08-04T23:14:55Z",
       "artifacts": {
         "siena_manifest": {
           "exists": true,
-          "bytes": 2317,
-          "sha256": "67fb8099f9818f72a31dfdadbc950b1730c4b9c2ef58b5aae328e7bd44db1c25"
+          "bytes": 2539,
+          "sha256": "01aa4e57b24438de27c0854a83e5dbe769864ea5548a160fdf61460ab5f0a4f8"
         },
         "annotation_audit": {
           "exists": true,
@@ -110,17 +110,17 @@
     },
     "S7_external_results": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T05:27:36Z",
+      "completed_utc": "2026-08-04T23:14:55Z",
       "artifacts": {
         "multicorpus_summary": {
           "exists": true,
-          "bytes": 5742,
-          "sha256": "fb94132b91596d893ac53fb30dbfca8d5b46214f1bdc24c573089405a388917e"
+          "bytes": 5747,
+          "sha256": "aefe82270464cdadf08809ce489f3462719b14d870c46f61c76097abc64001e8"
         },
         "ictal_preictal_integrity": {
           "exists": true,
-          "bytes": 3267,
-          "sha256": "d3a755ee608a0c00882bf5bdd00d6a89ca6e52fc258c232cdce87ada787e580a"
+          "bytes": 3836,
+          "sha256": "793e368baf644e68793d5de99f47b150cdec95dcad008d8210d23afa4a3476f5"
         }
       },
       "details": {
