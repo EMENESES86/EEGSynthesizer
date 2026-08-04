@@ -1,0 +1,178 @@
+{
+  "mode": "siena_external",
+  "generated_utc": "2026-08-04T03:54:27Z",
+  "validation": {
+    "notebook_sha256": "a10a77bbe572a891ccbdb8f37bad85671327b231f8bb2274817774407dd8cf34",
+    "siena_artifact_builder_notebook_sha256": "f2c456e15f14a4e3f9b6b1d7b3e851d9d8e90398a681e3a2e78911a58f4329fc"
+  },
+  "generator": {
+    "status": "SUPPORTED",
+    "manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307",
+    "modified": false
+  },
+  "siena_integrity": {
+    "status": "SUPPORTED",
+    "subjects": 14,
+    "declared_seizures": 47,
+    "accepted_seizures": 46,
+    "excluded_seizures": 1,
+    "primary_windows": 3515,
+    "preictal_windows": 5600
+  },
+  "chb_mit_existing": {
+    "status": "VIABLE CON LIMITACIONES",
+    "tstr_macro_auc": 0.6430743202093415,
+    "tstr_ci95": [
+      0.5460355378919731,
+      0.7332719679407158
+    ]
+  },
+  "siena_TSTR_RF_zscore": {
+    "status": "NOT EVALUABLE",
+    "macro_auc": 0.5862347148637471,
+    "ci95": [
+      0.4400382882882883,
+      0.7650312409183377
+    ],
+    "n_subjects": 4,
+    "endpoint": "ictal_vs_interictal_strict_at_least_4h"
+  },
+  "siena_protocols_RF_zscore": {
+    "SIENA_R2R_LOSO": {
+      "macro_auc": 0.6218591949661559,
+      "ci95_low": 0.4965165534804754,
+      "ci95_high": 0.7472018364518366,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    },
+    "TSTR_SYN_TO_SIENA": {
+      "macro_auc": 0.5862347148637471,
+      "ci95_low": 0.4400382882882883,
+      "ci95_high": 0.7650312409183377,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    },
+    "TSTR_FOCAL_SYN_TO_SIENA": {
+      "macro_auc": 0.5996897090867803,
+      "ci95_low": 0.46229225936462776,
+      "ci95_high": 0.7502175297113751,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    },
+    "CHB_TO_SIENA_REAL_REAL": {
+      "macro_auc": 0.6932209775442479,
+      "ci95_low": 0.5881904042200095,
+      "ci95_high": 0.7982515508684864,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    },
+    "CHB_PLUS_SYN_TO_SIENA": {
+      "macro_auc": 0.6768147657460583,
+      "ci95_low": 0.5562120376955904,
+      "ci95_high": 0.7974174937965262,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    },
+    "SIENA_PLUS_SYN_LOSO": {
+      "macro_auc": 0.6259601312450952,
+      "ci95_low": 0.5270370331069609,
+      "ci95_high": 0.7248832293832295,
+      "n_subjects": 4,
+      "n_subjects_total": 14
+    }
+  },
+  "focal_temporal_external": {
+    "status": "NOT SUPPORTED",
+    "features_within_real_real_q95_fraction": 0.8947368421052632,
+    "large_cliff_effects": 9,
+    "features_ks_ge_0_5": 5,
+    "laterality_accuracy": 0.6923076923076923,
+    "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+  },
+  "diversity_vs_siena": {
+    "status": "REPORTED",
+    "class_rows": [
+      {
+        "class": 0,
+        "fraction_close_feature_space": 0.002,
+        "syn_real_nn_median": 1.5637127377308637,
+        "real_real_nn_median": 0.7184842917263442,
+        "syn_syn_nn_median": 0.5208009885280351,
+        "diversity_ratio_syn_real": 0.7248606469543701,
+        "mmd2_rbf": 0.5081619106443003,
+        "not_privacy": true
+      },
+      {
+        "class": 1,
+        "fraction_close_feature_space": 0.002,
+        "syn_real_nn_median": 1.8679591758697347,
+        "real_real_nn_median": 1.165171848039142,
+        "syn_syn_nn_median": 0.7632078217689957,
+        "diversity_ratio_syn_real": 0.6550173891110884,
+        "mmd2_rbf": 0.20149401007290568,
+        "not_privacy": true
+      }
+    ]
+  },
+  "generalized_absence_external": {
+    "status": "NOT EVALUABLE",
+    "reason": "Siena no contiene una cohorte de ausencias generalizadas"
+  },
+  "preictal": {
+    "status": "DESCRIPTIVE ONLY",
+    "reason": "el generador no sintetiza una fase preictal"
+  },
+  "multicorpus_verdict": {
+    "status": "VIABLE REFORZADO CON LIMITACIONES",
+    "reason": "SYN→Siena está respaldado para detección ictal frente a preictal en 14 sujetos; el endpoint interictal estricto sigue limitado a cuatro sujetos y no se afirma equivalencia clínica.",
+    "not_clinical_equivalence": true
+  },
+  "siena_ictal_vs_preictal_14": {
+    "status": "SUPPORTED",
+    "interpretation": "external seizure-detection stress test; not preictal synthesis",
+    "macro_auc": 0.6992021055008338,
+    "ci95": [
+      0.6190591348054201,
+      0.7762500743358814
+    ],
+    "n_subjects": 14,
+    "paired_differences": [
+      {
+        "comparison": "SIENA_PLUS_SYN_minus_R2R",
+        "mean_auc_difference": 0.002395793548184743,
+        "ci95_low": -0.0101801895470661,
+        "ci95_high": 0.01657871875350134,
+        "subjects_improved": 6,
+        "n_subjects": 14,
+        "status": "NOT SUPPORTED"
+      },
+      {
+        "comparison": "SIENA_PLUS_SYN_minus_SMOTE",
+        "mean_auc_difference": 0.015362164179203112,
+        "ci95_low": -0.013338583114034103,
+        "ci95_high": 0.04359139980132889,
+        "subjects_improved": 8,
+        "n_subjects": 14,
+        "status": "NOT SUPPORTED"
+      },
+      {
+        "comparison": "CHB_PLUS_SYN_minus_CHB",
+        "mean_auc_difference": 0.05685747169498427,
+        "ci95_low": 0.0335963370290812,
+        "ci95_high": 0.08062536467493128,
+        "subjects_improved": 13,
+        "n_subjects": 14,
+        "status": "SUPPORTED"
+      },
+      {
+        "comparison": "TSTR_minus_R2R",
+        "mean_auc_difference": -0.017179947498206116,
+        "ci95_low": -0.056113979575975075,
+        "ci95_high": 0.021412032714413803,
+        "subjects_improved": 3,
+        "n_subjects": 14,
+        "status": "NOT SUPPORTED"
+      }
+    ]
+  }
+}

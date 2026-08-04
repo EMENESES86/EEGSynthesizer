@@ -1,0 +1,8 @@
+claim,status,evidence
+transferencia SYN→CHB-MIT,SUPPORTED,0.6430743202093415
+morfología focal temporal frente a adultos,NOT SUPPORTED,0.8947368421052632
+ausencia generalizada frente a Siena,NOT EVALUABLE,sin cohorte compatible
+preictal sintetizado,NOT SUPPORTED,fuera del generador
+equivalencia clínica,NOT SUPPORTED,fuera del alcance
+transferencia SYN→Siena: ictal vs interictal estricto,NOT EVALUABLE,0.5862347148637471
+transferencia SYN→Siena: ictal vs preictal (14 sujetos),SUPPORTED,0.6992021055008338

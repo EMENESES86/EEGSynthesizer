@@ -1,0 +1,122 @@
+{
+  "status": "NOT SUPPORTED",
+  "selected_candidate": false,
+  "improved_subjects": 4,
+  "required_improved_subjects": 4,
+  "no_domain_worse": false,
+  "diversity_ratio_candidate_baseline": 1.0000722180990627,
+  "pilots_passed": true,
+  "domain_scores": [
+    {
+      "domain": "background",
+      "score_baseline": 0.724129978517786,
+      "score_candidate": 0.7241140989987178
+    },
+    {
+      "domain": "spatial",
+      "score_baseline": 0.7200499057155956,
+      "score_candidate": 0.9155357932385582
+    },
+    {
+      "domain": "temporal",
+      "score_baseline": 1.1515498815390548,
+      "score_candidate": 0.9523809523809523
+    },
+    {
+      "domain": "variability",
+      "score_baseline": 0.7246980455021901,
+      "score_candidate": 0.6662917841027615
+    }
+  ],
+  "subject_scores": [
+    {
+      "subject": "chb01",
+      "score_baseline": 0.6939281453565087,
+      "score_candidate": 0.6713080651538048
+    },
+    {
+      "subject": "chb02",
+      "score_baseline": 0.8168944772965496,
+      "score_candidate": 0.7523302199718391
+    },
+    {
+      "subject": "chb03",
+      "score_baseline": 0.7161283624525874,
+      "score_candidate": 0.6952029415507397
+    },
+    {
+      "subject": "chb05",
+      "score_baseline": 0.8304991351522817,
+      "score_candidate": 0.8314228630051369
+    },
+    {
+      "subject": "chb06",
+      "score_baseline": 0.9416896057983838,
+      "score_candidate": 0.8355191418990968
+    }
+  ],
+  "baseline_parameters": {
+    "BASE_AMP_MEDIAN_V": 4.5e-05,
+    "BETA_MU": 2.0,
+    "BETA_SIGMA": 0.4,
+    "COMMON_FIELD_MIX": [
+      0.18,
+      0.42
+    ],
+    "ALPHA_AMP_V": [
+      2e-05,
+      5e-05
+    ],
+    "ALPHA_PROB": 0.75,
+    "TOPO_JITTER": [
+      0.85,
+      1.15
+    ],
+    "FOCAL_F0_RANGE": [
+      6.0,
+      12.0
+    ],
+    "FOCAL_F1_RANGE": [
+      3.0,
+      6.0
+    ],
+    "FOCAL_CONTRALATERAL_WEIGHT": 0.05
+  },
+  "candidate_parameters": {
+    "BASE_AMP_MEDIAN_V": 4.5e-05,
+    "BETA_MU": 2.0,
+    "BETA_SIGMA": 0.4,
+    "COMMON_FIELD_MIX": [
+      0.1659718966704249,
+      0.3872677588976581
+    ],
+    "ALPHA_AMP_V": [
+      2e-05,
+      5e-05
+    ],
+    "ALPHA_PROB": 0.75,
+    "TOPO_JITTER": [
+      0.85,
+      1.15
+    ],
+    "FOCAL_F0_RANGE": [
+      4.0,
+      6.0
+    ],
+    "FOCAL_F1_RANGE": [
+      2.5,
+      3.75
+    ],
+    "FOCAL_CONTRALATERAL_WEIGHT": 0.13862214758769617
+  },
+  "development_profile_sha256": "9e78e5b85d5e8b2c6c43b4d93e73ed20e519d8db43f6c4402acb57eccd510e95",
+  "calibration_iteration": 7,
+  "previous_rejected_audit_files": [
+    "generator_calibration_audit_iteration1.json",
+    "generator_calibration_audit_iteration2.json",
+    "generator_calibration_audit_iteration3.json",
+    "generator_calibration_audit_iteration4.json",
+    "generator_calibration_audit_iteration5.json",
+    "generator_calibration_audit_iteration6.json"
+  ]
+}

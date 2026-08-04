@@ -1,0 +1,328 @@
+{
+  "config": {
+    "schema_version": "4.0",
+    "fs_hz": 250,
+    "duration_s": 120,
+    "window_s": 2.0,
+    "step_s": 2.0,
+    "n_patients": 3000,
+    "final_seed": 42,
+    "class_counts": {
+      "none": 1500,
+      "generalized_absence": 750,
+      "focal_temporal": 750
+    },
+    "target_ptp_uv": {
+      "distribution": "truncated_lognormal",
+      "median": 300.0,
+      "sigma_log": 0.28,
+      "min": 150.0,
+      "max": 600.0,
+      "relative_tolerance": 0.05
+    },
+    "scenario_semantics": "internal_parametric_not_clinical_diagnoses",
+    "degradation_order": "after_complete_composition",
+    "pilot_seeds": [
+      42,
+      142,
+      242
+    ],
+    "pilot_patients_per_seed": 100
+  },
+  "pilot_reports": [
+    {
+      "seed": 42,
+      "n": 100,
+      "finite": true,
+      "amplitude_pass_rate": 1.0,
+      "target_in_bounds_rate": 1.0,
+      "boundary_mass": 0.0,
+      "median_target_error": 2.7748022136309557e-06,
+      "generalized_morphology_rate": 1.0,
+      "focal_morphology_rate": 1.0,
+      "digest": "f21555cd2164406fa7b7db519036bf1f1127945efb1e1c9e7ccf960825469d66",
+      "passed": true
+    },
+    {
+      "seed": 142,
+      "n": 100,
+      "finite": true,
+      "amplitude_pass_rate": 1.0,
+      "target_in_bounds_rate": 1.0,
+      "boundary_mass": 0.0,
+      "median_target_error": 2.1683493075835497e-06,
+      "generalized_morphology_rate": 1.0,
+      "focal_morphology_rate": 1.0,
+      "digest": "2ff9bb2c827815833802f4d1ab34ff2608c3172e413437f728443f3e7cde661d",
+      "passed": true
+    },
+    {
+      "seed": 242,
+      "n": 100,
+      "finite": true,
+      "amplitude_pass_rate": 1.0,
+      "target_in_bounds_rate": 1.0,
+      "boundary_mass": 0.0,
+      "median_target_error": 3.0241771051443925e-06,
+      "generalized_morphology_rate": 1.0,
+      "focal_morphology_rate": 1.0,
+      "digest": "e2b1a3600bd7af2a7542bf5bb85af0fe6eeb020d71f687503ba320f5996332fc",
+      "passed": true
+    }
+  ],
+  "candidate_audit": {
+    "status": "SUPPORTED",
+    "passed": true,
+    "issues": [],
+    "metrics": {
+      "n_patients": 3000,
+      "n_windows": 180000,
+      "amplitude_pass_rate": 1.0,
+      "median_target_error": 2.5669134285237966e-06,
+      "boundary_mass": 0.0,
+      "generalized_morphology_rate": 1.0,
+      "focal_morphology_rate": 1.0,
+      "patient_split_disjoint": true,
+      "train_shape": [
+        126000,
+        500,
+        19
+      ],
+      "train_ictal_fraction": 0.07720634920634921,
+      "val_shape": [
+        27000,
+        500,
+        19
+      ],
+      "val_ictal_fraction": 0.07407407407407407,
+      "test_shape": [
+        27000,
+        500,
+        19
+      ],
+      "test_ictal_fraction": 0.07440740740740741
+    }
+  },
+  "software": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1"
+  },
+  "created_utc": "2026-07-31T14:46:05Z",
+  "files": {
+    "cohort_metadata.csv": {
+      "bytes": 1253000,
+      "sha256": "30784ca34a24dab72d0f13bf8098d2974f72f49f3f2574e38e6517b0a48b0b3c"
+    },
+    "fig1_eeg_waveforms.pdf": {
+      "bytes": 29337,
+      "sha256": "4c9d73ad1db9c4f1506f85337153bb0881637f47b1cbb7de7f040fabfe253e46"
+    },
+    "fig1_eeg_waveforms.png": {
+      "bytes": 232175,
+      "sha256": "164d051e2deb6b1d07daebe7ec54ce6ba8f61f660c13346bdca56b93a00ac6e2"
+    },
+    "fig2_psd_comparison.pdf": {
+      "bytes": 16588,
+      "sha256": "fd75e1f982f05ea4c32c75f7fb85f1d9a5dacef91a3c87cded2e70b00c26848f"
+    },
+    "fig2_psd_comparison.png": {
+      "bytes": 118123,
+      "sha256": "c52c0e6ef5c30eda1744735c53d53b0ad6760c3a77e1627be267b9efe500a100"
+    },
+    "fig3_topography.pdf": {
+      "bytes": 14532,
+      "sha256": "494b2fee5a702bc6d6c81b7602150f9979bfc46b602aa355be6aee4710598365"
+    },
+    "fig3_topography.png": {
+      "bytes": 39445,
+      "sha256": "2c4a9ba78fa2ba647afb601a5b3a554f4c4bbae9efa7191db034112e9a4fbff8"
+    },
+    "pilot_validation.csv": {
+      "bytes": 535,
+      "sha256": "589851822ffa4d4f7fae50a5eb2a2ffb7d1e67ae1974591ffa006b126d94e1ed"
+    },
+    "tabla_amplitudes.csv": {
+      "bytes": 677,
+      "sha256": "d43da8fa258ce1ea93639b142d168405116465382e2412a6d461a17c9c6a859b"
+    },
+    "window_metadata_test.csv": {
+      "bytes": 1378679,
+      "sha256": "fe379d5de2e3fcedfd680c9ab1ae885d318b8671a5a038695fc326852ad5bfdc"
+    },
+    "window_metadata_train.csv": {
+      "bytes": 6631102,
+      "sha256": "395d565c7ed6e7b3d5a14925e9b94c8a1143ae281dcf304315047f3e367c5f83"
+    },
+    "window_metadata_val.csv": {
+      "bytes": 1357058,
+      "sha256": "359a7c8d8beb62a6f03f3d9a8bff5b1b6bcc1b5db22d383d205155e080209914"
+    },
+    "X_test.npy": {
+      "bytes": 1026000128,
+      "sha256": "9c2105a78660a08db800eccc846810787a46d837631f994b83d24cfcd418f568"
+    },
+    "X_train.npy": {
+      "bytes": 4788000128,
+      "sha256": "760ffefc038f447e078f92055fc99db35e235ea55aca12ddb7684f445e1c2c82"
+    },
+    "X_val.npy": {
+      "bytes": 1026000128,
+      "sha256": "11062c958bee1d2b4f0ba66a975121bade684707bf3065a16621edcfd06c7dff"
+    },
+    "y_test.npy": {
+      "bytes": 27128,
+      "sha256": "921b72d942e4abbf959713c2770dcf211d5ed1f3cf8d1020ca44b4bc7c73c46b"
+    },
+    "y_test_soft.npy": {
+      "bytes": 108128,
+      "sha256": "bde64eb417c102b6bfa1e474965914ab1cefd6256d2eab988bfa319a03a11ef2"
+    },
+    "y_train.npy": {
+      "bytes": 126128,
+      "sha256": "6d268e32414bb05f2e2058decfeb6f8d2cac87f00d4784c605402de19f6159a7"
+    },
+    "y_train_soft.npy": {
+      "bytes": 504128,
+      "sha256": "462ff8c91317b31d065e2df0499ea77c0bd1539046641b6a6a19a0752f577db9"
+    },
+    "y_val.npy": {
+      "bytes": 27128,
+      "sha256": "dd960382151fec3c68773e819fb030d587371d78d47d29733a2e068b93507c4d"
+    },
+    "y_val_soft.npy": {
+      "bytes": 108128,
+      "sha256": "401bdebe1ff6496d7bcc6ffbff2b9cdf4a4fd3c656da7b0157229daf12b86746"
+    }
+  },
+  "manifest_refreshed_utc": "2026-07-31T15:49:43.481651+00:00",
+  "development_calibration": {
+    "status": "NOT SUPPORTED",
+    "selected_candidate": false,
+    "improved_subjects": 4,
+    "required_improved_subjects": 4,
+    "no_domain_worse": false,
+    "diversity_ratio_candidate_baseline": 1.0000722180990627,
+    "pilots_passed": true,
+    "domain_scores": [
+      {
+        "domain": "background",
+        "score_baseline": 0.724129978517786,
+        "score_candidate": 0.7241140989987178
+      },
+      {
+        "domain": "spatial",
+        "score_baseline": 0.7200499057155956,
+        "score_candidate": 0.9155357932385582
+      },
+      {
+        "domain": "temporal",
+        "score_baseline": 1.1515498815390548,
+        "score_candidate": 0.9523809523809523
+      },
+      {
+        "domain": "variability",
+        "score_baseline": 0.7246980455021901,
+        "score_candidate": 0.6662917841027615
+      }
+    ],
+    "subject_scores": [
+      {
+        "subject": "chb01",
+        "score_baseline": 0.6939281453565087,
+        "score_candidate": 0.6713080651538048
+      },
+      {
+        "subject": "chb02",
+        "score_baseline": 0.8168944772965496,
+        "score_candidate": 0.7523302199718391
+      },
+      {
+        "subject": "chb03",
+        "score_baseline": 0.7161283624525874,
+        "score_candidate": 0.6952029415507397
+      },
+      {
+        "subject": "chb05",
+        "score_baseline": 0.8304991351522817,
+        "score_candidate": 0.8314228630051369
+      },
+      {
+        "subject": "chb06",
+        "score_baseline": 0.9416896057983838,
+        "score_candidate": 0.8355191418990968
+      }
+    ],
+    "baseline_parameters": {
+      "BASE_AMP_MEDIAN_V": 4.5e-05,
+      "BETA_MU": 2.0,
+      "BETA_SIGMA": 0.4,
+      "COMMON_FIELD_MIX": [
+        0.18,
+        0.42
+      ],
+      "ALPHA_AMP_V": [
+        2e-05,
+        5e-05
+      ],
+      "ALPHA_PROB": 0.75,
+      "TOPO_JITTER": [
+        0.85,
+        1.15
+      ],
+      "FOCAL_F0_RANGE": [
+        6.0,
+        12.0
+      ],
+      "FOCAL_F1_RANGE": [
+        3.0,
+        6.0
+      ],
+      "FOCAL_CONTRALATERAL_WEIGHT": 0.05
+    },
+    "candidate_parameters": {
+      "BASE_AMP_MEDIAN_V": 4.5e-05,
+      "BETA_MU": 2.0,
+      "BETA_SIGMA": 0.4,
+      "COMMON_FIELD_MIX": [
+        0.1659718966704249,
+        0.3872677588976581
+      ],
+      "ALPHA_AMP_V": [
+        2e-05,
+        5e-05
+      ],
+      "ALPHA_PROB": 0.75,
+      "TOPO_JITTER": [
+        0.85,
+        1.15
+      ],
+      "FOCAL_F0_RANGE": [
+        4.0,
+        6.0
+      ],
+      "FOCAL_F1_RANGE": [
+        2.5,
+        3.75
+      ],
+      "FOCAL_CONTRALATERAL_WEIGHT": 0.13862214758769617
+    },
+    "development_profile_sha256": "519faffc03b5872521261b8f23d1ca30b42cc8278a2ba18ff45027caa53d9471",
+    "calibration_iteration": 7,
+    "previous_rejected_audit_files": [
+      "generator_calibration_audit_iteration1.json",
+      "generator_calibration_audit_iteration2.json",
+      "generator_calibration_audit_iteration3.json",
+      "generator_calibration_audit_iteration4.json",
+      "generator_calibration_audit_iteration5.json",
+      "generator_calibration_audit_iteration6.json"
+    ]
+  },
+  "external_freeze": {
+    "frozen": true,
+    "frozen_utc": "2026-07-31T17:30:07Z",
+    "selected": "baseline"
+  }
+}

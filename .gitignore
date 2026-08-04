@@ -1,17 +1,68 @@
 # ============================================================
-#  EEGSynthesizer — .gitignore
+# EEGSynthesizer — archivos locales y artefactos reconstruibles
 # ============================================================
- 
- 
-# --- Entorno virtual / Virtual environment ---
+
+# Entornos virtuales
 .venv/
 venv/
 env/
 .env/
- 
- 
-# --- Datasets generados (archivos pesados) ---
-# Generated datasets (heavy files)
-dataset_eeg_final/
-dataset_doctorado_final/
+
+# Dataset sintético: se publican solo el manifiesto y el piloto compacto.
+dataset_eeg_final/*
+!dataset_eeg_final/generation_manifest.json
+!dataset_eeg_final/pilot_validation.csv
+
+# Validación: los EDF, matrices y cachés pesados se reconstruyen localmente.
+dataset_doctorado_final/*
+!dataset_doctorado_final/reproducibility_state.json
+!dataset_doctorado_final/real_manifest.json
+!dataset_doctorado_final/siena_manifest.json
+!dataset_doctorado_final/validation_q1_assets/
+dataset_doctorado_final/validation_q1_assets/*
+!dataset_doctorado_final/validation_q1_assets/development_profile.json
+!dataset_doctorado_final/validation_q1_assets/dev_source_manifest.json
+!dataset_doctorado_final/validation_q1_assets/dev_feature_profile.csv
+!dataset_doctorado_final/validation_q1_assets/dev_event_evolution.csv
+!dataset_doctorado_final/validation_q1_assets/dev_window_features.csv
+!dataset_doctorado_final/validation_q1_assets/dev_window_metadata.csv
+!dataset_doctorado_final/validation_q1_assets/generator_calibration_audit.json
+!dataset_doctorado_final/validation_q1_assets/generator_calibration_comparison.csv
+!dataset_doctorado_final/validation_q1_assets/01_internal_separability.csv
+!dataset_doctorado_final/validation_q1_assets/02_fidelity_featurewise.csv
+!dataset_doctorado_final/validation_q1_assets/02b_morphology_coverage.csv
+!dataset_doctorado_final/validation_q1_assets/02c_fidelity_by_subject.csv
+!dataset_doctorado_final/validation_q1_assets/03_cross_domain_loso.csv
+!dataset_doctorado_final/validation_q1_assets/03b_cross_domain_bootstrap.csv
+!dataset_doctorado_final/validation_q1_assets/04_feature_space_proximity_diversity.csv
+!dataset_doctorado_final/validation_q1_assets/05_final_summary.json
+!dataset_doctorado_final/validation_q1_assets/05_final_verdict_lines.csv
+!dataset_doctorado_final/validation_q1_assets/06_thesis_claim_matrix.csv
+!dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_by_patient.csv
+!dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_summary.json
+!dataset_doctorado_final/validation_q1_assets/08_siena_annotation_audit.csv
+!dataset_doctorado_final/validation_q1_assets/08_siena_integrity_summary.json
+!dataset_doctorado_final/validation_q1_assets/09_siena_fidelity_featurewise.csv
+!dataset_doctorado_final/validation_q1_assets/09_siena_morphology_coverage.csv
+!dataset_doctorado_final/validation_q1_assets/09_siena_proximity_diversity.csv
+!dataset_doctorado_final/validation_q1_assets/10_siena_mmd_by_subject.csv
+!dataset_doctorado_final/validation_q1_assets/10_siena_real_real_by_subject.csv
+!dataset_doctorado_final/validation_q1_assets/10_siena_real_real_reference.csv
+!dataset_doctorado_final/validation_q1_assets/11_siena_bootstrap_summary.csv
+!dataset_doctorado_final/validation_q1_assets/11_siena_transfer_loso.csv
+!dataset_doctorado_final/validation_q1_assets/12_siena_laterality_audit.csv
+!dataset_doctorado_final/validation_q1_assets/12_siena_phase_summary.csv
+!dataset_doctorado_final/validation_q1_assets/13_multicorpus_claim_matrix.csv
+!dataset_doctorado_final/validation_q1_assets/13_multicorpus_comparison.csv
+!dataset_doctorado_final/validation_q1_assets/13_multicorpus_final_summary.json
+!dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_bootstrap.csv
+!dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_integrity.json
+!dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_loso.csv
+!dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_paired_differences.csv
+!dataset_doctorado_final/validation_q1_assets/15_reproducibility_audit.json
+
+# Trabajo temporal, descargas parciales y copias locales
+tmp/
+*.part
+.ipynb_checkpoints/
 backup/

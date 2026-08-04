@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0-symmetry-audit",
+  "generated_utc": "2026-08-04T02:54:05Z",
+  "source_generation_manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307",
+  "validator_notebook_sha256": "4f94d2431729e84e0f21010697374182fa2b0d0f0cb97040539305e5e5b71baf",
+  "detail_csv": "07_generalized_symmetry_by_patient.csv",
+  "detail_csv_sha256": "057555292a2cd35a0be15137145b6fda0a46bf27632d6609fc96f4bc65f0498d",
+  "source_hashes_verified": true,
+  "generator_parameters_changed": false,
+  "generator_recalibrated": false,
+  "external_cohort_used": false,
+  "n_generalized_events": 750,
+  "symmetry_relative_difference_threshold": 0.35,
+  "acceptance_rate": 0.9,
+  "clean_nondegraded": {
+    "status": "SUPPORTED",
+    "pass_count": 750,
+    "pass_rate": 1.0,
+    "interpretation": "simetría morfológica en pares frontales no degradados"
+  },
+  "final_all_channels": {
+    "status": "NOT SUPPORTED",
+    "pass_count": 603,
+    "pass_rate": 0.804,
+    "interpretation": "simetría observable después de degradación de adquisición"
+  },
+  "events_with_frontal_pair_degradation": 149,
+  "frequency_2_5_4": {
+    "pass_count": 750,
+    "pass_rate": 1.0
+  },
+  "frontcentral_peak": {
+    "pass_count": 747,
+    "pass_rate": 0.996
+  },
+  "overall_interpretation": "La morfología bilateral está respaldada en pares no degradados; la simetría final debe reportarse por separado porque la degradación puede romperla."
+}

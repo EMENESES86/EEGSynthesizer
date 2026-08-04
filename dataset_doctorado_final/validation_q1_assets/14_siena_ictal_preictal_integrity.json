@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0-siena-ictal-preictal",
+  "generated_utc": "2026-08-04T04:11:23Z",
+  "endpoint": "ictal_vs_preictal_30_to_5_min",
+  "interpretation": "detección ictal frente a preictal; no síntesis ni predicción preictal",
+  "criteria_frozen_in_notebook": {
+    "minimum_subjects": 10,
+    "TSTR_supported": "macro AUROC > 0.5 and subject-bootstrap lower 95% > 0.5",
+    "augmentation_supported": "paired subject-bootstrap lower 95% of AUROC difference > 0",
+    "classification_threshold": 0.5
+  },
+  "source_integrity": {
+    "official_sha256_entries_verified": 58,
+    "official_edf": 41,
+    "siena_artifact_hashes_verified": true,
+    "synthetic_manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307"
+  },
+  "cohort": {
+    "subjects_total": 14,
+    "subjects_evaluable": 14,
+    "evaluable_subject_ids": [
+      "PN00",
+      "PN01",
+      "PN03",
+      "PN05",
+      "PN06",
+      "PN07",
+      "PN09",
+      "PN10",
+      "PN11",
+      "PN12",
+      "PN13",
+      "PN14",
+      "PN16",
+      "PN17"
+    ],
+    "ictal_windows": 1915,
+    "preictal_windows": 5600,
+    "strict_interictal_subjects": [
+      "PN01",
+      "PN03",
+      "PN07",
+      "PN14"
+    ],
+    "strict_interictal_subject_count": 4,
+    "duplicate_windows": 0,
+    "patient_leakage": false,
+    "finite": true
+  },
+  "TSTR_RF_zscore": {
+    "status": "SUPPORTED",
+    "macro_auc": 0.6992021055008338,
+    "ci95": [
+      0.6190591348054201,
+      0.7762500743358814
+    ],
+    "n_subjects": 14
+  },
+  "paired_differences": [
+    {
+      "comparison": "SIENA_PLUS_SYN_minus_R2R",
+      "mean_auc_difference": 0.002395793548184743,
+      "ci95_low": -0.0101801895470661,
+      "ci95_high": 0.01657871875350134,
+      "subjects_improved": 6,
+      "n_subjects": 14,
+      "status": "NOT SUPPORTED"
+    },
+    {
+      "comparison": "SIENA_PLUS_SYN_minus_SMOTE",
+      "mean_auc_difference": 0.015362164179203112,
+      "ci95_low": -0.013338583114034103,
+      "ci95_high": 0.04359139980132889,
+      "subjects_improved": 8,
+      "n_subjects": 14,
+      "status": "NOT SUPPORTED"
+    },
+    {
+      "comparison": "CHB_PLUS_SYN_minus_CHB",
+      "mean_auc_difference": 0.05685747169498427,
+      "ci95_low": 0.0335963370290812,
+      "ci95_high": 0.08062536467493128,
+      "subjects_improved": 13,
+      "n_subjects": 14,
+      "status": "SUPPORTED"
+    },
+    {
+      "comparison": "TSTR_minus_R2R",
+      "mean_auc_difference": -0.017179947498206116,
+      "ci95_low": -0.056113979575975075,
+      "ci95_high": 0.021412032714413803,
+      "subjects_improved": 3,
+      "n_subjects": 14,
+      "status": "NOT SUPPORTED"
+    }
+  ],
+  "numeric_artifacts": {
+    "14_siena_ictal_preictal_loso.csv": {
+      "sha256": "a59772fe76612e3a34bac8ad5334230da7a4222e9af2c243f104efeef5e60bf2",
+      "bytes": 56810
+    },
+    "14_siena_ictal_preictal_bootstrap.csv": {
+      "sha256": "8c26b236aca5bcbbd71186e37173b43562bcaae193bbaccb4c002231fd706a79",
+      "bytes": 15975
+    },
+    "14_siena_ictal_preictal_paired_differences.csv": {
+      "sha256": "b457d4432fbdc381e52bfc128b6e915f740480257897eb5bfcfe5f6034faa9f4",
+      "bytes": 502
+    }
+  }
+}

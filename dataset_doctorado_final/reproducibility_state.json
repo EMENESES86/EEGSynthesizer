@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0-reproducibility",
+  "stages": {
+    "S1_development_profile": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T04:27:11Z",
+      "artifacts": {
+        "development_profile": {
+          "exists": true,
+          "bytes": 1171,
+          "sha256": "9e78e5b85d5e8b2c6c43b4d93e73ed20e519d8db43f6c4402acb57eccd510e95"
+        },
+        "dev_source_manifest": {
+          "exists": true,
+          "bytes": 6850,
+          "sha256": "fbda832f944bee08bfae7693d7c5584e7bdac9d39472b25bb83492f26ef2281b"
+        },
+        "dev_feature_profile": {
+          "exists": true,
+          "bytes": 18227,
+          "sha256": "4a1d2915ff66bed46176423ed7d625356f5c1048400731d403a36b6eb1216c3a"
+        }
+      },
+      "details": {
+        "subjects": [
+          "chb01",
+          "chb02",
+          "chb03",
+          "chb05",
+          "chb06"
+        ],
+        "next_step": "execute 1_0 in full mode"
+      }
+    },
+    "S3_synthetic_frozen": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T02:53:53Z",
+      "details": {
+        "selected_profile": "baseline",
+        "reused": true
+      },
+      "artifacts": {
+        "generation_manifest": {
+          "bytes": 9560,
+          "sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307"
+        }
+      }
+    },
+    "S4_chbmit_derived": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T04:12:05Z",
+      "artifacts": {
+        "real_manifest": {
+          "exists": true,
+          "bytes": 22489,
+          "sha256": "734595476187c3581372823c93ef967216aab4f869efcf67c5a21a3301874ffc"
+        },
+        "metadata": {
+          "exists": true,
+          "bytes": 738103,
+          "sha256": "13d1c46945ec3bb20e103a009a1d29aa27893be9e64e0e02d49876f3de8f9583"
+        }
+      },
+      "details": {
+        "subjects": 23,
+        "windows": 14004,
+        "next_step": "execute siena_external"
+      }
+    },
+    "S5_siena_raw": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T04:11:23Z",
+      "artifacts": {
+        "official_checksums": {
+          "exists": true,
+          "bytes": 4866,
+          "sha256": "855450dd7c7b1ea40c042a195eff8385994e6718b1c4c17951498ada78d5e568"
+        }
+      },
+      "details": {
+        "official_entries": 58,
+        "official_edf": 41,
+        "raw_download": {
+          "official_entries": 58,
+          "official_edf": 41,
+          "downloaded": 0,
+          "resumed": 0
+        }
+      }
+    },
+    "S6_siena_derived": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T04:11:23Z",
+      "artifacts": {
+        "siena_manifest": {
+          "exists": true,
+          "bytes": 2317,
+          "sha256": "67fb8099f9818f72a31dfdadbc950b1730c4b9c2ef58b5aae328e7bd44db1c25"
+        },
+        "annotation_audit": {
+          "exists": true,
+          "bytes": 5785,
+          "sha256": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c"
+        }
+      },
+      "details": {
+        "subjects": 14,
+        "windows": 9115
+      }
+    },
+    "S7_external_results": {
+      "status": "SUPPORTED",
+      "completed_utc": "2026-08-04T04:11:23Z",
+      "artifacts": {
+        "multicorpus_summary": {
+          "exists": true,
+          "bytes": 5742,
+          "sha256": "ed3da38685119c0f684be691b0f83f69ea415a3f860b195d7d8592d566ebe074"
+        },
+        "ictal_preictal_integrity": {
+          "exists": true,
+          "bytes": 3267,
+          "sha256": "78ef8911bae576171771cf68a91cb38171f07059b69fca09b04b854d9ba27f1c"
+        }
+      },
+      "details": {
+        "interpretation": "operational research validation; not clinical equivalence"
+      }
+    }
+  }
+}

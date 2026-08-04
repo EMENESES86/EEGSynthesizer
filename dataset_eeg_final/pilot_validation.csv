@@ -1,0 +1,4 @@
+seed,n,finite,amplitude_pass_rate,target_in_bounds_rate,boundary_mass,median_target_error,generalized_morphology_rate,focal_morphology_rate,digest,passed
+42,100,True,1.0,1.0,0.0,2.7748022136309557e-06,1.0,1.0,f21555cd2164406fa7b7db519036bf1f1127945efb1e1c9e7ccf960825469d66,True
+142,100,True,1.0,1.0,0.0,2.1683493075835497e-06,1.0,1.0,2ff9bb2c827815833802f4d1ab34ff2608c3172e413437f728443f3e7cde661d,True
+242,100,True,1.0,1.0,0.0,3.0241771051443925e-06,1.0,1.0,e2b1a3600bd7af2a7542bf5bb85af0fe6eeb020d71f687503ba320f5996332fc,True

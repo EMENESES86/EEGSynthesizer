@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0-siena-multicorpus",
+  "source": {
+    "name": "Siena Scalp EEG Database",
+    "version": "1.0.0",
+    "doi": "10.13026/5d4a-j060",
+    "license": "CC BY 4.0",
+    "declared_subjects": 14,
+    "declared_edf": 41,
+    "declared_seizures": 47
+  },
+  "fs_hz": 250,
+  "window_s": 2.0,
+  "phase_definition": {
+    "ictal": "occupancy >= 0.5",
+    "preictal": "30 to 5 min before onset",
+    "interictal_strict": ">= 4 h from any accepted seizure",
+    "mixed_transition_postictal": "excluded"
+  },
+  "prospective_acceptance_criteria": {
+    "TSTR": "all SYN ictal scenarios; RF zscore macro AUROC > 0.5, bootstrap lower 95% > 0.5, at least 10 evaluable subjects",
+    "complete_focal_morphology": "all predefined features inside the Siena REAL-REAL LOSO q95 envelope"
+  },
+  "n_subjects": 14,
+  "n_windows": 9115,
+  "phase_counts": {
+    "preictal": 5600,
+    "ictal": 1915,
+    "interictal_strict": 1600
+  },
+  "accepted_seizures": 46,
+  "excluded_seizures": 1,
+  "official_sha256_entries": 58,
+  "artifacts": {
+    "siena_X.npy": {
+      "sha256": "c9e7a885c8d00322a53f2d31e88bb614dc6d231ef34e645ec4b4ded5ad293950",
+      "bytes": 328140128
+    },
+    "siena_y.npy": {
+      "sha256": "a91949ce241a0773f97e7fbdef131d75c3ed823697c7ed585dddb0569a39636b",
+      "bytes": 9243
+    },
+    "siena_pid.npy": {
+      "sha256": "e927c7a16ca5f12bffe31fdf02385d7b0a773210bc6d8c0e48d583824adad7cf",
+      "bytes": 145968
+    },
+    "siena_window_metadata.csv": {
+      "sha256": "096e05c5516e27c46c9890090964ac34ba055f5d7cacfeb95f6000e7f3e45d0a",
+      "bytes": 759021
+    },
+    "siena_annotation_audit.csv": {
+      "sha256": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "bytes": 5785
+    }
+  },
+  "synthetic_manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307",
+  "validator_notebook_sha256": "f2c456e15f14a4e3f9b6b1d7b3e851d9d8e90398a681e3a2e78911a58f4329fc",
+  "software": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "mne": "1.11.0"
+  },
+  "checkpoint_commit": "b554de3a2b5149d662c9e133d8d27320897eaee4",
+  "created_utc": "2026-07-31T21:56:01Z"
+}

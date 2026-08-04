@@ -1,0 +1,80 @@
+{
+  "schema_version": "5.1-dev",
+  "subjects": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb05",
+    "chb06"
+  ],
+  "n_windows": 2980,
+  "source_contract_sha256": "97d36de26ca2a844128e15739b05b28ca9dd7fccfe6390dea89ccc6d6e410541",
+  "feature_names": [
+    "ptp_med",
+    "ptp_p95",
+    "std_med",
+    "std_p95",
+    "bp1_4",
+    "bp4_8",
+    "bp8_13",
+    "bp13_30",
+    "ratio_2_6__6_20",
+    "beta",
+    "Hspec",
+    "corr_abs_mean",
+    "corr_abs_p95",
+    "dom_freq",
+    "freq_first",
+    "freq_last",
+    "rms_last_first",
+    "spatial_concentration",
+    "laterality_abs"
+  ],
+  "feature_domains": {
+    "background": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "temporal": [
+      8,
+      13,
+      14,
+      15,
+      16
+    ],
+    "spatial": [
+      11,
+      12,
+      17,
+      18
+    ],
+    "variability": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "n_events_with_evolution": 36
+}

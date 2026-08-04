@@ -1,0 +1,9 @@
+claim,status
+generator_integrity,SUPPORTED
+real_cohort_integrity,SUPPORTED
+internal_separability,SUPPORTED
+external_TSTR_RF_zscore,SUPPORTED
+fidelity_similarity,NOT SUPPORTED
+external_morphology_coverage,NOT SUPPORTED
+feature_space_proximity,SUPPORTED
+diversity_vs_real,NOT SUPPORTED

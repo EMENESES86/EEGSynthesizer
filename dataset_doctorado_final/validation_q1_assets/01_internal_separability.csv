@@ -1,0 +1,5 @@
+mode,model,protocol,roc_auc,average_precision,n_train,n_test,train_splits,test_split,patient_disjoint,status
+raw,LR,SYN_TRAIN+VAL→SYN_TEST,0.9787375,0.9825043239134186,4800,2400,"train,val",test,True,SUPPORTED
+raw,RF,SYN_TRAIN+VAL→SYN_TEST,0.9909743055555557,0.9924097173101626,4800,2400,"train,val",test,True,SUPPORTED
+zscore,LR,SYN_TRAIN+VAL→SYN_TEST,0.9814833333333335,0.9828992662263392,4800,2400,"train,val",test,True,SUPPORTED
+zscore,RF,SYN_TRAIN+VAL→SYN_TEST,0.9813520833333333,0.9854312197940509,4800,2400,"train,val",test,True,SUPPORTED

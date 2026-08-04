@@ -1,0 +1,14 @@
+thesis_claim,status,new_evidence,required_action
+N=3000 sujetos sintéticos,VIGENTE,generation_manifest.json,mantener
+CHB-MIT limitado a 5 sujetos/24 EDF,OBSOLETO,23 personas procesadas; 18 externas; 171 EDF seleccionados,sustituir métodos y limitaciones
+ventanas REAL con 50% de solapamiento,OBSOLETO,2 s sin solapamiento,sustituir
+ROC-AUC interno histórico 0.999,OBSOLETO,RF zscore=0.981352,sustituir por 01_internal_separability.csv
+TSTR histórico 0.613,OBSOLETO,"RF zscore=0.643074; IC95% [0.546036, 0.733272]",sustituir
+R2R histórico 0.466,OBSOLETO,"RF zscore=0.624590; IC95% [0.515534, 0.727367]",sustituir
+SMOTE histórico 0.475 ± 0.098,OBSOLETO,"RF zscore=0.619280; IC95% [0.510074, 0.723853]",sustituir
+proximidad/memorización histórica 0.8%,OBSOLETO,proximidad clase0=0.0160; clase1=0.0040,renombrar; no afirmar privacidad
+diversidad histórica 0.569,OBSOLETO,SYN/REAL clase0=0.5872; clase1=0.7068,sustituir y declarar diversidad menor
+Gap/IQR global histórico 1.045 y rasgos históricos,OBSOLETO,02_fidelity_featurewise.csv,sustituir cifras completas
+equivalencia clínica o capacidad diagnóstica,NO RESPALDADO,fuera del alcance,no afirmar
+fidelidad uniforme SYN↔REAL,NO RESPALDADO,11 efectos ictales Cliff grandes; 10 KS≥0.5,reportar desplazamiento de dominio
+generador paramétrico controlado para investigación,VIGENTE,"integridad, reproducibilidad y contrato interno aprobados",mantener con limitaciones externas
