@@ -34,7 +34,7 @@
     },
     "S3_synthetic_frozen": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T02:53:53Z",
+      "completed_utc": "2026-08-04T04:55:36Z",
       "details": {
         "selected_profile": "baseline",
         "reused": true
@@ -42,13 +42,13 @@
       "artifacts": {
         "generation_manifest": {
           "bytes": 9560,
-          "sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307"
+          "sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0"
         }
       }
     },
     "S4_chbmit_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:12:05Z",
+      "completed_utc": "2026-08-04T04:56:43Z",
       "artifacts": {
         "real_manifest": {
           "exists": true,
@@ -69,7 +69,7 @@
     },
     "S5_siena_raw": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:11:23Z",
+      "completed_utc": "2026-08-04T05:27:36Z",
       "artifacts": {
         "official_checksums": {
           "exists": true,
@@ -90,7 +90,7 @@
     },
     "S6_siena_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:11:23Z",
+      "completed_utc": "2026-08-04T05:27:36Z",
       "artifacts": {
         "siena_manifest": {
           "exists": true,
@@ -110,17 +110,17 @@
     },
     "S7_external_results": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:11:23Z",
+      "completed_utc": "2026-08-04T05:27:36Z",
       "artifacts": {
         "multicorpus_summary": {
           "exists": true,
           "bytes": 5742,
-          "sha256": "ed3da38685119c0f684be691b0f83f69ea415a3f860b195d7d8592d566ebe074"
+          "sha256": "fb94132b91596d893ac53fb30dbfca8d5b46214f1bdc24c573089405a388917e"
         },
         "ictal_preictal_integrity": {
           "exists": true,
           "bytes": 3267,
-          "sha256": "78ef8911bae576171771cf68a91cb38171f07059b69fca09b04b854d9ba27f1c"
+          "sha256": "d3a755ee608a0c00882bf5bdd00d6a89ca6e52fc258c232cdce87ada787e580a"
         }
       },
       "details": {

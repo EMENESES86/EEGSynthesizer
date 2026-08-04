@@ -117,24 +117,24 @@
       "sha256": "30784ca34a24dab72d0f13bf8098d2974f72f49f3f2574e38e6517b0a48b0b3c"
     },
     "fig1_eeg_waveforms.pdf": {
-      "bytes": 29337,
-      "sha256": "4c9d73ad1db9c4f1506f85337153bb0881637f47b1cbb7de7f040fabfe253e46"
+      "bytes": 29269,
+      "sha256": "1fdf611d0e0f4605c4391f8431947cb89fc4d568bd1ad3f18ed2d747e85c6443"
     },
     "fig1_eeg_waveforms.png": {
       "bytes": 232175,
       "sha256": "164d051e2deb6b1d07daebe7ec54ce6ba8f61f660c13346bdca56b93a00ac6e2"
     },
     "fig2_psd_comparison.pdf": {
-      "bytes": 16588,
-      "sha256": "fd75e1f982f05ea4c32c75f7fb85f1d9a5dacef91a3c87cded2e70b00c26848f"
+      "bytes": 16520,
+      "sha256": "73ff4fabfc81a0e80f02373647773b4a3a32247faf622782313c62059b9ac7b3"
     },
     "fig2_psd_comparison.png": {
       "bytes": 118123,
       "sha256": "c52c0e6ef5c30eda1744735c53d53b0ad6760c3a77e1627be267b9efe500a100"
     },
     "fig3_topography.pdf": {
-      "bytes": 14532,
-      "sha256": "494b2fee5a702bc6d6c81b7602150f9979bfc46b602aa355be6aee4710598365"
+      "bytes": 14464,
+      "sha256": "fcfacdedc6ed240a0a701a6edd5ac636de06d5e3964ce684108943fb4adacfe5"
     },
     "fig3_topography.png": {
       "bytes": 39445,

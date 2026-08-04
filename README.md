@@ -231,11 +231,15 @@ válido por archivos parciales.
 | S4 | CHB-MIT derivado e íntegro |
 | S5 | Corpus Siena oficial verificado |
 | S6 | Ventanas Siena derivadas e íntegras |
-| S7 | Resultados externos terminados |
+| S7 | Snapshots compactos de resultados externos disponibles |
 
 Cada etapa incluye estado, fecha UTC, hashes, tamaños y el siguiente paso. Los
 checkpoints no sustituyen los datos fuente: permiten decidir objetivamente qué
 puede reutilizarse y qué debe reconstruirse.
+
+Por ello, en un clon nuevo puede aparecer el snapshot S7 disponible mientras S3,
+S4 o S6 figuran incompletos: las tablas compactas se distribuyen con el repositorio,
+pero los arrays pesados deben generarse o descargarse antes de repetir los análisis.
 
 ## Resultados de referencia que deben reproducirse
 

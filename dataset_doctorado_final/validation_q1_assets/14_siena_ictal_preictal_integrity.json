@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0-siena-ictal-preictal",
-  "generated_utc": "2026-08-04T04:11:23Z",
+  "generated_utc": "2026-08-04T05:27:36Z",
   "endpoint": "ictal_vs_preictal_30_to_5_min",
   "interpretation": "detección ictal frente a preictal; no síntesis ni predicción preictal",
   "criteria_frozen_in_notebook": {
@@ -13,7 +13,7 @@
     "official_sha256_entries_verified": 58,
     "official_edf": 41,
     "siena_artifact_hashes_verified": true,
-    "synthetic_manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307"
+    "synthetic_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0"
   },
   "cohort": {
     "subjects_total": 14,

@@ -6,7 +6,7 @@
   "claims": {
     "generator_integrity": {
       "status": "SUPPORTED",
-      "manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307"
+      "manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0"
     },
     "real_cohort_integrity": {
       "status": "SUPPORTED",
@@ -54,7 +54,7 @@
       "file": "04_feature_space_proximity_diversity.csv"
     }
   },
-  "generated_utc": "2026-08-04T04:12:05Z",
+  "generated_utc": "2026-08-04T04:56:43Z",
   "framework_verdict": {
     "status": "VIABLE CON LIMITACIONES",
     "reason": "El generador es reproducible y TSTR está respaldado, pero fidelidad, cobertura externa y diversidad muestran desplazamiento de dominio.",

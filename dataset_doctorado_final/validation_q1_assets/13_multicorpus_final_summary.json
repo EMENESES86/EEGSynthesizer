@@ -1,13 +1,13 @@
 {
   "mode": "siena_external",
-  "generated_utc": "2026-08-04T03:54:27Z",
+  "generated_utc": "2026-08-04T05:13:40Z",
   "validation": {
-    "notebook_sha256": "a10a77bbe572a891ccbdb8f37bad85671327b231f8bb2274817774407dd8cf34",
+    "notebook_sha256": "dea0d5a4118185117673f42cea7487543419efef26f8174d6c2f0570b8eeed87",
     "siena_artifact_builder_notebook_sha256": "f2c456e15f14a4e3f9b6b1d7b3e851d9d8e90398a681e3a2e78911a58f4329fc"
   },
   "generator": {
     "status": "SUPPORTED",
-    "manifest_sha256": "e7f5e3d18c1596936d49fb793c814502d18a83ddb7e27a8cd5b1a683d318d307",
+    "manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
     "modified": false
   },
   "siena_integrity": {
