@@ -1,0 +1,7 @@
+Corpus,Endpoint,Estimando,Estimación,IC95_inf,IC95_sup,Unidad/N,Resultado
+CHB-MIT,ictal vs. interictal,AUROC TSTR,0.6430743202093415,0.5460355378919731,0.7332719679407158,18 sujetos,Respaldado: IC95 % AUROC > 0.5
+Siena,ictal vs. preictal (30-5 min),AUROC TSTR,0.6992021055008338,0.6190591348054201,0.7762500743358814,14 sujetos,Respaldado: IC95 % AUROC > 0.5
+Siena,ictal vs. interictal estricto,AUROC TSTR,0.5862347148637471,0.4400382882882883,0.7650312409183377,4 sujetos,Estimación exploratoria: n < 10
+Siena,ictal vs. preictal (30-5 min),Delta AUROC CHB+SYN-CHB,0.0568574716949842,0.0335963370290812,0.0806253646749312,14 sujetos,Beneficio respaldado: IC95 % diferencia > 0
+Siena,morfología focal temporal,fracción dentro de REAL-REAL q95,0.8947368421052632,,,19 rasgos,Concordancia 17/19; criterio completo 19/19
+Siena,lateralidad focal temporal,exactitud de lateralidad,0.6923076923076923,,,13 sujetos evaluables,Descriptivo: concordancia 9/13; sin umbral confirmatorio

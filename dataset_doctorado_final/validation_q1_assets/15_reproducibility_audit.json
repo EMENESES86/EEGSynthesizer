@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0-reproducibility-audit",
-  "audited_utc": "2026-08-04T05:20:00Z",
+  "audited_utc": "2026-08-04T16:18:35Z",
   "scope": "reconstrucción, reanudación, integridad, determinismo numérico, trazabilidad pública y claridad de ejecución",
   "environment": {
     "python": "3.13.7",
@@ -9,15 +9,19 @@
     "dependency_consistency": "SUPPORTED"
   },
   "implementation": {
-    "notebook_1_0_sha256": "e26fa4db52592e053bfd89824599e0619768a933aefb6c7a73c85082dc571e8d",
-    "notebook_1_1_sha256": "dea0d5a4118185117673f42cea7487543419efef26f8174d6c2f0570b8eeed87",
-    "readme_sha256": "f886b3e21e7be0f089fb8a612e3ac9acbb9e7b65a8f9239df1aea42e71a4c0b8",
+    "notebook_1_0_sha256": "7a843d36451491f9c8e0294dd525e606a1b642a3334420a85471a387fd6f9cbf",
+    "notebook_1_1_sha256": "82819aa80c40e15162efb4028c6bd4ec46f558ac39c816dd978e1833ec0d9b15",
+    "readme_sha256": "0a5564aa01e4fb26f337fc6de1b7dc15a5a8b30e5e2f2c1ddc400aa44e504d15",
     "requirements_sha256": "7d7897023e09ebbfeb624fcd31c28a17427faf8369955a9109ae590ff845a29f",
     "citation_sha256": "4b162a44b5a41416b8c7e0ee6548fc1970884a9e888bd1492360fa6b52d12a2f",
     "notebook_format": "SUPPORTED",
     "all_code_cells_compile": "SUPPORTED",
     "stored_outputs": 0,
-    "stored_execution_counts": 0
+    "stored_execution_counts": 0,
+    "notebook_1_0_stored_outputs": 7,
+    "notebook_1_0_stored_execution_counts": 9,
+    "notebook_1_1_stored_outputs": 0,
+    "notebook_1_1_stored_execution_counts": 0
   },
   "clean_reconstruction": {
     "isolated_clone": "SUPPORTED",
@@ -70,19 +74,28 @@
       "status": "SUPPORTED",
       "subjects": 18,
       "macro_auroc": 0.6430743202093415,
-      "ci95": [0.5460355378919731, 0.7332719679407158]
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ]
     },
     "siena_ictal_vs_preictal_tstr": {
       "status": "SUPPORTED",
       "subjects": 14,
       "macro_auroc": 0.6992021055008338,
-      "ci95": [0.6190591348054201, 0.7762500743358814],
+      "ci95": [
+        0.6190591348054201,
+        0.7762500743358814
+      ],
       "interpretation": "prueba externa de detección ictal; el generador no sintetiza ni predice la fase preictal"
     },
     "siena_chb_plus_syn_minus_chb": {
       "status": "SUPPORTED",
       "mean_auroc_difference": 0.05685747169498427,
-      "ci95": [0.0335963370290812, 0.08062536467493128],
+      "ci95": [
+        0.0335963370290812,
+        0.08062536467493128
+      ],
       "subjects_improved": 13,
       "subjects": 14
     },
@@ -119,5 +132,51 @@
     "thesis_current_wording": "NO VIABLE EN SU REDACCIÓN ACTUAL",
     "thesis_after_replacing_obsolete_results_and_limiting_claims": "VIABLE CON LIMITACIONES",
     "reason": "La generación, integridad y transferencia predefinida son reproducibles, pero la equivalencia clínica, la fidelidad distribucional completa y la cobertura total de la variabilidad real no están demostradas."
+  },
+  "publication_products": {
+    "status": "SUPPORTED",
+    "figures_audited": 6,
+    "multicorpus_table_visible_in_executed_notebook": true,
+    "embedded_png_images_in_final_cell": 6,
+    "png_files": 6,
+    "pdf_files": 6,
+    "captions_file": "16_publication_captions.csv",
+    "figure_audit_file": "16_publication_figure_audit.csv",
+    "representative_signal_provenance_file": "16_publication_representative_signals.csv",
+    "manifest_file": "16_publication_manifest.json",
+    "manifest_sha256": "136bf9b064b5345489207b32ef0579d765b7620d578bf38c466d4112d60a61c0",
+    "manifest_sources_verified": 21,
+    "manifest_outputs_verified": 17,
+    "manifest_hash_errors": 0,
+    "outputs_byte_identical_on_two_clean_status_runs": true,
+    "pdf_pages_verified": 6,
+    "pdf_rendering": "SUPPORTED",
+    "visual_overlap_or_clipping": 0,
+    "obsolete_uncontrolled_png_removed": 7,
+    "generator_or_scientific_metrics_changed": false,
+    "doctoral_figure_corrections": {
+      "table_units": "19 features for morphology coverage; 13 evaluable subjects for laterality",
+      "signal_and_psd_eligibility": "ictal_fraction >= 0.999 in every corpus",
+      "morphology_coverage": "both REAL-inside-SYN and SYN-inside-REAL shown",
+      "representative_signal_traceability": "subject/patient, event, source index, time, derivation, raw PTP and selection rule recorded",
+      "symmetry_denominator": "read dynamically from n_generalized_events"
+    },
+    "interpretation": "Productos descriptivos reproducibles; los CSV y JSON numéricos siguen siendo la fuente inferencial.",
+    "terminology_audit": {
+      "status": "SUPPORTED",
+      "technical_statuses_preserved_in_numeric_sources": true,
+      "reader_facing_statuses": [
+        "RESPALDADO",
+        "EXPLORATORIO (n < 10)",
+        "REFERENCIA REAL-REAL",
+        "IC95 % incluye 0",
+        "CRITERIO COMPLETO NO ALCANZADO"
+      ],
+      "not_supported_definition": "el criterio completo no se alcanzó; no implica ausencia de efecto, daño o invalidez",
+      "not_evaluable_definition": "tamaño muestral inferior al mínimo prospectivo; estimación exploratoria",
+      "laterality_interpretation": "descriptivo: 9/13 concordantes; sin umbral confirmatorio predefinido",
+      "inference_scope": "plausibilidad morfológica operacional, cobertura por rasgos y utilidad de transferencia externa",
+      "formal_equivalence_scope": "requiere un diseño diferente con márgenes clínicos predefinidos"
+    }
   }
 }

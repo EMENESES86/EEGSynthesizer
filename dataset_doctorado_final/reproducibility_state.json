@@ -34,7 +34,7 @@
     },
     "S3_synthetic_frozen": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:55:36Z",
+      "completed_utc": "2026-08-04T11:15:18Z",
       "details": {
         "selected_profile": "baseline",
         "reused": true
@@ -48,7 +48,7 @@
     },
     "S4_chbmit_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-04T04:56:43Z",
+      "completed_utc": "2026-08-04T11:15:59Z",
       "artifacts": {
         "real_manifest": {
           "exists": true,

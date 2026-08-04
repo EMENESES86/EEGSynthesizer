@@ -243,6 +243,24 @@ pero los arrays pesados deben generarse o descargarse antes de repetir los anál
 
 ## Resultados de referencia que deben reproducirse
 
+### Productos para tesis y artículo
+
+El bloque final de `1_1_EEGSynthesizer_VALIDATION.ipynb` muestra una tabla
+multicorpus y reconstruye automáticamente seis figuras a partir de los artefactos
+verificados. Se guardan versiones PNG y PDF, una tabla CSV/LaTeX, leyendas y un
+manifiesto SHA-256 dentro de
+`dataset_doctorado_final/validation_q1_assets/`. Las figuras distinguen criterios
+respaldados, criterios completos no alcanzados y estimaciones exploratorias. Su
+alcance inferencial comprende plausibilidad morfológica operacional, cobertura por
+rasgos y utilidad de transferencia externa; los CSV y JSON conservan la evidencia
+numérica completa.
+
+La misma carpeta incluye `16_publication_figure_audit.csv`, con la fuente, el uso
+permitido y la limitación de cada figura, y
+`16_publication_representative_signals.csv`, que identifica los sujetos, eventos,
+ventanas, derivaciones y amplitudes crudas de las señales mostradas. Las señales y
+la PSD utilizan únicamente ventanas con ocupación ictal completa.
+
 ### Integridad del generador
 
 - 3 000 pacientes y 180 000 ventanas.

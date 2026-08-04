@@ -54,7 +54,7 @@
       "file": "04_feature_space_proximity_diversity.csv"
     }
   },
-  "generated_utc": "2026-08-04T04:56:43Z",
+  "generated_utc": "2026-08-04T11:15:59Z",
   "framework_verdict": {
     "status": "VIABLE CON LIMITACIONES",
     "reason": "El generador es reproducible y TSTR está respaldado, pero fidelidad, cobertura externa y diversidad muestran desplazamiento de dominio.",

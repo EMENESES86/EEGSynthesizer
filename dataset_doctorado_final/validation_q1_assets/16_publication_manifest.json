@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.1-publication-products",
+  "generated_utc": "2026-08-04T16:18:00Z",
+  "validator_notebook_sha256": "82819aa80c40e15162efb4028c6bd4ec46f558ac39c816dd978e1833ec0d9b15",
+  "sources": {
+    "dataset_doctorado_final/validation_q1_assets/02_fidelity_featurewise.csv": {
+      "bytes": 7350,
+      "sha256": "c2889fa3906e3fad0999a374acb4970397575bb8d2d31b1a20d71e0e0756e3cd"
+    },
+    "dataset_doctorado_final/validation_q1_assets/02b_morphology_coverage.csv": {
+      "bytes": 4184,
+      "sha256": "01b1b0e5eb62131506b34ff30c909cd3be35afb41e9b7d3ee7c54e953bbacc28"
+    },
+    "dataset_doctorado_final/validation_q1_assets/03b_cross_domain_bootstrap.csv": {
+      "bytes": 3615,
+      "sha256": "6363747bdd48c1c6d9abed8f59553e15b9319f40db762614c37e6d19f5dd609a"
+    },
+    "dataset_doctorado_final/validation_q1_assets/05_final_summary.json": {
+      "bytes": 2472,
+      "sha256": "e304f54182085fb9728f7fc928fffeedc562c0daa9993d67455175ced97ae4ba"
+    },
+    "dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_summary.json": {
+      "bytes": 1486,
+      "sha256": "1c53f199e216359163d01d02fa34b2933c27467ba458053c56ea3648de839989"
+    },
+    "dataset_doctorado_final/validation_q1_assets/09_siena_fidelity_featurewise.csv": {
+      "bytes": 5431,
+      "sha256": "f271c65fd384ab85cbce37bdae71eec8f15614d3d9d5f55615e31043486c8d2b"
+    },
+    "dataset_doctorado_final/validation_q1_assets/09_siena_morphology_coverage.csv": {
+      "bytes": 2911,
+      "sha256": "88d858d3220e6cd507691533ec02f84d595bfc81b878d19813c2e2a77fe13157"
+    },
+    "dataset_doctorado_final/validation_q1_assets/12_siena_laterality_audit.csv": {
+      "bytes": 676,
+      "sha256": "0bab9abfe2d21b2eef00df2eb4d1e87ca993c8e4cc603dd194391530a79890a7"
+    },
+    "dataset_doctorado_final/validation_q1_assets/13_multicorpus_final_summary.json": {
+      "bytes": 4068,
+      "sha256": "cfc49c090460f2c71f3f73b039804a0c28abdbab70b4517069e020adb2cd204f"
+    },
+    "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_integrity.json": {
+      "bytes": 3267,
+      "sha256": "d3a755ee608a0c00882bf5bdd00d6a89ca6e52fc258c232cdce87ada787e580a"
+    },
+    "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_paired_differences.csv": {
+      "bytes": 502,
+      "sha256": "b457d4432fbdc381e52bfc128b6e915f740480257897eb5bfcfe5f6034faa9f4"
+    },
+    "dataset_eeg_final/X_test.npy": {
+      "bytes": 1026000128,
+      "sha256": "9c2105a78660a08db800eccc846810787a46d837631f994b83d24cfcd418f568"
+    },
+    "dataset_eeg_final/y_test.npy": {
+      "bytes": 27128,
+      "sha256": "921b72d942e4abbf959713c2770dcf211d5ed1f3cf8d1020ca44b4bc7c73c46b"
+    },
+    "dataset_eeg_final/window_metadata_test.csv": {
+      "bytes": 1378679,
+      "sha256": "fe379d5de2e3fcedfd680c9ab1ae885d318b8671a5a038695fc326852ad5bfdc"
+    },
+    "dataset_doctorado_final/X_real.npy": {
+      "bytes": 504144128,
+      "sha256": "80ee61d0d0c3f17e442ed66452837e1dc413ab24544cb3e4bd79de003a48bb17"
+    },
+    "dataset_doctorado_final/y_real.npy": {
+      "bytes": 14132,
+      "sha256": "d6ac1bc1438dbc4962410ed818f4b019e15adc443df48fc9cccbb612e9a60c36"
+    },
+    "dataset_doctorado_final/pid_real.npy": {
+      "bytes": 280208,
+      "sha256": "ea82858a14512b2dd63f9ed24a64ca15a72c7e6a14d1bc2761eeb3afa4d8d0ce"
+    },
+    "dataset_doctorado_final/real_window_metadata.csv": {
+      "bytes": 738103,
+      "sha256": "13d1c46945ec3bb20e103a009a1d29aa27893be9e64e0e02d49876f3de8f9583"
+    },
+    "dataset_doctorado_final/siena_X.npy": {
+      "bytes": 328140128,
+      "sha256": "c9e7a885c8d00322a53f2d31e88bb614dc6d231ef34e645ec4b4ded5ad293950"
+    },
+    "dataset_doctorado_final/siena_y.npy": {
+      "bytes": 9243,
+      "sha256": "a91949ce241a0773f97e7fbdef131d75c3ed823697c7ed585dddb0569a39636b"
+    },
+    "dataset_doctorado_final/siena_window_metadata.csv": {
+      "bytes": 759021,
+      "sha256": "096e05c5516e27c46c9890090964ac34ba055f5d7cacfeb95f6000e7f3e45d0a"
+    }
+  },
+  "outputs": {
+    "16_publication_multicorpus_table.csv": {
+      "bytes": 986,
+      "sha256": "ce12c8d4cb54a613615d07b32ced5319be642376e6907edd661b7c2b5b8748aa"
+    },
+    "16_publication_multicorpus_table.tex": {
+      "bytes": 1020,
+      "sha256": "779f621016a97e0e5d9e257e8e8b24a31867a7c807d4195f513e81cba4cbda26"
+    },
+    "16_publication_captions.csv": {
+      "bytes": 1707,
+      "sha256": "d4d564a51f5386f4d922c28236a03d26acb4065831f68edb003b0bf397fc739f"
+    },
+    "16_publication_figure_audit.csv": {
+      "bytes": 1654,
+      "sha256": "8afd80f88165fa198536d34127b6ef6e5a62470b056cdedd8cfaa8ac1d8e7e05"
+    },
+    "16_publication_representative_signals.csv": {
+      "bytes": 1038,
+      "sha256": "fa39d190db42e878a135a91eba3b62b0706fd69b244bb4193a791581d136e8f9"
+    },
+    "16_fig_auroc_forest.png": {
+      "bytes": 99902,
+      "sha256": "d05d25645ba1759686da866547bfb02cda2b15df571e6f52eda39731eea42c01"
+    },
+    "16_fig_auroc_forest.pdf": {
+      "bytes": 20223,
+      "sha256": "57572c325ded393230095f39ebacdfcb082c372143a99fa09ce099ccc30079ff"
+    },
+    "16_fig_syn_effect.png": {
+      "bytes": 85060,
+      "sha256": "cba275ecbb8c31855ae820c443f650ee76e74a2fc4ec1d40d358558ec3c9a474"
+    },
+    "16_fig_syn_effect.pdf": {
+      "bytes": 18501,
+      "sha256": "cec711207f562dcd72ba2bb503cfa336315480407b986c9eb8aea5219a7b9c5b"
+    },
+    "16_fig_morphology_fidelity.png": {
+      "bytes": 508208,
+      "sha256": "8aaa9c5b73f2eb0db700f955e07ef66be3a3bc3e52276d597a8a4d2212998f77"
+    },
+    "16_fig_morphology_fidelity.pdf": {
+      "bytes": 41193,
+      "sha256": "b3bc95073b9c8a243ee9e2e1d0a20ecb398b886cadde4e687567c708c96bf1d6"
+    },
+    "16_fig_signal_comparison.png": {
+      "bytes": 342178,
+      "sha256": "da561cf8a7ad0859394b43552cef72faf972826741908cf250d40655e1d1ba5a"
+    },
+    "16_fig_signal_comparison.pdf": {
+      "bytes": 35744,
+      "sha256": "cf51211cc856353806677562fdb4522d222e24a3d1ab896653e0c9988ad30696"
+    },
+    "16_fig_psd_multicorpus.png": {
+      "bytes": 122121,
+      "sha256": "8ab924f23cb40bbcf06299ac90249c2fa08e6e89dbb44d282ec1fe64d72930fb"
+    },
+    "16_fig_psd_multicorpus.pdf": {
+      "bytes": 17947,
+      "sha256": "9aef7a238f1e4cf42e46b398d7de87c71b0c724ab15f0c780380efaf5196d482"
+    },
+    "16_fig_symmetry_degradation.png": {
+      "bytes": 103588,
+      "sha256": "f57cb1a47496f5ef7fb160aebf2a080286533e9c401cfaf7274d4403dd7813c0"
+    },
+    "16_fig_symmetry_degradation.pdf": {
+      "bytes": 25558,
+      "sha256": "b06599954d779adb9d952eb0008170e94d2f4580f4a64a03bb61d00136ef0edc"
+    }
+  },
+  "selection": {
+    "eligibility": "ictal_fraction >= 0.999 in every corpus; CHB-MIT development subjects excluded",
+    "waveforms": "medoid in robust z-scored feature space; maximum-PTP bipolar derivation displayed after medoid selection; exact provenance in 16_publication_representative_signals.csv",
+    "psd": "absolute median over 200 deterministic fully ictal windows and 18 bipolar derivations; no amplitude normalization"
+  },
+  "scope": "productos descriptivos y confirmatorios para publicación; los CSV/JSON numéricos son la fuente inferencial",
+  "inference_scope": "plausibilidad morfológica operacional, cobertura por rasgos y utilidad de transferencia externa",
+  "formal_clinical_equivalence_design_performed": false
+}

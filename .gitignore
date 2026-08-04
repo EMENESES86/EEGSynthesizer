@@ -60,6 +60,8 @@ dataset_doctorado_final/validation_q1_assets/*
 !dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_loso.csv
 !dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_paired_differences.csv
 !dataset_doctorado_final/validation_q1_assets/15_reproducibility_audit.json
+!dataset_doctorado_final/validation_q1_assets/16_publication_*
+!dataset_doctorado_final/validation_q1_assets/16_fig_*
 
 # Trabajo temporal, descargas parciales y copias locales
 tmp/

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0-symmetry-audit",
-  "generated_utc": "2026-08-04T04:55:47Z",
+  "generated_utc": "2026-08-04T11:15:34Z",
   "source_generation_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
-  "validator_notebook_sha256": "e26fa4db52592e053bfd89824599e0619768a933aefb6c7a73c85082dc571e8d",
+  "validator_notebook_sha256": "b5c29932760471a2ff442f86ae362d40aa7fb049fbe4d1418d3abd5a90649a2d",
   "detail_csv": "07_generalized_symmetry_by_patient.csv",
   "detail_csv_sha256": "057555292a2cd35a0be15137145b6fda0a46bf27632d6609fc96f4bc65f0498d",
   "source_hashes_verified": true,
