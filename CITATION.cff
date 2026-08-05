@@ -18,8 +18,8 @@ authors:
     email: efmenesest@pucesa.edu.ec
     orcid: "https://orcid.org/0000-0002-6917-8355"
 
-version: "4.0.0-rc1"
-date-released: "2026-08-03"
+version: "4.0.0"
+date-released: "2026-08-05"
 license: CC-BY-4.0
 repository-code: "https://github.com/EMENESES86/EEGSynthesizer"
 
@@ -60,7 +60,7 @@ preferred-citation:
       affiliation: >-
         Pontificia Universidad Católica del Ecuador, Sede Ambato (PUCESA)
       orcid: "https://orcid.org/0000-0002-6917-8355"
-  version: "4.0.0-rc1"
+  version: "4.0.0"
   year: 2026
   license: CC-BY-4.0
   repository-code: "https://github.com/EMENESES86/EEGSynthesizer"
