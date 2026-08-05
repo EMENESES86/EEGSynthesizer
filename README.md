@@ -16,7 +16,10 @@ EEG clínico.
 - Amplitud observable final bajo el contrato operacional de 150–600 µV.
 - Morfologías sintéticas diferenciadas, evolución focal y topografía controlada.
 - Separación de pacientes entre TRAIN, VAL y TEST.
-- Transferencia SYN→CHB-MIT y SYN→Siena bajo los protocolos declarados.
+- Transferencia SYN→CHB-MIT bajo el protocolo externo declarado.
+- Transferencia SYN→Siena respaldada para el contraste ictal frente a preictal
+  limpio en 14 sujetos. El contraste con interictal estricto fue evaluable solo en
+  cuatro sujetos y no permite inferencia multicorpus general.
 - Descarga oficial, reanudable y verificable de CHB-MIT y Siena.
 
 ## Qué no debe afirmarse
@@ -174,21 +177,18 @@ se aceptan variables del sistema.
 Windows PowerShell:
 
 ```powershell
-$env:EEGSYN_VALIDATION_MODE='prepare_dev'
-jupyter nbconvert --to notebook --execute 1_1_EEGSynthesizer_VALIDATION.ipynb --output prepare_dev_executed.ipynb --ExecutePreprocessor.timeout=-1
-
 $env:EEGSYNTH_MODE='full'
 $env:EEGSYNTH_CALIBRATION_MODE='frozen'
 jupyter nbconvert --to notebook --execute 1_0_EEGSynthesizer_DATASET.ipynb --output generation_executed.ipynb --ExecutePreprocessor.timeout=-1
-
-$env:EEGSYN_VALIDATION_MODE='external'
-jupyter nbconvert --to notebook --execute 1_1_EEGSynthesizer_VALIDATION.ipynb --output chbmit_executed.ipynb --ExecutePreprocessor.timeout=-1
 
 $env:EEGSYN_VALIDATION_MODE='siena_external'
 jupyter nbconvert --to notebook --execute 1_1_EEGSynthesizer_VALIDATION.ipynb --output siena_executed.ipynb --ExecutePreprocessor.timeout=-1
 ```
 
-Linux o macOS usa la misma secuencia anteponiendo la variable al comando.
+Esta es la secuencia completa de reproducción. Los modos `prepare_dev` y `external`
+son opciones de mantenimiento descritas anteriormente y no forman parte de la
+ejecución normal. Linux o macOS usa la misma secuencia anteponiendo la variable al
+comando.
 
 ## Descargas, reanudación e integridad
 
@@ -248,7 +248,10 @@ la PSD utilizan únicamente ventanas con ocupación ictal completa.
 
 - 3 000 pacientes y 180 000 ventanas.
 - TRAIN/VAL/TEST sin pacientes compartidos.
-- Amplitud: 100 % de eventos dentro del contrato.
+- Amplitud: `1500/1500` eventos dentro del contrato.
+- Medición en ventana completamente limpia: `1459/1500` (`97.27 %`). Los otros
+  `41/1500` (`2.73 %`) utilizaron la medición fallback y conservan amplitud válida;
+  por ello, la medición limpia universal es `NOT SUPPORTED`.
 - Error mediano objetivo–observado: `0.00000257` relativo.
 - Masa exacta en límites: `0 %`.
 - Frecuencia generalizada de 2.5–4 Hz: `750/750` (`100 %`).
