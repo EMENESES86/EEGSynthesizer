@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.0-definitive-reproducibility-audit",
-  "audited_utc": "2026-08-04T23:15:18Z",
-  "scope": "dos notebooks, manifiestos SYN/CHB-MIT/Siena, contrato temporal Siena y productos de publicación",
+  "schema_version": "3.2-clean-room-reproducibility-audit",
+  "audited_utc": "2026-08-05T14:57:12Z",
+  "scope": "dos notebooks, procedencia histórica SYN, contexto de medición, manifiestos CHB-MIT/Siena, contrato temporal Siena y productos de publicación",
   "environment": {
     "python": "3.13.7",
     "numpy": "2.4.2",
@@ -30,7 +30,7 @@
   },
   "notebooks": {
     "1_0_EEGSynthesizer_DATASET.ipynb": {
-      "sha256": "4ca82ebf3de5412a291305c32e655084daa25e48c7f8ef4a22ca12f53a368ef1",
+      "sha256": "30f0b62a5df212dae71d31358c7f4537b93c4f475a01e04d796e7949e5dafb9a",
       "cells": 11,
       "stored_output_cells": 0,
       "compile_errors": [],
@@ -38,7 +38,7 @@
       "prohibited_attribution_terms": 0
     },
     "1_1_EEGSynthesizer_VALIDATION.ipynb": {
-      "sha256": "1babcb5499d2cb16220098c9b087ba1066beaaca0e49952901dc912d2d2619ca",
+      "sha256": "8f80d4b5887ffac483f77cb12538e6bc38546621a1613393798ac9c2182b63df",
       "cells": 12,
       "stored_output_cells": 0,
       "compile_errors": [],
@@ -59,6 +59,8 @@
   },
   "traceability": {
     "generation_manifest_frozen": true,
+    "chb_builder_matches_validator": true,
+    "chb_builder_contract_current": true,
     "siena_builder_matches_validator": true,
     "siena_uses_current_synthetic_manifest": true,
     "multicorpus_summary_matches_validator": true,
@@ -66,7 +68,50 @@
     "preictal_summary_matches_siena_manifest": true,
     "publication_manifest_matches_validator": true,
     "symmetry_matches_generator": true,
-    "symmetry_matches_synthetic_manifest": true
+    "symmetry_matches_synthetic_manifest": true,
+    "development_profile_lineage_reconciled": true,
+    "measurement_context_independently_verified": true
+  },
+  "development_profile_reconciliation": {
+    "status": "SUPPORTED",
+    "historical_development_profile_sha256": "519faffc03b5872521261b8f23d1ca30b42cc8278a2ba18ff45027caa53d9471",
+    "current_snapshot_development_profile_sha256": "9e78e5b85d5e8b2c6c43b4d93e73ed20e519d8db43f6c4402acb57eccd510e95",
+    "actual_development_profile_sha256": "9e78e5b85d5e8b2c6c43b4d93e73ed20e519d8db43f6c4402acb57eccd510e95",
+    "historical_hash_preserved": true,
+    "profile_hash_changed": true,
+    "current_snapshot_matches_actual_profile": true,
+    "baseline_parameters_identical": true,
+    "historical_selected_profile": "baseline",
+    "current_selected_profile": "baseline",
+    "manifest_selected_profile": "baseline",
+    "data_regenerated": false,
+    "data_impact": "none: baseline parameters and all recorded artifact hashes are unchanged"
+  },
+  "amplitude_measurement_context": {
+    "n_ictal_events": 1500,
+    "clean_measurement_count": 1459,
+    "clean_measurement_rate": 0.9726666666666667,
+    "fallback_count": 41,
+    "fallback_rate": 0.027333333333333334,
+    "fallback_short_central_region_count": 24,
+    "fallback_no_clean_full_window_count": 17,
+    "fallback_with_co_injected_artifact_count": 16,
+    "fallback_without_co_injected_artifact_count": 25,
+    "central_clean_window_duration_threshold_s": 3.3333333333333335
+  },
+  "measurement_context_checks": {
+    "profile_reconciliation_supported": true,
+    "profile_reconciliation_matches_1_0": true,
+    "measurement_context_matches_1_0": true,
+    "measurement_total_1500": true,
+    "measurement_clean_1459": true,
+    "measurement_fallback_41": true,
+    "measurement_short_fallback_24": true,
+    "measurement_no_clean_full_window_17": true,
+    "measurement_coartifact_16": true,
+    "measurement_without_coartifact_25": true,
+    "amplitude_contract_1500": true,
+    "generalized_detail_fallback_41": true
   },
   "scientific_results": {
     "CHB_MIT_TSTR_RF_zscore": {
@@ -104,10 +149,73 @@
       "features_ks_ge_0_5": 5,
       "laterality_accuracy": 0.6923076923076923,
       "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+    },
+    "final_amplitude_contract": {
+      "status": "SUPPORTED",
+      "pass_count": 1500,
+      "total_count": 1500
+    },
+    "universal_clean_measurement": {
+      "status": "NOT SUPPORTED",
+      "pass_count": 1459,
+      "total_count": 1500
     }
   },
+  "published_scientific_reference": {
+    "CHB_MIT_TSTR_RF_zscore": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.6430743202093415,
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ],
+      "n_subjects": 18
+    },
+    "Siena_TSTR_RF_zscore_clean_preictal": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.7008300137418093,
+      "ci95": [
+        0.6211641143045521,
+        0.7762140062259614
+      ],
+      "n_subjects": 14
+    },
+    "Siena_TSTR_RF_zscore_strict_interictal": {
+      "status": "NOT EVALUABLE",
+      "macro_auc": 0.5862347148637471,
+      "ci95": [
+        0.4400382882882883,
+        0.7650312409183377
+      ],
+      "n_subjects": 4,
+      "endpoint": "ictal_vs_interictal_strict_at_least_4h"
+    },
+    "focal_morphology_external": {
+      "status": "NOT SUPPORTED",
+      "features_within_real_real_q95_fraction": 0.8947368421052632,
+      "large_cliff_effects": 9,
+      "features_ks_ge_0_5": 5,
+      "laterality_accuracy": 0.6923076923076923,
+      "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+    },
+    "final_amplitude_contract": {
+      "status": "SUPPORTED",
+      "pass_count": 1500,
+      "total_count": 1500
+    },
+    "universal_clean_measurement": {
+      "status": "NOT SUPPORTED",
+      "pass_count": 1459,
+      "total_count": 1500
+    }
+  },
+  "published_scientific_reference_check": {
+    "status": "SUPPORTED",
+    "absolute_tolerance": 1e-12,
+    "differences": []
+  },
   "publication_products": {
-    "manifest_sha256": "753a2f53af3e46acb378048081c602e506e20c1f3f06a9a7ce73733466d23a82",
+    "manifest_sha256": "50434a3256138e78237b0ac8b1352b55950b130d34230fc561758e486c6f606b",
     "outputs_verified": 17,
     "sources_verified": 21
   },

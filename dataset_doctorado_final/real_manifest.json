@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.1-real",
+  "schema_version": "5.2-real",
   "scope": "all",
   "fs_hz": 250,
   "window_s": 2.0,
@@ -384,7 +384,6 @@
     "chb24/chb24_17.edf": "1d5d442e958a741642d970050dbca3d10ed50182bd5168e18d382daf34aa92d2",
     "chb24/chb24_21.edf": "49006c89efa30d00625e49ba47ae72c70160f2f09a351ad1bc7b9ab05a8dbd8b"
   },
-  "created_utc": "2026-07-31T18:12:39Z",
   "artifacts": {
     "X": {
       "sha256": "80ee61d0d0c3f17e442ed66452837e1dc413ab24544cb3e4bd79de003a48bb17",
@@ -417,5 +416,118 @@
       "bytes": 738103,
       "rows": 14004
     }
-  }
+  },
+  "builder_notebook_sha256": "8f80d4b5887ffac483f77cb12538e6bc38546621a1613393798ac9c2182b63df",
+  "builder_contract": {
+    "schema": "5.2-real-builder",
+    "scope": "all",
+    "fs_hz": 250,
+    "window_s": 2.0,
+    "bipolar": [
+      [
+        "FP1-F7",
+        "FP1",
+        "F7"
+      ],
+      [
+        "F7-T3",
+        "F7",
+        "T3"
+      ],
+      [
+        "T3-T5",
+        "T3",
+        "T5"
+      ],
+      [
+        "T5-O1",
+        "T5",
+        "O1"
+      ],
+      [
+        "FP1-F3",
+        "FP1",
+        "F3"
+      ],
+      [
+        "F3-C3",
+        "F3",
+        "C3"
+      ],
+      [
+        "C3-P3",
+        "C3",
+        "P3"
+      ],
+      [
+        "P3-O1",
+        "P3",
+        "O1"
+      ],
+      [
+        "FP2-F4",
+        "FP2",
+        "F4"
+      ],
+      [
+        "F4-C4",
+        "F4",
+        "C4"
+      ],
+      [
+        "C4-P4",
+        "C4",
+        "P4"
+      ],
+      [
+        "P4-O2",
+        "P4",
+        "O2"
+      ],
+      [
+        "FP2-F8",
+        "FP2",
+        "F8"
+      ],
+      [
+        "F8-T4",
+        "F8",
+        "T4"
+      ],
+      [
+        "T4-T6",
+        "T4",
+        "T6"
+      ],
+      [
+        "T6-O2",
+        "T6",
+        "O2"
+      ],
+      [
+        "FZ-CZ",
+        "FZ",
+        "CZ"
+      ],
+      [
+        "CZ-PZ",
+        "CZ",
+        "PZ"
+      ]
+    ],
+    "max_windows_per_subject_class": 400,
+    "seed": 42,
+    "development_cases": [
+      "chb01",
+      "chb02",
+      "chb03",
+      "chb05",
+      "chb06"
+    ],
+    "case_person": {
+      "chb21": "chb01"
+    }
+  },
+  "builder_contract_sha256": "2c07fb4a0328cf46206b41781f12ed5dcbc18ea909ac3c3f8ae0c0164a87c84b",
+  "created_utc": "2026-08-05T14:15:02Z"
 }

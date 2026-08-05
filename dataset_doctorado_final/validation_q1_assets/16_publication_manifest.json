@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1-publication-products",
-  "generated_utc": "2026-08-04T23:15:02Z",
-  "validator_notebook_sha256": "1babcb5499d2cb16220098c9b087ba1066beaaca0e49952901dc912d2d2619ca",
+  "generated_utc": "2026-08-05T14:56:55Z",
+  "validator_notebook_sha256": "8f80d4b5887ffac483f77cb12538e6bc38546621a1613393798ac9c2182b63df",
   "sources": {
     "dataset_doctorado_final/validation_q1_assets/02_fidelity_featurewise.csv": {
       "bytes": 7350,
@@ -17,11 +17,11 @@
     },
     "dataset_doctorado_final/validation_q1_assets/05_final_summary.json": {
       "bytes": 2478,
-      "sha256": "fca71a7e6ba6945895b42887d843baecb4aefdc532f5a275766c35ecd9612acf"
+      "sha256": "e2beb11bf064a26cae32d3008bab8975ca3d8e715c38d0788a33f3dce7528028"
     },
     "dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_summary.json": {
-      "bytes": 1486,
-      "sha256": "fa6429cd8dd9719e20ece28b70f5d8395337494671a3d64fd9d34c2a7bce6438"
+      "bytes": 3331,
+      "sha256": "e4d0135a4db62aea80facd1566b924e03cfd30c6630dbabdecbe4ff58ac68a2f"
     },
     "dataset_doctorado_final/validation_q1_assets/09_siena_fidelity_featurewise.csv": {
       "bytes": 5431,
@@ -37,11 +37,11 @@
     },
     "dataset_doctorado_final/validation_q1_assets/13_multicorpus_final_summary.json": {
       "bytes": 5747,
-      "sha256": "aefe82270464cdadf08809ce489f3462719b14d870c46f61c76097abc64001e8"
+      "sha256": "109da918ba9836eb8055b01e7f5153c3985b0dd7e29ebc1f45891ccefac256d0"
     },
     "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_integrity.json": {
       "bytes": 3836,
-      "sha256": "793e368baf644e68793d5de99f47b150cdec95dcad008d8210d23afa4a3476f5"
+      "sha256": "ebc626a2f4473ed153a06835aad7db7d0e19543385a913f0762fb9111629d2d9"
     },
     "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_paired_differences.csv": {
       "bytes": 506,
