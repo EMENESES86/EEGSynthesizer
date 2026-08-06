@@ -34,7 +34,7 @@
     },
     "S3_synthetic_frozen": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-05T14:06:47Z",
+      "completed_utc": "2026-08-06T00:20:53Z",
       "details": {
         "selected_profile": "baseline",
         "reused": true,
@@ -63,12 +63,12 @@
     },
     "S4_chbmit_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-05T14:15:03Z",
+      "completed_utc": "2026-08-06T01:51:15Z",
       "artifacts": {
         "real_manifest": {
           "exists": true,
           "bytes": 24262,
-          "sha256": "3ce5c072c0efc5143c9dfdb1e4b0b273a6ffb2d05c2bfd71ed074f4ff747d057"
+          "sha256": "bbe48c17d6c4c9a8263698af196db8c3e0aeca74284067e38a1486aad1773d50"
         },
         "metadata": {
           "exists": true,
@@ -84,7 +84,7 @@
     },
     "S5_siena_raw": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-05T14:56:46Z",
+      "completed_utc": "2026-08-06T01:49:07Z",
       "artifacts": {
         "official_checksums": {
           "exists": true,
@@ -105,12 +105,12 @@
     },
     "S6_siena_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-05T14:56:46Z",
+      "completed_utc": "2026-08-06T01:49:07Z",
       "artifacts": {
         "siena_manifest": {
           "exists": true,
           "bytes": 2539,
-          "sha256": "1c7da5b9c590a8ddc683b2a73408d29541b0162af5d4dbc15acbe162e8aaab98"
+          "sha256": "6cc2d23e6ec970680ebe42dadccd6556951a2480a3a312dee80eb078fd313a84"
         },
         "annotation_audit": {
           "exists": true,
@@ -125,17 +125,17 @@
     },
     "S7_external_results": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-05T14:56:46Z",
+      "completed_utc": "2026-08-06T01:49:07Z",
       "artifacts": {
         "multicorpus_summary": {
           "exists": true,
           "bytes": 5747,
-          "sha256": "109da918ba9836eb8055b01e7f5153c3985b0dd7e29ebc1f45891ccefac256d0"
+          "sha256": "d4d2ce9371da4f13fa2f776e4974b487554570579e357754ef3147fa6309eeb1"
         },
         "ictal_preictal_integrity": {
           "exists": true,
           "bytes": 3836,
-          "sha256": "ebc626a2f4473ed153a06835aad7db7d0e19543385a913f0762fb9111629d2d9"
+          "sha256": "a179146d1029fd5f65a053a4d47734d7679537bb2c8abd66edf5cb7716430f65"
         }
       },
       "details": {

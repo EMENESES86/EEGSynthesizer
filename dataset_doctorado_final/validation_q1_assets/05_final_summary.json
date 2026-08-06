@@ -1,5 +1,5 @@
 {
-  "mode": "siena_external",
+  "mode": "external",
   "synthetic_status": "SUPPORTED",
   "real_status": "SUPPORTED",
   "external_validation_status": "SUPPORTED",
@@ -10,7 +10,7 @@
     },
     "real_cohort_integrity": {
       "status": "SUPPORTED",
-      "manifest_sha256": "3ce5c072c0efc5143c9dfdb1e4b0b273a6ffb2d05c2bfd71ed074f4ff747d057",
+      "manifest_sha256": "bbe48c17d6c4c9a8263698af196db8c3e0aeca74284067e38a1486aad1773d50",
       "n_windows_all": 14004,
       "n_windows_external": 11024,
       "n_external_subjects": 18,
@@ -54,16 +54,10 @@
       "file": "04_feature_space_proximity_diversity.csv"
     }
   },
-  "generated_utc": "2026-08-05T14:15:03Z",
+  "generated_utc": "2026-08-06T01:51:15Z",
   "framework_verdict": {
     "status": "VIABLE CON LIMITACIONES",
     "reason": "El generador es reproducible y TSTR está respaldado, pero fidelidad, cobertura externa y diversidad muestran desplazamiento de dominio.",
-    "not_clinical_equivalence": true
-  },
-  "doctoral_verdict": {
-    "status": "NO VIABLE EN SU REDACCIÓN ACTUAL",
-    "reason": "El manuscrito proporcionado conserva resultados históricos obsoletos; debe sustituirlos por la matriz 06 antes de defender las conclusiones.",
-    "conditional_after_revision": "VIABLE CON LIMITACIONES",
     "not_clinical_equivalence": true
   }
 }

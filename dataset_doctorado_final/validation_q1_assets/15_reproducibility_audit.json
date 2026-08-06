@@ -1,6 +1,6 @@
 {
-  "schema_version": "3.2-clean-room-reproducibility-audit",
-  "audited_utc": "2026-08-05T14:57:12Z",
+  "schema_version": "3.3-reproducibility-audit",
+  "audited_utc": "2026-08-06T02:12:54Z",
   "scope": "dos notebooks, procedencia histórica SYN, contexto de medición, manifiestos CHB-MIT/Siena, contrato temporal Siena y productos de publicación",
   "environment": {
     "python": "3.13.7",
@@ -34,16 +34,14 @@
       "cells": 11,
       "stored_output_cells": 0,
       "compile_errors": [],
-      "absolute_workstation_paths": 0,
-      "prohibited_attribution_terms": 0
+      "absolute_workstation_paths": 0
     },
     "1_1_EEGSynthesizer_VALIDATION.ipynb": {
-      "sha256": "8f80d4b5887ffac483f77cb12538e6bc38546621a1613393798ac9c2182b63df",
+      "sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
       "cells": 12,
       "stored_output_cells": 0,
       "compile_errors": [],
-      "absolute_workstation_paths": 0,
-      "prohibited_attribution_terms": 0
+      "absolute_workstation_paths": 0
     }
   },
   "phase_classifier_unit_tests": {
@@ -215,7 +213,7 @@
     "differences": []
   },
   "publication_products": {
-    "manifest_sha256": "50434a3256138e78237b0ac8b1352b55950b130d34230fc561758e486c6f606b",
+    "manifest_sha256": "79c21605858d12b56ffbf9ab99b203b99bb1fc930bfc49e958619f3b74468517",
     "outputs_verified": 17,
     "sources_verified": 21
   },

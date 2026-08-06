@@ -60,7 +60,7 @@
     }
   },
   "synthetic_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
-  "validator_notebook_sha256": "8f80d4b5887ffac483f77cb12538e6bc38546621a1613393798ac9c2182b63df",
+  "validator_notebook_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
   "software": {
     "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
     "numpy": "2.4.2",
@@ -69,5 +69,5 @@
     "mne": "1.11.0"
   },
   "checkpoint_commit": "b4b4293a9ab5fde54e5eb5c235266bc2f0a38624",
-  "created_utc": "2026-08-05T14:35:49Z"
+  "created_utc": "2026-08-06T01:11:06Z"
 }

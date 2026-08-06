@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1-symmetry-measurement-audit",
-  "generated_utc": "2026-08-05T14:06:58Z",
+  "generated_utc": "2026-08-06T00:21:10Z",
   "source_generation_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
   "validator_notebook_sha256": "30f0b62a5df212dae71d31358c7f4537b93c4f475a01e04d796e7949e5dafb9a",
   "detail_csv": "07_generalized_symmetry_by_patient.csv",
