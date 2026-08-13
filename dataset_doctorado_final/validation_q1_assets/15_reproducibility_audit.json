@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.3-reproducibility-audit",
-  "audited_utc": "2026-08-06T02:12:54Z",
-  "scope": "dos notebooks, procedencia histórica SYN, contexto de medición, manifiestos CHB-MIT/Siena, contrato temporal Siena y productos de publicación",
+  "schema_version": "6.3-runall-stable-code-hash-migration",
+  "audited_utc": "2026-08-10T23:11:21Z",
+  "scope": "locked-source, staged two-pass multicorpus validation; no matrix builder or implicit reference acceptance",
   "environment": {
     "python": "3.13.7",
     "numpy": "2.4.2",
@@ -12,36 +12,55 @@
     "matplotlib": "3.10.8"
   },
   "execution_contract": {
-    "order": [
-      "1_0_EEGSynthesizer_DATASET.ipynb",
-      "1_1_EEGSynthesizer_VALIDATION.ipynb"
-    ],
-    "validation_modes": [
-      "status",
-      "prepare_dev",
-      "external",
-      "siena_external"
-    ],
-    "resume_support": [
-      "CHB-MIT .part + HTTP Range + SHA256",
-      "Siena .part + HTTP Range + SHA256",
-      "manifiestos derivados con SHA256"
-    ]
+    "published_out_dir": "dataset_doctorado_final/validation_q1_assets",
+    "candidate_out_dir": "tmp/eegsynth_rebuild/validation_candidate/validation_q1_assets",
+    "migration_phase": "ACCEPT_PENDING",
+    "audited_existing_products": 48,
+    "candidate_products_before_audit": 46,
+    "candidate_trace_products": 1,
+    "promoted_trace_products": 5,
+    "promoted_destinations_including_state": 6,
+    "immutable_products": 43,
+    "matrix_builders_forbidden": true,
+    "notebook_hash_scope": "code_cells_v1",
+    "stored_outputs_allowed": true
   },
   "notebooks": {
     "1_0_EEGSynthesizer_DATASET.ipynb": {
-      "sha256": "30f0b62a5df212dae71d31358c7f4537b93c4f475a01e04d796e7949e5dafb9a",
+      "code_sha256": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+      "hash_scope": "code_cells_v1",
+      "historical_notebook_file_sha256": "e6a2b734b3d2987d33a8b8cfb71d4235955f7d9eddedd0d62b89c795277f193b",
       "cells": 11,
-      "stored_output_cells": 0,
+      "stored_output_cells": 7,
       "compile_errors": [],
-      "absolute_workstation_paths": 0
+      "absolute_workstation_paths": 0,
+      "deprecated_representative_naming": 0,
+      "stored_outputs_are_informational": true,
+      "saved_vs_executed_source_check": {
+        "status": "NOT APPLICABLE",
+        "reason": "1_0 executes in a separate Jupyter kernel",
+        "saved_code_cells": 9,
+        "compared_entries": 0,
+        "mismatch_indices": []
+      }
     },
     "1_1_EEGSynthesizer_VALIDATION.ipynb": {
-      "sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
+      "code_sha256": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264",
+      "hash_scope": "code_cells_v1",
+      "historical_notebook_file_sha256": "a586e0fdf834c19b2ba36762a43930db4ea463324cb332101e426655f9e79b6b",
       "cells": 12,
-      "stored_output_cells": 0,
+      "stored_output_cells": 7,
       "compile_errors": [],
-      "absolute_workstation_paths": 0
+      "absolute_workstation_paths": 0,
+      "deprecated_representative_naming": 0,
+      "stored_outputs_are_informational": true,
+      "saved_vs_executed_source_check": {
+        "status": "SUPPORTED",
+        "hash_scope": "code_cells_v1",
+        "saved_code_cells": 10,
+        "compared_entries": 10,
+        "mismatch_indices": []
+      }
     }
   },
   "phase_classifier_unit_tests": {
@@ -57,18 +76,204 @@
   },
   "traceability": {
     "generation_manifest_frozen": true,
-    "chb_builder_matches_validator": true,
+    "all_exact_source_locks_valid": true,
+    "generation_manifest_exact_lock": true,
+    "chb_schema_current": true,
     "chb_builder_contract_current": true,
-    "siena_builder_matches_validator": true,
-    "siena_uses_current_synthetic_manifest": true,
+    "siena_schema_current": true,
+    "siena_uses_locked_synthetic_manifest": true,
     "multicorpus_summary_matches_validator": true,
     "preictal_summary_matches_validator": true,
     "preictal_summary_matches_siena_manifest": true,
     "publication_manifest_matches_validator": true,
-    "symmetry_matches_generator": true,
-    "symmetry_matches_synthetic_manifest": true,
+    "symmetry_detail_matches_summary": true,
+    "symmetry_matches_locked_synthetic_manifest": true,
     "development_profile_lineage_reconciled": true,
     "measurement_context_independently_verified": true
+  },
+  "source_migration": {
+    "migration_id": "2026-08-runall-stable-notebook-code-hash-v4",
+    "authorized_change_scopes": [
+      "notebook_code_hash_scope",
+      "saved_vs_executed_source_check",
+      "runall_output_persistence",
+      "audit_only_idempotency_and_locking",
+      "audit_only_csv_empty_string_normalization",
+      "saved_vs_executed_trailing_newline_normalization",
+      "audit_only_inline_topography_png"
+    ],
+    "current_validator_notebook_code_sha256": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264",
+    "current_generator_notebook_code_sha256": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+    "notebook_hash_scope": "code_cells_v1",
+    "historical_real_builder_notebook_file_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
+    "historical_siena_builder_notebook_file_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
+    "historical_builder_sha_does_not_trigger_rebuild": true,
+    "symmetry_summary_trace_migration": {
+      "status": "MIGRATED",
+      "historical_validator_notebook_file_sha256": "36cb236774c21a2a408139207dcc50d773494903e7f9f72b0de57490c96707f4",
+      "validator_notebook_code_sha256": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+      "notebook_hash_scope": "code_cells_v1",
+      "generated_utc_frozen": "2026-08-11T02:46:20Z"
+    },
+    "exact_source_locks": {
+      "generation_manifest": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
+      "X_real": "80ee61d0d0c3f17e442ed66452837e1dc413ab24544cb3e4bd79de003a48bb17",
+      "y_real": "d6ac1bc1438dbc4962410ed818f4b019e15adc443df48fc9cccbb612e9a60c36",
+      "pid_real": "ea82858a14512b2dd63f9ed24a64ca15a72c7e6a14d1bc2761eeb3afa4d8d0ce",
+      "real_window_metadata": "13d1c46945ec3bb20e103a009a1d29aa27893be9e64e0e02d49876f3de8f9583",
+      "real_manifest": "bbe48c17d6c4c9a8263698af196db8c3e0aeca74284067e38a1486aad1773d50",
+      "siena_X": "87ecf1fbae3168fdb3d4e60c3961af5a6b4cddc113222769107702971273bf08",
+      "siena_y": "ed0f7f072c39a5da2c0dfcc2a8a9f4959dc97251d54bca43df82855ae9f74023",
+      "siena_pid": "e927c7a16ca5f12bffe31fdf02385d7b0a773210bc6d8c0e48d583824adad7cf",
+      "siena_window_metadata": "87a3dfde68b2c8b55be15efc8638b94e9d993c021da551d7da64585533a5267f",
+      "siena_annotation": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "siena_manifest": "6cc2d23e6ec970680ebe42dadccd6556951a2480a3a312dee80eb078fd313a84"
+    },
+    "all_exact_source_locks_valid": true,
+    "matrix_builders_forbidden": true,
+    "validation_run_utc": "2026-08-10T23:11:21Z"
+  },
+  "source_artifact_integrity": {
+    "generation_manifest": true,
+    "X_real": true,
+    "y_real": true,
+    "pid_real": true,
+    "real_window_metadata": true,
+    "real_manifest": true,
+    "siena_X": true,
+    "siena_y": true,
+    "siena_pid": true,
+    "siena_window_metadata": true,
+    "siena_annotation": true,
+    "siena_manifest": true
+  },
+  "exact_source_lock_report": {
+    "generation_manifest": {
+      "path": "dataset_eeg_final/generation_manifest.json",
+      "expected_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
+      "actual_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
+      "valid": true
+    },
+    "X_real": {
+      "path": "dataset_doctorado_final/X_real.npy",
+      "expected_sha256": "80ee61d0d0c3f17e442ed66452837e1dc413ab24544cb3e4bd79de003a48bb17",
+      "actual_sha256": "80ee61d0d0c3f17e442ed66452837e1dc413ab24544cb3e4bd79de003a48bb17",
+      "valid": true
+    },
+    "y_real": {
+      "path": "dataset_doctorado_final/y_real.npy",
+      "expected_sha256": "d6ac1bc1438dbc4962410ed818f4b019e15adc443df48fc9cccbb612e9a60c36",
+      "actual_sha256": "d6ac1bc1438dbc4962410ed818f4b019e15adc443df48fc9cccbb612e9a60c36",
+      "valid": true
+    },
+    "pid_real": {
+      "path": "dataset_doctorado_final/pid_real.npy",
+      "expected_sha256": "ea82858a14512b2dd63f9ed24a64ca15a72c7e6a14d1bc2761eeb3afa4d8d0ce",
+      "actual_sha256": "ea82858a14512b2dd63f9ed24a64ca15a72c7e6a14d1bc2761eeb3afa4d8d0ce",
+      "valid": true
+    },
+    "real_window_metadata": {
+      "path": "dataset_doctorado_final/real_window_metadata.csv",
+      "expected_sha256": "13d1c46945ec3bb20e103a009a1d29aa27893be9e64e0e02d49876f3de8f9583",
+      "actual_sha256": "13d1c46945ec3bb20e103a009a1d29aa27893be9e64e0e02d49876f3de8f9583",
+      "valid": true
+    },
+    "real_manifest": {
+      "path": "dataset_doctorado_final/real_manifest.json",
+      "expected_sha256": "bbe48c17d6c4c9a8263698af196db8c3e0aeca74284067e38a1486aad1773d50",
+      "actual_sha256": "bbe48c17d6c4c9a8263698af196db8c3e0aeca74284067e38a1486aad1773d50",
+      "valid": true
+    },
+    "siena_X": {
+      "path": "dataset_doctorado_final/siena_X.npy",
+      "expected_sha256": "87ecf1fbae3168fdb3d4e60c3961af5a6b4cddc113222769107702971273bf08",
+      "actual_sha256": "87ecf1fbae3168fdb3d4e60c3961af5a6b4cddc113222769107702971273bf08",
+      "valid": true
+    },
+    "siena_y": {
+      "path": "dataset_doctorado_final/siena_y.npy",
+      "expected_sha256": "ed0f7f072c39a5da2c0dfcc2a8a9f4959dc97251d54bca43df82855ae9f74023",
+      "actual_sha256": "ed0f7f072c39a5da2c0dfcc2a8a9f4959dc97251d54bca43df82855ae9f74023",
+      "valid": true
+    },
+    "siena_pid": {
+      "path": "dataset_doctorado_final/siena_pid.npy",
+      "expected_sha256": "e927c7a16ca5f12bffe31fdf02385d7b0a773210bc6d8c0e48d583824adad7cf",
+      "actual_sha256": "e927c7a16ca5f12bffe31fdf02385d7b0a773210bc6d8c0e48d583824adad7cf",
+      "valid": true
+    },
+    "siena_window_metadata": {
+      "path": "dataset_doctorado_final/siena_window_metadata.csv",
+      "expected_sha256": "87a3dfde68b2c8b55be15efc8638b94e9d993c021da551d7da64585533a5267f",
+      "actual_sha256": "87a3dfde68b2c8b55be15efc8638b94e9d993c021da551d7da64585533a5267f",
+      "valid": true
+    },
+    "siena_annotation": {
+      "path": "dataset_doctorado_final/siena_annotation_audit.csv",
+      "expected_sha256": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "actual_sha256": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "valid": true
+    },
+    "siena_manifest": {
+      "path": "dataset_doctorado_final/siena_manifest.json",
+      "expected_sha256": "6cc2d23e6ec970680ebe42dadccd6556951a2480a3a312dee80eb078fd313a84",
+      "actual_sha256": "6cc2d23e6ec970680ebe42dadccd6556951a2480a3a312dee80eb078fd313a84",
+      "valid": true
+    }
+  },
+  "numeric_contract_checks": {
+    "trts_detail_schema": true,
+    "trts_summary_schema": true,
+    "siena_real_train_iqr_detail_schema": true,
+    "siena_real_train_iqr_summary_schema": true,
+    "siena_common_gamma_mmd_schema": true,
+    "chb_pooled_iqr_schema": true,
+    "chb_subject_iqr_schema": true,
+    "siena_pooled_iqr_schema": true,
+    "trts_rows_present": true,
+    "trts_unit_is_real_training_fold_model": true,
+    "trts_has_no_held_out_real_subject": true,
+    "trts_records_omitted_real_subject": true,
+    "trts_uses_one_fixed_syn_test_set_per_mode": true,
+    "trts_has_no_bootstrap_interval": true,
+    "trts_reports_exactly_18_models": true,
+    "trts_descriptive_fields_finite": true,
+    "non_trts_subject_counts_use_finite_metrics": true,
+    "mmd_evaluable_rows_present": true,
+    "mmd_gamma_is_real_train_only": true,
+    "mmd_gamma_is_positive_finite": true,
+    "mmd_gamma_matches_reference_median": true,
+    "mmd_delta_uses_paired_common_gamma_results": true,
+    "mmd_not_evaluable_rows_have_no_numeric_result": true,
+    "mmd_independently_recomputed_from_matrices": true,
+    "mmd_json_counts_match_csv": true,
+    "mmd_json_ne_reasons_match_csv": true,
+    "wasserstein_evaluable_rows_present": true,
+    "wasserstein_scale_is_positive_and_nondegenerate": true,
+    "wasserstein_normalized_by_real_train_iqr": true,
+    "wasserstein_not_evaluable_has_no_normalized_value": true,
+    "wasserstein_scale_shared_across_comparisons": true,
+    "wasserstein_summary_has_38_class_feature_rows": true,
+    "iqr_independently_recomputed_from_matrices": true,
+    "raw_wasserstein_preserved_for_degenerate_iqr": true,
+    "pooled_and_subject_iqr_ne_preserve_raw": true,
+    "subject_iqr_uses_other_real_subjects": true,
+    "wasserstein_json_counts_match_csv": true,
+    "aggregated_and_focal_siena_claims_are_separate": true,
+    "siena_integrity_product_uses_aggregate_not_focal_terminology": true,
+    "aggregated_siena_claim_records_ne": true,
+    "focal_siena_claim_has_no_aggregated_coverage_fields": true,
+    "chb_finite_subject_count_matches_json": true,
+    "chb_supported_claim_has_at_least_10_subjects": true,
+    "siena_finite_subject_count_matches_json": true,
+    "siena_supported_claim_has_at_least_10_subjects": true,
+    "aggregated_siena_status_matches_csv": true
+  },
+  "numeric_contract_context": {
+    "mmd_ictal_total": 14,
+    "mmd_ictal_not_evaluable": 0,
+    "mmd_ictal_ne_reason_counts": {},
+    "degenerate_iqr_wasserstein_rows_with_raw": 36
   },
   "development_profile_reconciliation": {
     "status": "SUPPORTED",
@@ -140,13 +345,30 @@
       "n_subjects": 4,
       "endpoint": "ictal_vs_interictal_strict_at_least_4h"
     },
-    "focal_morphology_external": {
+    "aggregated_siena_ictal_external": {
       "status": "NOT SUPPORTED",
-      "features_within_real_real_q95_fraction": 0.8947368421052632,
+      "features_total": 19,
+      "features_evaluable": 19,
+      "features_within_real_real_q95": 15,
+      "features_outside_real_real_q95": 4,
+      "features_not_evaluable": 0,
+      "features_within_real_real_q95_fraction": 0.7894736842105263,
+      "real_train_iqr_normalization": true,
+      "median_subject_mmd2_real_real": 0.05120917632196759,
+      "median_subject_mmd2_syn_real": 0.31778694640401267,
+      "median_subject_mmd_difference_syn_minus_real": 0.2644203993888925,
+      "mmd_gamma_source": "SIENA_OTHER_SUBJECTS_REAL_TRAIN",
+      "mmd_subjects_total": 14,
+      "mmd_subjects_evaluable": 14,
+      "mmd_subjects_not_evaluable": 0,
+      "mmd_ne_reason_counts": {}
+    },
+    "focal_temporal_external": {
+      "status": "NOT SUPPORTED",
       "large_cliff_effects": 9,
       "features_ks_ge_0_5": 5,
       "laterality_accuracy": 0.6923076923076923,
-      "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+      "laterality_subjects_evaluable": 13
     },
     "final_amplitude_contract": {
       "status": "SUPPORTED",
@@ -159,7 +381,7 @@
       "total_count": 1500
     }
   },
-  "published_scientific_reference": {
+  "historical_published_scientific_reference": {
     "CHB_MIT_TSTR_RF_zscore": {
       "status": "SUPPORTED",
       "macro_auc": 0.6430743202093415,
@@ -207,17 +429,432 @@
       "total_count": 1500
     }
   },
-  "published_scientific_reference_check": {
+  "candidate_scientific_reference": {
+    "CHB_MIT_TSTR_RF_zscore": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.6430743202093415,
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ],
+      "n_subjects": 18
+    },
+    "Siena_TSTR_RF_zscore_clean_preictal": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.7008300137418093,
+      "ci95": [
+        0.6211641143045521,
+        0.7762140062259614
+      ],
+      "n_subjects": 14
+    },
+    "Siena_TSTR_RF_zscore_strict_interictal": {
+      "status": "NOT EVALUABLE",
+      "macro_auc": 0.5862347148637471,
+      "ci95": [
+        0.4400382882882883,
+        0.7650312409183377
+      ],
+      "n_subjects": 4,
+      "endpoint": "ictal_vs_interictal_strict_at_least_4h"
+    },
+    "aggregated_siena_ictal_external": {
+      "status": "NOT SUPPORTED",
+      "features_total": 19,
+      "features_evaluable": 19,
+      "features_within_real_real_q95": 15,
+      "features_outside_real_real_q95": 4,
+      "features_not_evaluable": 0,
+      "features_within_real_real_q95_fraction": 0.7894736842105263,
+      "real_train_iqr_normalization": true,
+      "median_subject_mmd2_real_real": 0.05120917632196759,
+      "median_subject_mmd2_syn_real": 0.31778694640401267,
+      "median_subject_mmd_difference_syn_minus_real": 0.2644203993888925,
+      "mmd_gamma_source": "SIENA_OTHER_SUBJECTS_REAL_TRAIN",
+      "mmd_subjects_total": 14,
+      "mmd_subjects_evaluable": 14,
+      "mmd_subjects_not_evaluable": 0,
+      "mmd_ne_reason_counts": {}
+    },
+    "focal_temporal_external": {
+      "status": "NOT SUPPORTED",
+      "large_cliff_effects": 9,
+      "features_ks_ge_0_5": 5,
+      "laterality_accuracy": 0.6923076923076923,
+      "laterality_subjects_evaluable": 13
+    },
+    "final_amplitude_contract": {
+      "status": "SUPPORTED",
+      "pass_count": 1500,
+      "total_count": 1500
+    },
+    "universal_clean_measurement": {
+      "status": "NOT SUPPORTED",
+      "pass_count": 1459,
+      "total_count": 1500
+    }
+  },
+  "published_scientific_reference": {
+    "CHB_MIT_TSTR_RF_zscore": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.6430743202093415,
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ],
+      "n_subjects": 18
+    },
+    "Siena_TSTR_RF_zscore_clean_preictal": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.7008300137418093,
+      "ci95": [
+        0.6211641143045521,
+        0.7762140062259614
+      ],
+      "n_subjects": 14
+    },
+    "Siena_TSTR_RF_zscore_strict_interictal": {
+      "status": "NOT EVALUABLE",
+      "macro_auc": 0.5862347148637471,
+      "ci95": [
+        0.4400382882882883,
+        0.7650312409183377
+      ],
+      "n_subjects": 4,
+      "endpoint": "ictal_vs_interictal_strict_at_least_4h"
+    },
+    "aggregated_siena_ictal_external": {
+      "status": "NOT SUPPORTED",
+      "features_total": 19,
+      "features_evaluable": 19,
+      "features_within_real_real_q95": 15,
+      "features_outside_real_real_q95": 4,
+      "features_not_evaluable": 0,
+      "features_within_real_real_q95_fraction": 0.7894736842105263,
+      "real_train_iqr_normalization": true,
+      "median_subject_mmd2_real_real": 0.05120917632196759,
+      "median_subject_mmd2_syn_real": 0.31778694640401267,
+      "median_subject_mmd_difference_syn_minus_real": 0.2644203993888925,
+      "mmd_gamma_source": "SIENA_OTHER_SUBJECTS_REAL_TRAIN",
+      "mmd_subjects_total": 14,
+      "mmd_subjects_evaluable": 14,
+      "mmd_subjects_not_evaluable": 0,
+      "mmd_ne_reason_counts": {}
+    },
+    "focal_temporal_external": {
+      "status": "NOT SUPPORTED",
+      "large_cliff_effects": 9,
+      "features_ks_ge_0_5": 5,
+      "laterality_accuracy": 0.6923076923076923,
+      "laterality_subjects_evaluable": 13
+    },
+    "final_amplitude_contract": {
+      "status": "SUPPORTED",
+      "pass_count": 1500,
+      "total_count": 1500
+    },
+    "universal_clean_measurement": {
+      "status": "NOT SUPPORTED",
+      "pass_count": 1459,
+      "total_count": 1500
+    }
+  },
+  "locked_primary_results": {
+    "CHB_MIT_TSTR_RF_zscore": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.6430743202093415,
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ],
+      "n_subjects": 18
+    },
+    "Siena_TSTR_RF_zscore_clean_preictal": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.7008300137418093,
+      "ci95": [
+        0.6211641143045521,
+        0.7762140062259614
+      ],
+      "n_subjects": 14
+    },
+    "CHB_PLUS_SYN_minus_CHB": {
+      "status": "SUPPORTED",
+      "mean_auc_difference": 0.05628574513892359,
+      "ci95_low": 0.03290353526114568,
+      "ci95_high": 0.0807642759510501,
+      "subjects_improved": 13,
+      "n_subjects": 14
+    }
+  },
+  "current_primary_results": {
+    "CHB_MIT_TSTR_RF_zscore": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.6430743202093415,
+      "ci95": [
+        0.5460355378919731,
+        0.7332719679407158
+      ],
+      "n_subjects": 18
+    },
+    "Siena_TSTR_RF_zscore_clean_preictal": {
+      "status": "SUPPORTED",
+      "macro_auc": 0.7008300137418093,
+      "ci95": [
+        0.6211641143045521,
+        0.7762140062259614
+      ],
+      "n_subjects": 14
+    },
+    "CHB_PLUS_SYN_minus_CHB": {
+      "status": "SUPPORTED",
+      "mean_auc_difference": 0.0562857451389235,
+      "ci95_low": 0.0329035352611456,
+      "ci95_high": 0.0807642759510501,
+      "subjects_improved": 13,
+      "n_subjects": 14
+    }
+  },
+  "locked_primary_results_check": {
     "status": "SUPPORTED",
     "absolute_tolerance": 1e-12,
     "differences": []
   },
   "publication_products": {
-    "manifest_sha256": "79c21605858d12b56ffbf9ab99b203b99bb1fc930bfc49e958619f3b74468517",
+    "manifest_sha256": "d2accaf1f2c95b3427100b5e9a3346ac0055550a7914367f2f2994c94f177ec2",
     "outputs_verified": 17,
-    "sources_verified": 21
+    "sources_verified": 26,
+    "candidate_product_sha256": {
+      "01_internal_separability.csv": "dc6b45366b4544acbbba0fd1015e10ec091a878bb664632416e2d8d6212c08cb",
+      "02_fidelity_featurewise.csv": "d5d627010d3c762f5d509f2eaac46326706d313e5612604322a260f667bb4c08",
+      "02b_morphology_coverage.csv": "01b1b0e5eb62131506b34ff30c909cd3be35afb41e9b7d3ee7c54e953bbacc28",
+      "02c_fidelity_by_subject.csv": "dda864e7c05936f36cd8f98b061ce17d54d7485e4e876d39624e50d69eb829e9",
+      "03_cross_domain_loso.csv": "997fa74a1e521d44ff6ad2127684dbaf36c0b20d62ccb287ed3dd3e97782fb8e",
+      "03b_cross_domain_bootstrap.csv": "490709a6e0577d5d115a8118d68799d294b00b45dc6802fc11ed41dcedced2e3",
+      "04_feature_space_proximity_diversity.csv": "19079c721cc06876d5addd7dbbba919afccb67fd60e555e980de849d332818d1",
+      "05_final_summary.json": "f9b317a06f1c9811f1456e4bf014c7d16c15fc14b97a6855d5da12fe42fd63af",
+      "05_final_verdict_lines.csv": "9343221ebe1e471fa73294f8628a944af0fc0ccbd3e81f1f927146a2a332017c",
+      "08_siena_annotation_audit.csv": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "08_siena_integrity_summary.json": "1cf8454d8d1c756a03217830d1bd67c64aa6aa97a8257ec34bc3cec4011d11c3",
+      "09_siena_fidelity_featurewise.csv": "930f57a141035872c2572c002439784ab92176e65e05cba9e30ab62ce6f31740",
+      "09_siena_morphology_coverage.csv": "88d858d3220e6cd507691533ec02f84d595bfc81b878d19813c2e2a77fe13157",
+      "09_siena_proximity_diversity.csv": "e9cad6156890623603529600325bcc79cd0c1c0a3ff747de4f721c649014355a",
+      "10_siena_mmd_by_subject.csv": "b2adfb4bcba23f520a239ba244cb00e04e535724c1bd650d2d7d03e7c752b069",
+      "10_siena_real_real_by_subject.csv": "cbb1e1a957a934034372e0a73efa2f1e24592a8944575afe0870b74591e9aa49",
+      "10_siena_real_real_reference.csv": "22f16ef87f16f985e73751a6bfe501d711607a4e669ea73c76e4a32434888542",
+      "11_siena_bootstrap_summary.csv": "b3a38e60f2d7658d1c46752a936eca0f75267819bf77127bea560cb3b2f9b076",
+      "11_siena_transfer_loso.csv": "def6839dfe98dd10ce000d7a0afc79faac139295cf479f17143038a7424e1017",
+      "12_siena_laterality_audit.csv": "0bab9abfe2d21b2eef00df2eb4d1e87ca993c8e4cc603dd194391530a79890a7",
+      "12_siena_phase_summary.csv": "9d25dfe987c72ad4e0ac987e71c2cf0b31e8c635d126dad9adcfd3904bd1f02c",
+      "13_multicorpus_claim_matrix.csv": "9dd218908edaff7a097e4bc830e4b3bac1d616dcbfaccc3aa5b2c0eba1a04727",
+      "13_multicorpus_comparison.csv": "8f68e5bea5c1c5131bb6c8a99e72b88581975d71e7e7bfd92babd49e962d49e5",
+      "13_multicorpus_final_summary.json": "2cc6e594829834cd0bc57c11bcc42dd8e95d86eb2380c18781a0bd1f197e2c22",
+      "14_siena_ictal_preictal_bootstrap.csv": "66b734cfff350f81dd16bf23ca10e6ab1c4014ebd83a265d32439b5ebb8e8f60",
+      "14_siena_ictal_preictal_integrity.json": "05bd4bec5c96a9eeacf4afc45d751fe44a33486809759f3702b21034d728c63f",
+      "14_siena_ictal_preictal_loso.csv": "a3c59469c08cbf81467b6f53d5b67826c44049d80d16affdd26b8056683280a6",
+      "14_siena_ictal_preictal_paired_differences.csv": "16b2a0b994bbecc14cb798b79687ae727665812ee7d90a41be2f9204023c3141",
+      "16_fig_auroc_forest.pdf": "072d11513922226a4ed8d084dcc08c24156342d3d5bc25bc1414b5269fb8763a",
+      "16_fig_auroc_forest.png": "e42075506c2a1a86988d60208f5f810f80612ab7c3b3b578f027f3f937413c38",
+      "16_fig_morphology_fidelity.pdf": "fa4ffa62cf3be9eb4bdb3bb247feb0552cb044e8e34db9ef4e2d8e625b57bb30",
+      "16_fig_morphology_fidelity.png": "b1d7b758eab22054603425b6048af01513a5d508b5bcf4ecffb15aed22989c78",
+      "16_fig_psd_multicorpus.pdf": "cf439a19ad12984f1e37c3356fd4c071cac635e8ff9f6717ccc85e59b5e20677",
+      "16_fig_psd_multicorpus.png": "6f8ff3acec66f32a2bfc1c5a70290c17ae670dd3d6fe8c72e3a293b2cdb35b3a",
+      "16_fig_signal_comparison.pdf": "917f6b2334ae936264a77c1db1dd6c049b6fbc8388dcec18de9fc692e123d429",
+      "16_fig_signal_comparison.png": "17e54ee6bb44a209f753e97c67ea2325bbbb254b00377e0ffe2f8ec9f8d275d9",
+      "16_fig_symmetry_degradation.pdf": "9324c670173ed19a0e08d9ab7b1d02cf7266d231a85c6e4d3a925c76d3811b0d",
+      "16_fig_symmetry_degradation.png": "fced4ec0ee6b77cea8456850f198dce8cddc0a40fd3238e60fa0e208246f8e37",
+      "16_fig_syn_effect.pdf": "8d6082e8d2ed67836123198778d6433541c5f0a10281957d95f412912e3b5345",
+      "16_fig_syn_effect.png": "3c9fea0cb36da9d0c15ce91d9663da7f7cc25d80079ebf5f5e4987270219df80",
+      "16_publication_captions.csv": "9a40b7e94f6bceec8f97d82e70992606b1bbfe767390bc0b8ee60e557443cd2c",
+      "16_publication_figure_audit.csv": "af5f2981826be73d5d238cad8201e5c7e112be873b85d2032ac7e4f7754e0a5e",
+      "16_publication_manifest.json": "d2accaf1f2c95b3427100b5e9a3346ac0055550a7914367f2f2994c94f177ec2",
+      "16_publication_multicorpus_table.csv": "4dcee8c9a266b47f95cf3e030d9e5073c89931e6ca9b0456aed8d3af25b3f984",
+      "16_publication_multicorpus_table.tex": "0efabf893aa9523baaff8ed635a8982923f4e2bc5caba6431bf7b55dd9c3cdc1",
+      "16_publication_representative_signals.csv": "3ec5e3c452812f5d95ddb9addd40a9ae25b1e439972bc38fc3fa35b389c57978"
+    },
+    "candidate_trace_product_sha256": {
+      "07_generalized_symmetry_summary.json": "08380ac714b317053a380e5cac225d758abb98f5952325f0b2440b66d4cf0ae3"
+    }
   },
+  "prior_failed_staging": {
+    "observed_file_count": 165,
+    "bytes": 4122635,
+    "checkpoint_files": 92,
+    "candidate_files": 73,
+    "promoted": false,
+    "cleanup_status": "REMOVED_BEFORE_TRACE_MIGRATION",
+    "reason": "legacy full-file notebook hash/output gate"
+  },
+  "superseded_pending_reviews": [
+    {
+      "present": true,
+      "audit_sha256": "a9f837b325084fa8c6a8098201895086bfaf4fa7099f1bb6765c4b0c1b41aae4",
+      "promoted": false,
+      "reason": "reviewer rejected absolute workstation paths in saved outputs"
+    },
+    {
+      "present": true,
+      "audit_sha256": "d072c6246a5fa0d3b127300aae6327d3c7f11d9dfe17ae07c6a16ca8bb95518d",
+      "promoted": false,
+      "reason": "reviewer rejected non-frozen generated_utc/completed_utc in trace-only products"
+    }
+  ],
+  "previous_accepted_migrations": [
+    {
+      "migration_id": "2026-08-runall-stable-notebook-code-hash-v1",
+      "status": "ACCEPTED",
+      "audit_sha256": "9dcb3834ab82e257d292eafa4fe238c3bbefdc19efc8373826dee30e3c35464f",
+      "superseded_by": "2026-08-runall-stable-notebook-code-hash-v2",
+      "scientific_reference_sha256": "c84cf3288d0b8926183c979534aa00fd567ed40ba784e3824408e0440301041c"
+    },
+    {
+      "migration_id": "2026-08-runall-stable-notebook-code-hash-v2",
+      "status": "ACCEPTED",
+      "audit_sha256": "635aef3d95c69fef30b21b670fbcb1b145ddb8c6d4effc34d75fe66245dd21d7",
+      "superseded_by": "2026-08-runall-stable-notebook-code-hash-v3",
+      "scientific_reference_sha256": "c84cf3288d0b8926183c979534aa00fd567ed40ba784e3824408e0440301041c"
+    },
+    {
+      "migration_id": "2026-08-runall-stable-notebook-code-hash-v3",
+      "status": "ACCEPTED",
+      "audit_sha256": "297519c6a77bd0fc5937a5496c3e734d7a1bfa8bfe91ab8a11b5888d42f37b6b",
+      "superseded_by": "2026-08-runall-stable-notebook-code-hash-v4",
+      "scientific_reference_sha256": "c84cf3288d0b8926183c979534aa00fd567ed40ba784e3824408e0440301041c"
+    }
+  ],
   "failures": [],
   "verdict": "SUPPORTED",
-  "interpretation": "La reproducibilidad, integridad y trazabilidad son independientes de que una métrica científica sea favorable; los estados científicos se conservan sin reinterpretación."
+  "interpretation": "Scientific-reference changes require an explicit second pass; exact source locks and product hashes are fail-closed.",
+  "published_scientific_reference_migration": {
+    "migration_id": "2026-08-runall-stable-notebook-code-hash-v4",
+    "status": "ACCEPTED",
+    "validation_run_utc": "2026-08-10T23:11:21Z",
+    "authorized_change_scopes": [
+      "notebook_code_hash_scope",
+      "saved_vs_executed_source_check",
+      "runall_output_persistence",
+      "audit_only_idempotency_and_locking",
+      "audit_only_csv_empty_string_normalization",
+      "saved_vs_executed_trailing_newline_normalization",
+      "audit_only_inline_topography_png"
+    ],
+    "notebook_hash_scope": "code_cells_v1",
+    "candidate_notebook_code_sha256": {
+      "1_0_EEGSynthesizer_DATASET.ipynb": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+      "1_1_EEGSynthesizer_VALIDATION.ipynb": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264"
+    },
+    "candidate_staging": "tmp/eegsynth_rebuild/validation_candidate",
+    "candidate_scientific_reference_sha256": "c84cf3288d0b8926183c979534aa00fd567ed40ba784e3824408e0440301041c",
+    "candidate_product_sha256": {
+      "01_internal_separability.csv": "dc6b45366b4544acbbba0fd1015e10ec091a878bb664632416e2d8d6212c08cb",
+      "02_fidelity_featurewise.csv": "d5d627010d3c762f5d509f2eaac46326706d313e5612604322a260f667bb4c08",
+      "02b_morphology_coverage.csv": "01b1b0e5eb62131506b34ff30c909cd3be35afb41e9b7d3ee7c54e953bbacc28",
+      "02c_fidelity_by_subject.csv": "dda864e7c05936f36cd8f98b061ce17d54d7485e4e876d39624e50d69eb829e9",
+      "03_cross_domain_loso.csv": "997fa74a1e521d44ff6ad2127684dbaf36c0b20d62ccb287ed3dd3e97782fb8e",
+      "03b_cross_domain_bootstrap.csv": "490709a6e0577d5d115a8118d68799d294b00b45dc6802fc11ed41dcedced2e3",
+      "04_feature_space_proximity_diversity.csv": "19079c721cc06876d5addd7dbbba919afccb67fd60e555e980de849d332818d1",
+      "05_final_summary.json": "f9b317a06f1c9811f1456e4bf014c7d16c15fc14b97a6855d5da12fe42fd63af",
+      "05_final_verdict_lines.csv": "9343221ebe1e471fa73294f8628a944af0fc0ccbd3e81f1f927146a2a332017c",
+      "08_siena_annotation_audit.csv": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "08_siena_integrity_summary.json": "1cf8454d8d1c756a03217830d1bd67c64aa6aa97a8257ec34bc3cec4011d11c3",
+      "09_siena_fidelity_featurewise.csv": "930f57a141035872c2572c002439784ab92176e65e05cba9e30ab62ce6f31740",
+      "09_siena_morphology_coverage.csv": "88d858d3220e6cd507691533ec02f84d595bfc81b878d19813c2e2a77fe13157",
+      "09_siena_proximity_diversity.csv": "e9cad6156890623603529600325bcc79cd0c1c0a3ff747de4f721c649014355a",
+      "10_siena_mmd_by_subject.csv": "b2adfb4bcba23f520a239ba244cb00e04e535724c1bd650d2d7d03e7c752b069",
+      "10_siena_real_real_by_subject.csv": "cbb1e1a957a934034372e0a73efa2f1e24592a8944575afe0870b74591e9aa49",
+      "10_siena_real_real_reference.csv": "22f16ef87f16f985e73751a6bfe501d711607a4e669ea73c76e4a32434888542",
+      "11_siena_bootstrap_summary.csv": "b3a38e60f2d7658d1c46752a936eca0f75267819bf77127bea560cb3b2f9b076",
+      "11_siena_transfer_loso.csv": "def6839dfe98dd10ce000d7a0afc79faac139295cf479f17143038a7424e1017",
+      "12_siena_laterality_audit.csv": "0bab9abfe2d21b2eef00df2eb4d1e87ca993c8e4cc603dd194391530a79890a7",
+      "12_siena_phase_summary.csv": "9d25dfe987c72ad4e0ac987e71c2cf0b31e8c635d126dad9adcfd3904bd1f02c",
+      "13_multicorpus_claim_matrix.csv": "9dd218908edaff7a097e4bc830e4b3bac1d616dcbfaccc3aa5b2c0eba1a04727",
+      "13_multicorpus_comparison.csv": "8f68e5bea5c1c5131bb6c8a99e72b88581975d71e7e7bfd92babd49e962d49e5",
+      "13_multicorpus_final_summary.json": "2cc6e594829834cd0bc57c11bcc42dd8e95d86eb2380c18781a0bd1f197e2c22",
+      "14_siena_ictal_preictal_bootstrap.csv": "66b734cfff350f81dd16bf23ca10e6ab1c4014ebd83a265d32439b5ebb8e8f60",
+      "14_siena_ictal_preictal_integrity.json": "05bd4bec5c96a9eeacf4afc45d751fe44a33486809759f3702b21034d728c63f",
+      "14_siena_ictal_preictal_loso.csv": "a3c59469c08cbf81467b6f53d5b67826c44049d80d16affdd26b8056683280a6",
+      "14_siena_ictal_preictal_paired_differences.csv": "16b2a0b994bbecc14cb798b79687ae727665812ee7d90a41be2f9204023c3141",
+      "16_fig_auroc_forest.pdf": "072d11513922226a4ed8d084dcc08c24156342d3d5bc25bc1414b5269fb8763a",
+      "16_fig_auroc_forest.png": "e42075506c2a1a86988d60208f5f810f80612ab7c3b3b578f027f3f937413c38",
+      "16_fig_morphology_fidelity.pdf": "fa4ffa62cf3be9eb4bdb3bb247feb0552cb044e8e34db9ef4e2d8e625b57bb30",
+      "16_fig_morphology_fidelity.png": "b1d7b758eab22054603425b6048af01513a5d508b5bcf4ecffb15aed22989c78",
+      "16_fig_psd_multicorpus.pdf": "cf439a19ad12984f1e37c3356fd4c071cac635e8ff9f6717ccc85e59b5e20677",
+      "16_fig_psd_multicorpus.png": "6f8ff3acec66f32a2bfc1c5a70290c17ae670dd3d6fe8c72e3a293b2cdb35b3a",
+      "16_fig_signal_comparison.pdf": "917f6b2334ae936264a77c1db1dd6c049b6fbc8388dcec18de9fc692e123d429",
+      "16_fig_signal_comparison.png": "17e54ee6bb44a209f753e97c67ea2325bbbb254b00377e0ffe2f8ec9f8d275d9",
+      "16_fig_symmetry_degradation.pdf": "9324c670173ed19a0e08d9ab7b1d02cf7266d231a85c6e4d3a925c76d3811b0d",
+      "16_fig_symmetry_degradation.png": "fced4ec0ee6b77cea8456850f198dce8cddc0a40fd3238e60fa0e208246f8e37",
+      "16_fig_syn_effect.pdf": "8d6082e8d2ed67836123198778d6433541c5f0a10281957d95f412912e3b5345",
+      "16_fig_syn_effect.png": "3c9fea0cb36da9d0c15ce91d9663da7f7cc25d80079ebf5f5e4987270219df80",
+      "16_publication_captions.csv": "9a40b7e94f6bceec8f97d82e70992606b1bbfe767390bc0b8ee60e557443cd2c",
+      "16_publication_figure_audit.csv": "af5f2981826be73d5d238cad8201e5c7e112be873b85d2032ac7e4f7754e0a5e",
+      "16_publication_manifest.json": "d2accaf1f2c95b3427100b5e9a3346ac0055550a7914367f2f2994c94f177ec2",
+      "16_publication_multicorpus_table.csv": "4dcee8c9a266b47f95cf3e030d9e5073c89931e6ca9b0456aed8d3af25b3f984",
+      "16_publication_multicorpus_table.tex": "0efabf893aa9523baaff8ed635a8982923f4e2bc5caba6431bf7b55dd9c3cdc1",
+      "16_publication_representative_signals.csv": "3ec5e3c452812f5d95ddb9addd40a9ae25b1e439972bc38fc3fa35b389c57978"
+    },
+    "candidate_trace_product_sha256": {
+      "07_generalized_symmetry_summary.json": "08380ac714b317053a380e5cac225d758abb98f5952325f0b2440b66d4cf0ae3"
+    },
+    "candidate_reproducibility_state_sha256": "6d2e38374ce22a74806d5e55530be51bfa769e0626c1911bbe2651d4663fd966",
+    "candidate_product_count": 46,
+    "candidate_trace_product_count": 1,
+    "audited_existing_product_count": 48,
+    "promotion_product_names": [
+      "07_generalized_symmetry_summary.json",
+      "13_multicorpus_final_summary.json",
+      "14_siena_ictal_preictal_integrity.json",
+      "15_reproducibility_audit.json",
+      "16_publication_manifest.json"
+    ],
+    "immutable_product_sha256": {
+      "01_internal_separability.csv": "dc6b45366b4544acbbba0fd1015e10ec091a878bb664632416e2d8d6212c08cb",
+      "02_fidelity_featurewise.csv": "d5d627010d3c762f5d509f2eaac46326706d313e5612604322a260f667bb4c08",
+      "02b_morphology_coverage.csv": "01b1b0e5eb62131506b34ff30c909cd3be35afb41e9b7d3ee7c54e953bbacc28",
+      "02c_fidelity_by_subject.csv": "dda864e7c05936f36cd8f98b061ce17d54d7485e4e876d39624e50d69eb829e9",
+      "03_cross_domain_loso.csv": "997fa74a1e521d44ff6ad2127684dbaf36c0b20d62ccb287ed3dd3e97782fb8e",
+      "03b_cross_domain_bootstrap.csv": "490709a6e0577d5d115a8118d68799d294b00b45dc6802fc11ed41dcedced2e3",
+      "04_feature_space_proximity_diversity.csv": "19079c721cc06876d5addd7dbbba919afccb67fd60e555e980de849d332818d1",
+      "05_final_summary.json": "f9b317a06f1c9811f1456e4bf014c7d16c15fc14b97a6855d5da12fe42fd63af",
+      "05_final_verdict_lines.csv": "9343221ebe1e471fa73294f8628a944af0fc0ccbd3e81f1f927146a2a332017c",
+      "08_siena_annotation_audit.csv": "9ded998cd9d967c1ab0f6e55d6062dbdbf4a147a334c4c15e900cce5fd67110c",
+      "08_siena_integrity_summary.json": "1cf8454d8d1c756a03217830d1bd67c64aa6aa97a8257ec34bc3cec4011d11c3",
+      "09_siena_fidelity_featurewise.csv": "930f57a141035872c2572c002439784ab92176e65e05cba9e30ab62ce6f31740",
+      "09_siena_morphology_coverage.csv": "88d858d3220e6cd507691533ec02f84d595bfc81b878d19813c2e2a77fe13157",
+      "09_siena_proximity_diversity.csv": "e9cad6156890623603529600325bcc79cd0c1c0a3ff747de4f721c649014355a",
+      "10_siena_mmd_by_subject.csv": "b2adfb4bcba23f520a239ba244cb00e04e535724c1bd650d2d7d03e7c752b069",
+      "10_siena_real_real_by_subject.csv": "cbb1e1a957a934034372e0a73efa2f1e24592a8944575afe0870b74591e9aa49",
+      "10_siena_real_real_reference.csv": "22f16ef87f16f985e73751a6bfe501d711607a4e669ea73c76e4a32434888542",
+      "11_siena_bootstrap_summary.csv": "b3a38e60f2d7658d1c46752a936eca0f75267819bf77127bea560cb3b2f9b076",
+      "11_siena_transfer_loso.csv": "def6839dfe98dd10ce000d7a0afc79faac139295cf479f17143038a7424e1017",
+      "12_siena_laterality_audit.csv": "0bab9abfe2d21b2eef00df2eb4d1e87ca993c8e4cc603dd194391530a79890a7",
+      "12_siena_phase_summary.csv": "9d25dfe987c72ad4e0ac987e71c2cf0b31e8c635d126dad9adcfd3904bd1f02c",
+      "13_multicorpus_claim_matrix.csv": "9dd218908edaff7a097e4bc830e4b3bac1d616dcbfaccc3aa5b2c0eba1a04727",
+      "13_multicorpus_comparison.csv": "8f68e5bea5c1c5131bb6c8a99e72b88581975d71e7e7bfd92babd49e962d49e5",
+      "14_siena_ictal_preictal_bootstrap.csv": "66b734cfff350f81dd16bf23ca10e6ab1c4014ebd83a265d32439b5ebb8e8f60",
+      "14_siena_ictal_preictal_loso.csv": "a3c59469c08cbf81467b6f53d5b67826c44049d80d16affdd26b8056683280a6",
+      "14_siena_ictal_preictal_paired_differences.csv": "16b2a0b994bbecc14cb798b79687ae727665812ee7d90a41be2f9204023c3141",
+      "16_fig_auroc_forest.pdf": "072d11513922226a4ed8d084dcc08c24156342d3d5bc25bc1414b5269fb8763a",
+      "16_fig_auroc_forest.png": "e42075506c2a1a86988d60208f5f810f80612ab7c3b3b578f027f3f937413c38",
+      "16_fig_morphology_fidelity.pdf": "fa4ffa62cf3be9eb4bdb3bb247feb0552cb044e8e34db9ef4e2d8e625b57bb30",
+      "16_fig_morphology_fidelity.png": "b1d7b758eab22054603425b6048af01513a5d508b5bcf4ecffb15aed22989c78",
+      "16_fig_psd_multicorpus.pdf": "cf439a19ad12984f1e37c3356fd4c071cac635e8ff9f6717ccc85e59b5e20677",
+      "16_fig_psd_multicorpus.png": "6f8ff3acec66f32a2bfc1c5a70290c17ae670dd3d6fe8c72e3a293b2cdb35b3a",
+      "16_fig_signal_comparison.pdf": "917f6b2334ae936264a77c1db1dd6c049b6fbc8388dcec18de9fc692e123d429",
+      "16_fig_signal_comparison.png": "17e54ee6bb44a209f753e97c67ea2325bbbb254b00377e0ffe2f8ec9f8d275d9",
+      "16_fig_symmetry_degradation.pdf": "9324c670173ed19a0e08d9ab7b1d02cf7266d231a85c6e4d3a925c76d3811b0d",
+      "16_fig_symmetry_degradation.png": "fced4ec0ee6b77cea8456850f198dce8cddc0a40fd3238e60fa0e208246f8e37",
+      "16_fig_syn_effect.pdf": "8d6082e8d2ed67836123198778d6433541c5f0a10281957d95f412912e3b5345",
+      "16_fig_syn_effect.png": "3c9fea0cb36da9d0c15ce91d9663da7f7cc25d80079ebf5f5e4987270219df80",
+      "16_publication_captions.csv": "9a40b7e94f6bceec8f97d82e70992606b1bbfe767390bc0b8ee60e557443cd2c",
+      "16_publication_figure_audit.csv": "af5f2981826be73d5d238cad8201e5c7e112be873b85d2032ac7e4f7754e0a5e",
+      "16_publication_multicorpus_table.csv": "4dcee8c9a266b47f95cf3e030d9e5073c89931e6ca9b0456aed8d3af25b3f984",
+      "16_publication_multicorpus_table.tex": "0efabf893aa9523baaff8ed635a8982923f4e2bc5caba6431bf7b55dd9c3cdc1",
+      "16_publication_representative_signals.csv": "3ec5e3c452812f5d95ddb9addd40a9ae25b1e439972bc38fc3fa35b389c57978"
+    },
+    "promotion_product_count": 5,
+    "destination_product_count_including_state": 6,
+    "acceptance_flag_required": "EEGSYN_ACCEPT_REFERENCE_MIGRATION=1",
+    "accepted_snapshot_utc": "2026-08-10T23:11:21Z"
+  }
 }

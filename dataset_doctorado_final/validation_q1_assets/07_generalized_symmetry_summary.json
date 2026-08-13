@@ -1,11 +1,46 @@
 {
-  "schema_version": "1.1-symmetry-measurement-audit",
-  "generated_utc": "2026-08-06T00:21:10Z",
+  "schema_version": "2.1-symmetry-evaluability-audit-code-hash",
+  "generated_utc": "2026-08-11T02:46:20Z",
   "source_generation_manifest_sha256": "08091538c5cb593ea711139db512145ef505b0bbc2dcface273807434a7b2db0",
-  "validator_notebook_sha256": "30f0b62a5df212dae71d31358c7f4537b93c4f475a01e04d796e7949e5dafb9a",
+  "validator_notebook_code_sha256": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+  "validator_notebook_hash_scope": "code_cells_v1",
+  "traceability_migration_id": "2026-08-runall-stable-notebook-code-hash-v4",
   "detail_csv": "07_generalized_symmetry_by_patient.csv",
-  "detail_csv_sha256": "ca179a468d3158617219ccf3d9c99b408fc4f8322b70262ad956e9aaed54e3cc",
+  "detail_csv_sha256": "be884aa43f6b993b57cfd741e1313d4b0cb363e102f5eb63122eb78468376f4f",
   "source_hashes_verified": true,
+  "topography_publication": {
+    "source_table": {
+      "name": "tabla_amplitudes.csv",
+      "bytes": 677,
+      "sha256": "d43da8fa258ce1ea93639b142d168405116465382e2412a6d461a17c9c6a859b",
+      "generation_manifest_entry_sha256": "d43da8fa258ce1ea93639b142d168405116465382e2412a6d461a17c9c6a859b",
+      "hash_verified": true
+    },
+    "files": {
+      "fig3_topography_es.pdf": {
+        "bytes": 33557,
+        "sha256": "649dfa092e8274188ff4179f55282c3bc36ccd2494b78c1d329f7db8d8ea3054",
+        "page_count": 1,
+        "media_box_pt": [
+          0.0,
+          0.0,
+          440.360625,
+          458.172
+        ]
+      },
+      "fig3_topography_en_us.pdf": {
+        "bytes": 32416,
+        "sha256": "9b2b4675b2a8803a57f78bd92e64e1a51b75501d7b6f553a9a1912417eb10c2b",
+        "page_count": 1,
+        "media_box_pt": [
+          0.0,
+          0.0,
+          440.360625,
+          458.172
+        ]
+      }
+    }
+  },
   "generator_parameters_changed": false,
   "generator_recalibrated": false,
   "external_cohort_used": false,
@@ -51,15 +86,31 @@
   "n_generalized_events": 750,
   "symmetry_relative_difference_threshold": 0.35,
   "acceptance_rate": 0.9,
+  "historical_indicator": {
+    "status": "HISTORICAL",
+    "pass_count": 750,
+    "total_count": 750,
+    "pass_rate": 1.0,
+    "field": "cohort_metadata.symmetry_ok",
+    "interpretation": "Indicador legado calculado durante generación; se conserva para trazabilidad y no sustituye la reevaluación post-hoc."
+  },
   "clean_nondegraded": {
     "status": "SUPPORTED",
-    "pass_count": 750,
+    "pass_count": 742,
+    "fail_count": 0,
+    "evaluable_count": 742,
+    "not_evaluable_count": 8,
+    "total_count": 750,
     "pass_rate": 1.0,
-    "interpretation": "simetría morfológica en pares frontales no degradados"
+    "pass_rate_denominator": "evaluable_count",
+    "not_evaluable_reason": "ambos pares frontales predefinidos contienen al menos un canal degradado",
+    "interpretation": "742/742 eventos evaluables cumplen; 8/750 son NOT EVALUABLE y no se contabilizan como éxitos."
   },
   "final_all_channels": {
     "status": "NOT SUPPORTED",
     "pass_count": 603,
+    "fail_count": 147,
+    "total_count": 750,
     "pass_rate": 0.804,
     "interpretation": "simetría observable después de degradación de adquisición"
   },
@@ -72,5 +123,5 @@
     "pass_count": 747,
     "pass_rate": 0.996
   },
-  "overall_interpretation": "La morfología bilateral está respaldada en pares no degradados; la simetría final debe reportarse por separado porque la degradación puede romperla."
+  "overall_interpretation": "El indicador histórico es 750/750. La reevaluación clean_nondegraded respalda 742/742 eventos evaluables y marca 8/750 como NOT EVALUABLE; la señal final cumple en 603/750."
 }

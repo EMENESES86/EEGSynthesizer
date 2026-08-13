@@ -19,7 +19,7 @@
   },
   "prospective_acceptance_criteria": {
     "TSTR": "all SYN ictal scenarios; RF zscore macro AUROC > 0.5, bootstrap lower 95% > 0.5, at least 10 evaluable subjects",
-    "complete_focal_morphology": "all predefined features inside the Siena REAL-REAL LOSO q95 envelope"
+    "complete_aggregated_ictal_morphology": "all predefined features inside the Siena REAL-REAL LOSO q95 envelope"
   },
   "n_subjects": 14,
   "n_windows": 9115,
@@ -69,5 +69,11 @@
     "mne": "1.11.0"
   },
   "checkpoint_commit": "b4b4293a9ab5fde54e5eb5c235266bc2f0a38624",
-  "created_utc": "2026-08-06T01:11:06Z"
+  "created_utc": "2026-08-06T01:11:06Z",
+  "terminology_migration": {
+    "source_manifest_sha256": "6cc2d23e6ec970680ebe42dadccd6556951a2480a3a312dee80eb078fd313a84",
+    "legacy_source_field": "prospective_acceptance_criteria.complete_focal_morphology",
+    "canonical_product_field": "prospective_acceptance_criteria.complete_aggregated_ictal_morphology",
+    "data_changed": false
+  }
 }

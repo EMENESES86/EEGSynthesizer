@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0-reproducibility",
+  "schema_version": "1.1-reproducibility-code-hash",
   "stages": {
     "S1_development_profile": {
       "status": "SUPPORTED",
@@ -34,7 +34,7 @@
     },
     "S3_synthetic_frozen": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-06T00:20:53Z",
+      "completed_utc": "2026-08-11T02:45:57Z",
       "details": {
         "selected_profile": "baseline",
         "reused": true,
@@ -63,7 +63,7 @@
     },
     "S4_chbmit_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-06T01:51:15Z",
+      "completed_utc": "2026-08-10T23:11:21Z",
       "artifacts": {
         "real_manifest": {
           "exists": true,
@@ -84,7 +84,7 @@
     },
     "S5_siena_raw": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-06T01:49:07Z",
+      "completed_utc": "2026-08-10T23:11:21Z",
       "artifacts": {
         "official_checksums": {
           "exists": true,
@@ -96,16 +96,14 @@
         "official_entries": 58,
         "official_edf": 41,
         "raw_download": {
-          "official_entries": 58,
-          "official_edf": 41,
-          "downloaded": 0,
-          "resumed": 0
+          "status": "NOT REQUESTED",
+          "reason": "locked derived Siena matrices are read-only in siena_external"
         }
       }
     },
     "S6_siena_derived": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-06T01:49:07Z",
+      "completed_utc": "2026-08-10T23:11:21Z",
       "artifacts": {
         "siena_manifest": {
           "exists": true,
@@ -125,22 +123,28 @@
     },
     "S7_external_results": {
       "status": "SUPPORTED",
-      "completed_utc": "2026-08-06T01:49:07Z",
+      "completed_utc": "2026-08-10T23:11:21Z",
       "artifacts": {
         "multicorpus_summary": {
           "exists": true,
-          "bytes": 5747,
-          "sha256": "d4d2ce9371da4f13fa2f776e4974b487554570579e357754ef3147fa6309eeb1"
+          "bytes": 6848,
+          "sha256": "2cc6e594829834cd0bc57c11bcc42dd8e95d86eb2380c18781a0bd1f197e2c22"
         },
         "ictal_preictal_integrity": {
           "exists": true,
-          "bytes": 3836,
-          "sha256": "a179146d1029fd5f65a053a4d47734d7679537bb2c8abd66edf5cb7716430f65"
+          "bytes": 3906,
+          "sha256": "05bd4bec5c96a9eeacf4afc45d751fe44a33486809759f3702b21034d728c63f"
         }
       },
       "details": {
         "interpretation": "operational research validation; not clinical equivalence"
       }
     }
+  },
+  "traceability_migration": {
+    "migration_id": "2026-08-runall-stable-notebook-code-hash-v4",
+    "notebook_hash_scope": "code_cells_v1",
+    "generator_notebook_code_sha256": "2a921f5b891826ac2d1d61ebfdecd5ad22edd5c0cfb0f447feefb3d3e9a94099",
+    "validator_notebook_code_sha256": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264"
   }
 }

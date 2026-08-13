@@ -1,47 +1,68 @@
 {
-  "schema_version": "1.1-publication-products",
-  "generated_utc": "2026-08-06T02:12:32Z",
-  "validator_notebook_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
+  "schema_version": "2.1-publication-products-code-hash",
+  "generated_utc": "2026-08-10T23:11:21Z",
+  "validator_notebook_code_sha256": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264",
+  "validator_notebook_hash_scope": "code_cells_v1",
   "sources": {
     "dataset_doctorado_final/validation_q1_assets/02_fidelity_featurewise.csv": {
-      "bytes": 7350,
-      "sha256": "c2889fa3906e3fad0999a374acb4970397575bb8d2d31b1a20d71e0e0756e3cd"
+      "bytes": 18099,
+      "sha256": "d5d627010d3c762f5d509f2eaac46326706d313e5612604322a260f667bb4c08"
     },
     "dataset_doctorado_final/validation_q1_assets/02b_morphology_coverage.csv": {
       "bytes": 4184,
       "sha256": "01b1b0e5eb62131506b34ff30c909cd3be35afb41e9b7d3ee7c54e953bbacc28"
     },
+    "dataset_doctorado_final/validation_q1_assets/03_cross_domain_loso.csv": {
+      "bytes": 38461,
+      "sha256": "997fa74a1e521d44ff6ad2127684dbaf36c0b20d62ccb287ed3dd3e97782fb8e"
+    },
     "dataset_doctorado_final/validation_q1_assets/03b_cross_domain_bootstrap.csv": {
-      "bytes": 3615,
-      "sha256": "6363747bdd48c1c6d9abed8f59553e15b9319f40db762614c37e6d19f5dd609a"
+      "bytes": 6708,
+      "sha256": "490709a6e0577d5d115a8118d68799d294b00b45dc6802fc11ed41dcedced2e3"
     },
     "dataset_doctorado_final/validation_q1_assets/05_final_summary.json": {
-      "bytes": 2129,
-      "sha256": "f50d7d239f75c6e8e17f6c70a302ea14f2e114b7270db25851d00e9b29334366"
+      "bytes": 2135,
+      "sha256": "f9b317a06f1c9811f1456e4bf014c7d16c15fc14b97a6855d5da12fe42fd63af"
+    },
+    "dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_by_patient.csv": {
+      "bytes": 177927,
+      "sha256": "be884aa43f6b993b57cfd741e1313d4b0cb363e102f5eb63122eb78468376f4f"
     },
     "dataset_doctorado_final/validation_q1_assets/07_generalized_symmetry_summary.json": {
-      "bytes": 3331,
-      "sha256": "2bae09b65e61389a51e154909fbe5adde885199c6461772871974d74a0dde6dd"
+      "bytes": 5145,
+      "sha256": "08380ac714b317053a380e5cac225d758abb98f5952325f0b2440b66d4cf0ae3"
     },
     "dataset_doctorado_final/validation_q1_assets/09_siena_fidelity_featurewise.csv": {
-      "bytes": 5431,
-      "sha256": "f271c65fd384ab85cbce37bdae71eec8f15614d3d9d5f55615e31043486c8d2b"
+      "bytes": 13480,
+      "sha256": "930f57a141035872c2572c002439784ab92176e65e05cba9e30ab62ce6f31740"
     },
     "dataset_doctorado_final/validation_q1_assets/09_siena_morphology_coverage.csv": {
       "bytes": 2911,
       "sha256": "88d858d3220e6cd507691533ec02f84d595bfc81b878d19813c2e2a77fe13157"
+    },
+    "dataset_doctorado_final/validation_q1_assets/10_siena_real_real_by_subject.csv": {
+      "bytes": 274871,
+      "sha256": "cbb1e1a957a934034372e0a73efa2f1e24592a8944575afe0870b74591e9aa49"
+    },
+    "dataset_doctorado_final/validation_q1_assets/10_siena_real_real_reference.csv": {
+      "bytes": 5152,
+      "sha256": "22f16ef87f16f985e73751a6bfe501d711607a4e669ea73c76e4a32434888542"
+    },
+    "dataset_doctorado_final/validation_q1_assets/10_siena_mmd_by_subject.csv": {
+      "bytes": 4273,
+      "sha256": "b2adfb4bcba23f520a239ba244cb00e04e535724c1bd650d2d7d03e7c752b069"
     },
     "dataset_doctorado_final/validation_q1_assets/12_siena_laterality_audit.csv": {
       "bytes": 676,
       "sha256": "0bab9abfe2d21b2eef00df2eb4d1e87ca993c8e4cc603dd194391530a79890a7"
     },
     "dataset_doctorado_final/validation_q1_assets/13_multicorpus_final_summary.json": {
-      "bytes": 5747,
-      "sha256": "d4d2ce9371da4f13fa2f776e4974b487554570579e357754ef3147fa6309eeb1"
+      "bytes": 6848,
+      "sha256": "2cc6e594829834cd0bc57c11bcc42dd8e95d86eb2380c18781a0bd1f197e2c22"
     },
     "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_integrity.json": {
-      "bytes": 3836,
-      "sha256": "a179146d1029fd5f65a053a4d47734d7679537bb2c8abd66edf5cb7716430f65"
+      "bytes": 3906,
+      "sha256": "05bd4bec5c96a9eeacf4afc45d751fe44a33486809759f3702b21034d728c63f"
     },
     "dataset_doctorado_final/validation_q1_assets/14_siena_ictal_preictal_paired_differences.csv": {
       "bytes": 506,
@@ -90,79 +111,81 @@
   },
   "outputs": {
     "16_publication_multicorpus_table.csv": {
-      "bytes": 1065,
-      "sha256": "29c91739692cf13d91549a291ca9792c44a0de2780637ddc32f3c3dea6cc3810"
+      "bytes": 1072,
+      "sha256": "4dcee8c9a266b47f95cf3e030d9e5073c89931e6ca9b0456aed8d3af25b3f984"
     },
     "16_publication_multicorpus_table.tex": {
-      "bytes": 1099,
-      "sha256": "108ad0868aa9b4962c89bea731306b7fce4a658d357925cc0dfa22d77eae1ba4"
+      "bytes": 1106,
+      "sha256": "0efabf893aa9523baaff8ed635a8982923f4e2bc5caba6431bf7b55dd9c3cdc1"
     },
     "16_publication_captions.csv": {
-      "bytes": 1934,
-      "sha256": "80e2fd0c948c3c9365b0e961363b92204659fab0ad46a3bd12c1e825a7cdf5f6"
+      "bytes": 1947,
+      "sha256": "9a40b7e94f6bceec8f97d82e70992606b1bbfe767390bc0b8ee60e557443cd2c"
     },
     "16_publication_figure_audit.csv": {
-      "bytes": 1769,
-      "sha256": "7d07871d421d209ffd13c2af056e709432d11512f75157a8504b87f5f0984116"
+      "bytes": 1842,
+      "sha256": "af5f2981826be73d5d238cad8201e5c7e112be873b85d2032ac7e4f7754e0a5e"
     },
     "16_publication_representative_signals.csv": {
-      "bytes": 1038,
-      "sha256": "fa39d190db42e878a135a91eba3b62b0706fd69b244bb4193a791581d136e8f9"
+      "bytes": 1128,
+      "sha256": "3ec5e3c452812f5d95ddb9addd40a9ae25b1e439972bc38fc3fa35b389c57978"
     },
     "16_fig_auroc_forest.png": {
-      "bytes": 105853,
-      "sha256": "599fab69525bcb1773ec55e5c0121a96cf618b47379a65be61ab1355853cea6a"
+      "bytes": 103386,
+      "sha256": "e42075506c2a1a86988d60208f5f810f80612ab7c3b3b578f027f3f937413c38"
     },
     "16_fig_auroc_forest.pdf": {
-      "bytes": 20435,
-      "sha256": "c672aae21db16313d3bccd19ebe40f8208242ab42d11bec6e2acae0c6aa2100a"
+      "bytes": 21167,
+      "sha256": "072d11513922226a4ed8d084dcc08c24156342d3d5bc25bc1414b5269fb8763a"
     },
     "16_fig_syn_effect.png": {
-      "bytes": 83334,
-      "sha256": "b1a6e3204e792714e68030e7b3551173c7472d79fe2b33cc122f51c367ec6292"
+      "bytes": 86122,
+      "sha256": "3c9fea0cb36da9d0c15ce91d9663da7f7cc25d80079ebf5f5e4987270219df80"
     },
     "16_fig_syn_effect.pdf": {
-      "bytes": 19215,
-      "sha256": "2373f2d8dbb1e7ae41f9ba97f20fd3a31b973c2f634534cf24750fcfb3f749a3"
+      "bytes": 18991,
+      "sha256": "8d6082e8d2ed67836123198778d6433541c5f0a10281957d95f412912e3b5345"
     },
     "16_fig_morphology_fidelity.png": {
-      "bytes": 508208,
-      "sha256": "8aaa9c5b73f2eb0db700f955e07ef66be3a3bc3e52276d597a8a4d2212998f77"
+      "bytes": 506703,
+      "sha256": "b1d7b758eab22054603425b6048af01513a5d508b5bcf4ecffb15aed22989c78"
     },
     "16_fig_morphology_fidelity.pdf": {
-      "bytes": 41193,
-      "sha256": "b3bc95073b9c8a243ee9e2e1d0a20ecb398b886cadde4e687567c708c96bf1d6"
+      "bytes": 41847,
+      "sha256": "fa4ffa62cf3be9eb4bdb3bb247feb0552cb044e8e34db9ef4e2d8e625b57bb30"
     },
     "16_fig_signal_comparison.png": {
-      "bytes": 342178,
-      "sha256": "da561cf8a7ad0859394b43552cef72faf972826741908cf250d40655e1d1ba5a"
+      "bytes": 341799,
+      "sha256": "17e54ee6bb44a209f753e97c67ea2325bbbb254b00377e0ffe2f8ec9f8d275d9"
     },
     "16_fig_signal_comparison.pdf": {
-      "bytes": 35744,
-      "sha256": "cf51211cc856353806677562fdb4522d222e24a3d1ab896653e0c9988ad30696"
+      "bytes": 34519,
+      "sha256": "917f6b2334ae936264a77c1db1dd6c049b6fbc8388dcec18de9fc692e123d429"
     },
     "16_fig_psd_multicorpus.png": {
-      "bytes": 122121,
-      "sha256": "8ab924f23cb40bbcf06299ac90249c2fa08e6e89dbb44d282ec1fe64d72930fb"
+      "bytes": 126146,
+      "sha256": "6f8ff3acec66f32a2bfc1c5a70290c17ae670dd3d6fe8c72e3a293b2cdb35b3a"
     },
     "16_fig_psd_multicorpus.pdf": {
-      "bytes": 17947,
-      "sha256": "9aef7a238f1e4cf42e46b398d7de87c71b0c724ab15f0c780380efaf5196d482"
+      "bytes": 18789,
+      "sha256": "cf439a19ad12984f1e37c3356fd4c071cac635e8ff9f6717ccc85e59b5e20677"
     },
     "16_fig_symmetry_degradation.png": {
-      "bytes": 104404,
-      "sha256": "c5b84e0c030f17305df13121f6ff26b6ce2af3453cca080832cb3a2406338091"
+      "bytes": 124041,
+      "sha256": "fced4ec0ee6b77cea8456850f198dce8cddc0a40fd3238e60fa0e208246f8e37"
     },
     "16_fig_symmetry_degradation.pdf": {
-      "bytes": 25855,
-      "sha256": "965303884bc59c6b0c970dd6ea0849821e5f05ef44bd5304f51e5f962511a7a5"
+      "bytes": 27384,
+      "sha256": "9324c670173ed19a0e08d9ab7b1d02cf7266d231a85c6e4d3a925c76d3811b0d"
     }
   },
   "selection": {
     "eligibility": "ictal_fraction >= 0.999 in every corpus; CHB-MIT development subjects excluded",
-    "transfer_protocol": "Random Forest; z-score independently within each 2 s channel/window before feature extraction; bootstrap over held-out subjects",
+    "transfer_protocol": "Random Forest; z-score independently within each 2 s channel/window before feature extraction; subject bootstrap only when the test unit is a held-out real subject; TRTS is descriptive across real-training folds",
     "siena_preictal_contract": "30 to 5 min before next seizure and at least 30 min after every previous seizure end; zero postictal overlap required",
-    "waveforms": "medoid in robust z-scored feature space; maximum-PTP bipolar derivation displayed after medoid selection; exact provenance in 16_publication_representative_signals.csv",
+    "waveforms": "observed window nearest the coordinate-wise median after MAD scaling; maximum-PTP bipolar derivation displayed after representative selection; exact provenance in 16_publication_representative_signals.csv",
+    "siena_real_real_wasserstein": "normalization by the IQR of other Siena subjects in the same class; degenerate REAL-train scales are not evaluable",
+    "siena_subject_mmd": "one common RBF gamma per subject/class estimated only from other Siena subjects and reused for REAL-REAL and SYN-REAL",
     "psd": "absolute median over 200 deterministic fully ictal windows and 18 bipolar derivations; no amplitude normalization"
   },
   "scope": "productos descriptivos y confirmatorios para publicación; los CSV/JSON numéricos son la fuente inferencial",

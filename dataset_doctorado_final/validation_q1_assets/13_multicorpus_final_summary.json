@@ -1,9 +1,12 @@
 {
+  "schema_version": "1.1-multicorpus-code-hash",
   "mode": "siena_external",
-  "generated_utc": "2026-08-06T01:20:43Z",
+  "generated_utc": "2026-08-10T23:11:21Z",
   "validation": {
-    "notebook_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
-    "siena_artifact_builder_notebook_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06"
+    "notebook_code_sha256": "d2b0b578726c0aba9a455e6c283795d16d663e0d84181530c296245236150264",
+    "notebook_hash_scope": "code_cells_v1",
+    "siena_artifact_builder_notebook_sha256": "14ee8dfe1fb8eef80ad4724a1c085c5edc3b181031c317cb103fbc9ea60a9f06",
+    "siena_artifact_builder_hash_semantics": "historical_file_sha256_informational"
   },
   "generator": {
     "status": "SUPPORTED",
@@ -81,13 +84,30 @@
       "n_subjects_total": 14
     }
   },
+  "aggregated_siena_ictal_external": {
+    "status": "NOT SUPPORTED",
+    "features_total": 19,
+    "features_evaluable": 19,
+    "features_within_real_real_q95": 15,
+    "features_outside_real_real_q95": 4,
+    "features_not_evaluable": 0,
+    "features_within_real_real_q95_fraction": 0.7894736842105263,
+    "real_train_iqr_normalization": true,
+    "median_subject_mmd2_real_real": 0.05120917632196759,
+    "median_subject_mmd2_syn_real": 0.31778694640401267,
+    "median_subject_mmd_difference_syn_minus_real": 0.2644203993888925,
+    "mmd_gamma_source": "SIENA_OTHER_SUBJECTS_REAL_TRAIN",
+    "mmd_subjects_total": 14,
+    "mmd_subjects_evaluable": 14,
+    "mmd_subjects_not_evaluable": 0,
+    "mmd_ne_reason_counts": {}
+  },
   "focal_temporal_external": {
     "status": "NOT SUPPORTED",
-    "features_within_real_real_q95_fraction": 0.8947368421052632,
     "large_cliff_effects": 9,
     "features_ks_ge_0_5": 5,
     "laterality_accuracy": 0.6923076923076923,
-    "median_subject_mmd_difference_syn_minus_real": 0.23710289298741916
+    "laterality_subjects_evaluable": 13
   },
   "diversity_vs_siena": {
     "status": "REPORTED",
@@ -99,7 +119,10 @@
         "real_real_nn_median": 0.7184842917263442,
         "syn_syn_nn_median": 0.5208009885280351,
         "diversity_ratio_syn_real": 0.7248606469543701,
-        "mmd2_rbf": 0.5081619106443003,
+        "mmd2_rbf": 0.6455151486126458,
+        "mmd_status": "EVALUABLE",
+        "mmd_gamma_source": "REAL_CLASS_REFERENCE",
+        "mmd_gamma": 0.04296406869543212,
         "not_privacy": true
       },
       {
@@ -109,7 +132,10 @@
         "real_real_nn_median": 1.165171848039142,
         "syn_syn_nn_median": 0.7632078217689957,
         "diversity_ratio_syn_real": 0.6550173891110884,
-        "mmd2_rbf": 0.20149401007290568,
+        "mmd2_rbf": 0.2235251741266704,
+        "mmd_status": "EVALUABLE",
+        "mmd_gamma_source": "REAL_CLASS_REFERENCE",
+        "mmd_gamma": 0.023341018265918004,
         "not_privacy": true
       }
     ]
